@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusableInTouchMode="false"
+    android:padding="@dimen/activity_margin"
+     >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/province_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="省份：" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/province_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spinner_height"
+                style="@style/Widget.WP.Spinner"
+                 >
+            </Spinner>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/city_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市：" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spinner_height"
+                style="@style/Widget.WP.Spinner"
+                 >
+            </Spinner>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+            <TextView
+                android:id="@+id/county_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="县城镇：" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/county_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spinner_height"
+                style="@style/Widget.WP.Spinner"
+                 >
+            </Spinner>
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/display_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableLayout1"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="57dip"
+        android:focusableInTouchMode="false"
+        android:hint="输出城市"
+        android:paddingLeft="20dip"
+         >
+    </EditText>
+
+    <Button
+        android:id="@+id/selectarea_save_button"
+        android:layout_width="100dip"
+        android:layout_height="40dip"
+        android:layout_below="@+id/display_edit"
+        android:layout_centerHorizontal="true"
+        android:text="保存" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_shop_cart_bg1"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"></View>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/item_shop_cart_padding_bottom"
+        android:paddingLeft="@dimen/item_shop_cart_padding_left"
+        android:paddingRight="@dimen/item_shop_cart_padding_right"
+        android:paddingTop="@dimen/item_shop_cart_padding_top">
+        <RelativeLayout
+            android:id="@+id/rl_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@style/mCheckBox"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/item_shop_cart_checkbox_padding_left"
+                android:text=""
+                android:textColor="@color/title_txt_new_shop_cart_color"
+                android:textSize="@dimen/item_shop_cart_title_txt_size" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@android:id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:id="@+id/icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    />
+                <com.nahuo.library.controls.CircleTextView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/shopcart_circletext"
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:alpha="0.9"
+                    app:circlebackground="@color/black_actionbar"
+                    app:textColor="@color/white"
+                    app:textSize="15"
+                   />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/icon"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="5"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/title_title_txt_new_shop_cart_color"
+                        android:textSize="14sp"
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:text=""
+                        android:textColor="@color/item_shop_cart_txt_color" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_color_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_title"
+                    android:background="@drawable/item_shop_cart_color_size_bg"
+                    android:minHeight="50dp"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/item_shop_cart_txt_size_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_color_size"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/item_shop_cart_color_size_bg"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="编辑"
+                    android:textColor="@color/title_title_txt_new_shop_cart_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/icon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+
+                android:textColor="@color/item_shop_cart_txt_color"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

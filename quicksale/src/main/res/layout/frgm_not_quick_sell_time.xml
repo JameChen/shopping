@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="110"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:background="@color/bg_red"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下一场开拼时间"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="52dp"
+                />
+            <TextView
+                android:id="@+id/tv_next_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2015-10-08 08:00"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginBottom="20dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="倒计时"
+                android:textColor="#6A1613"
+                android:textSize="14sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/tv_day"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/bg_red"
+                    android:textSize="38sp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_day_colon"
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/tv_hour"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="11"
+                    android:textColor="@color/bg_red"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_min"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="24"
+                    android:textColor="@color/bg_red"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sec"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="59"
+                    android:textColor="@color/bg_red"
+                    android:textSize="38sp"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/tv_day_desc"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_red"
+                    android:gravity="center"
+                    android:text="天"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_day_desc_colon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_red"
+                    android:gravity="center"
+                    android:text="时"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_red"
+                    android:gravity="center"
+                    android:text="分"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_red"
+                    android:gravity="center"
+                    android:text="秒"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="48dp"
+            android:text="天天拼货团"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="每天现场直播广州批发市场档口一手货源"
+            />
+
+        <Button
+            android:id="@+id/btn_know_more"
+            android:layout_width="188dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_black_stroke_white_solid"
+            android:text="了解更多>"
+            />
+    </LinearLayout>
+
+</LinearLayout>

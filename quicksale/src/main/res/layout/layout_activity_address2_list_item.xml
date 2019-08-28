@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@android:id/icon1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@android:string/ok"
+        android:padding="12dp"
+        android:src="@drawable/address_edt" />
+
+    <ImageView
+        android:id="@android:id/icon2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@android:string/ok"
+        android:padding="12dp"
+        android:src="@drawable/address_del" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/Text.M.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="4dp"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@+id/tvName"
+        android:singleLine="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDefaultSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="默认地址"
+        android:background="@drawable/layout_addressadapter_default"
+        android:padding="2dp"
+        android:textColor="@color/base_red"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@+id/tvPhone"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        style="@style/Text.S.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:layout_toLeftOf="@android:id/icon2"
+        android:gravity="left" />
+
+    <TextView
+        android:id="@+id/tvAddressDetail"
+        style="@style/Text.S.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="4dp"
+        android:layout_toLeftOf="@android:id/icon2"
+        android:gravity="left"
+        android:maxLines="2" />
+
+</RelativeLayout>

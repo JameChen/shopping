@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_white_corner_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/draw_top_corner_black"
+        android:gravity="center"
+        android:text="修改运费"
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            >
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black_overlay"
+                android:text="运费：" />
+			<TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black_overlay"
+                android:layout_alignParentRight="true"
+                android:text="元" />
+            <EditText
+                android:id="@+id/et_dlg_change_price_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text2"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:paddingBottom="5dp"
+                android:inputType="numberDecimal"
+                android:layout_toLeftOf="@id/text3"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp" />
+        </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/contact_msg_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_cancle"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/contact_msg_set"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_confirm"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

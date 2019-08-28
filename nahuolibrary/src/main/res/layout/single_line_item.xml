@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/single_content"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="center_vertical"
+         >
+
+        <TextView
+            android:id="@+id/left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            
+			<EditText 
+			    android:id="@+id/right_edittext"
+			    style="@style/edittext_noborder_style"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+				android:inputType="numberDecimal"
+			    /><!-- inputType默认是数字，请不要修改，因为在代码中不好设置只能输入数字 -->
+			<TextView
+                android:id="@+id/right_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+            	android:gravity="center"
+                android:layout_marginRight="8dp"
+                />
+            <ImageView
+                android:id="@+id/right_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/more_mini" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/under_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:background="@color/line_gray" />
+
+</FrameLayout>

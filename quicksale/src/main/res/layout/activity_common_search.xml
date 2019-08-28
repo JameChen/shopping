@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:scaleType="center"
+            android:src="@drawable/back"
+            android:visibility="gone" />
+
+        <com.nahuo.library.controls.EditTextEx
+            android:id="@+id/et_search"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:drawableRight="@drawable/txt_clear_bg"
+            android:hint="搜索款式"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#606060"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_search"
+            style="@style/edittext_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:completionHint="搜索关联的词语"
+            android:completionHintView="@layout/autocomtext_bottom"
+            android:drawableLeft="@drawable/search_left_gray"
+            android:drawablePadding="5dp"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#606060"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rg_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            style="@style/rb_order_list_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="onClick"
+            android:text="档口/品牌" />
+
+        <RadioButton
+            android:id="@+id/rb_mid"
+            style="@style/rb_order_list_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onClick"
+            android:text="话题"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            style="@style/rb_order_list_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="类目" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_hot_words_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hot_good"
+                android:visibility="gone" />
+
+            <com.nahuo.library.controls.FlowLayout
+                android:id="@+id/ll_hot_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+
+            <TextView
+                android:id="@+id/tv_search_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/search_history"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/lv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:listSelector="@drawable/listview_item_bg"
+                android:visibility="gone"></ListView>
+
+            <LinearLayout
+                android:id="@+id/layout_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.nahuo.library.controls.FlowLayout
+                    android:id="@+id/ll_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="清空搜索记录" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_search_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_result_null_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_result_null" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/try_to_search" />
+
+                <TextView
+                    android:id="@+id/tv_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#005FEE" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+            android:id="@+id/lv_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:divider="@drawable/divider_horizontal_bright"
+            android:listSelector="@android:color/transparent" />
+
+    </LinearLayout>
+</LinearLayout>

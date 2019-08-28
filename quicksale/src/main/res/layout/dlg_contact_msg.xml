@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/contact_msg"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/layout_contact_msg_checkbox"
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"
+            android:text="@string/contact_msg_overlook"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/contact_msg_cancel"
+            style="@style/button_blue_text_style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/pass" />
+        
+        <Button
+            android:id="@+id/contact_msg_set"
+            style="@style/button_blue_text_style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/set" />
+
+    </LinearLayout>
+
+</LinearLayout>

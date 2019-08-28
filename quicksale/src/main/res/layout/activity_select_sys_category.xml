@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+    <ExpandableListView 
+        android:id="@+id/lv_sys_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_gray"
+        android:dividerHeight="0.5dp" 
+        ></ExpandableListView>
+</com.nahuo.widget.TouchLinearLayout>

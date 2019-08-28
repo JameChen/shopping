@@ -1,0 +1,23 @@
+<com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ShopImageViewActivity" >
+
+    <com.nahuo.library.controls.imageviewzoom.ImageViewTouch
+        android:id="@+id/itemimage_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <ProgressBar
+        android:id="@+id/itemimage_image_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_horizontal_style" />
+
+</com.nahuo.widget.TouchFrameLayout>

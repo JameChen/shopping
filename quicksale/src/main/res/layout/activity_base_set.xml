@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/layout_titlebar_default" />
+    <!-- 允许代理修改零售价 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp" >
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/item_change_retail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            app:left_text="允许代理修改零售价"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <com.nahuo.library.controls.SwitchButton
+            android:id="@+id/btn_change_retail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp" />
+    </RelativeLayout>
+    <!-- 允许代理自行发货 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent" 
+        android:layout_height="54dp" >
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/item_allow_agent_ship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            app:left_text="允许代理自行发货"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <com.nahuo.library.controls.SwitchButton
+            android:id="@+id/btn_allow_agent_ship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp" />
+    </RelativeLayout>
+    <!-- 收件人的电话用我的 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent" 
+        android:layout_height="54dp" >
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/item_use_my_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            app:left_text="收件人的电话用我的"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <com.nahuo.library.controls.SwitchButton
+            android:id="@+id/btn_use_my_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp" />
+    </RelativeLayout>
+
+</com.nahuo.widget.TouchLinearLayout>

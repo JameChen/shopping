@@ -1,0 +1,239 @@
+TASK com.nahuo.quicksale id=173
+  ACTIVITY com.nahuo.quicksale/.MainActivity 81e4cdf pid=25031
+    Local Activity 39afc06 State:
+      mResumed=false mStopped=true mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 460mcc1mnc zh_CN ldltr sw360dp w360dp h620dp 480dpi nrml long port finger -keyb/v/h -nav/h s.6 themeChanged=0 themeChangedFlags=0}
+      mLoadersStarted=true
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@7eb5055
+        mContainer=android.app.Activity$HostCallbacks@7eb5055
+        mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=102993707 (3212 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{8694a6a V.E...... R......D 0,0-1080,1920}
+        android.widget.LinearLayout{17d2b5b V.E...... .......D 0,0-1080,1920}
+          android.view.ViewStub{8e35ff8 G.E...... ......I. 0,0-0,0 #10203b6 android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{1dd9cd1 V.E...... .......D 0,60-1080,1920 #1020002 android:id/content}
+            com.nahuo.widget.TouchFrameLayout{bc9a336 V.E...... .......D 0,0-1080,1860}
+              android.widget.TabHost{6592237 VFE...... .......D 0,0-1080,1860 #1020012 android:id/tabhost}
+                android.widget.RelativeLayout{9ea83a4 V.E...... .......D 0,0-1080,1860}
+                  android.widget.TabWidget{1ce350d VFE...... ........ 0,1720-1080,1860 #1020013 android:id/tabs}
+                    android.widget.RelativeLayout{e04bcc2 VFE...C.. ..S..... 0,0-270,140}
+                      android.widget.ImageView{993aad3 V.ED..... ..S..... 99,12-171,84 #7f090697 app:id/tab_icon}
+                      android.widget.TextView{41e3610 V.ED..... ..S..... 102,96-168,140 #7f090698 app:id/tab_title}
+                      android.widget.TextView{5b61509 G.ED..... ..S...I. 0,0-0,0 #7f090699 app:id/tab_new}
+                    android.widget.RelativeLayout{6e5e30e VFE...C.. ........ 270,0-540,140}
+                      android.widget.ImageView{5e4212f V.ED..... ........ 99,12-171,84 #7f090697 app:id/tab_icon}
+                      android.widget.TextView{d98a33c V.ED..... ........ 102,96-168,140 #7f090698 app:id/tab_title}
+                      android.widget.TextView{821f8c5 G.ED..... ......I. 0,0-0,0 #7f090699 app:id/tab_new}
+                    android.widget.RelativeLayout{da1221a VFE...C.. ........ 540,0-810,140}
+                      android.widget.ImageView{1ba14b V.ED..... ........ 99,12-171,84 #7f090697 app:id/tab_icon}
+                      android.widget.TextView{1eab728 V.ED..... ........ 102,96-168,140 #7f090698 app:id/tab_title}
+                      android.widget.TextView{5ae5c41 G.ED..... ......I. 0,0-0,0 #7f090699 app:id/tab_new}
+                    android.widget.RelativeLayout{69f45e6 VFE...C.. ........ 810,0-1080,140}
+                      android.widget.ImageView{f010727 V.ED..... ........ 99,12-171,84 #7f090697 app:id/tab_icon}
+                      android.widget.TextView{2c81dd4 V.ED..... ........ 102,96-168,140 #7f090698 app:id/tab_title}
+                      android.widget.TextView{e437b7d G.ED..... ......I. 0,0-0,0 #7f090699 app:id/tab_new}
+                  android.view.View{209da72 V.ED..... ........ 0,1718-1080,1720 #7f0900fd app:id/line}
+                  android.widget.FrameLayout{4eceec3 V.E...... .......D 0,0-1080,1718 #1020011 android:id/tabcontent}
+                    com.android.internal.policy.PhoneWindow$DecorView{7734340 VFE...... R......D 0,0-1080,1718}
+                      android.widget.LinearLayout{e115279 V.E...... .......D 0,0-1080,1718}
+                        android.view.ViewStub{7172bbe G.E...... ......I. 0,0-0,0 #10203b6 android:id/action_mode_bar_stub}
+                        android.widget.FrameLayout{725b41f V.E...... .......D 0,0-1080,1718 #1020002 android:id/content}
+                          android.widget.FrameLayout{6e9536c V.E...... .......D 0,0-1080,1718 #7f09027a app:id/container}
+                            android.widget.LinearLayout{a4b9d35 V.E...... .......D 0,0-1080,1718}
+                              android.widget.RelativeLayout{81645ca V.E...... ........ 0,0-1080,162}
+                                android.widget.TextView{efb733b V.ED..C.. ........ 30,0-198,162 #7f09027f app:id/tv_all}
+                                android.widget.TextView{8ce3a58 V.ED..... ........ 405,44-675,117}
+                                android.widget.ImageView{da5d7b1 V.ED..C.. ........ 918,0-1080,162 #7f0900ca app:id/iv_shopping_cart}
+                                android.widget.ImageView{b3af496 V.ED..C.. ........ 785,0-947,162 #7f090465 app:id/iv_all_search}
+                              android.widget.RelativeLayout{a40817 V.E...... ........ 0,162-1080,276}
+                                android.widget.HorizontalScrollView{918a404 VFED..... ........ 0,0-1080,114}
+                                  android.widget.RadioGroup{8f3ded V.E...... ........ 0,0-1272,114 #7f09013c app:id/radio_group}
+                                    android.widget.RadioButton{429c422 VFED..C.. ........ 0,0-378,114 #1}
+                                    android.widget.RadioButton{3d70eb3 VFED..C.. ........ 378,0-636,114 #2}
+                                    android.widget.RadioButton{a7dfc70 VFED..C.. ........ 636,0-894,114 #3}
+                                    android.widget.RadioButton{92ecbe9 VFED..C.. ........ 894,0-1152,114 #4}
+                                android.widget.ImageView{a44006e V.ED..... ........ 960,0-1080,114 #7f090466 app:id/ivtopright}
+                              android.support.v4.view.ViewPager{a29e30f VFED..... .......D 0,276-1080,1718 #7f090464 app:id/view_pager_pin_huo}
+                                android.widget.LinearLayout{39e6f9c V.E...... .......D 0,0-1080,1442}
+                                  com.nahuo.quicksale.controls.refreshlayout.SwipeRefreshLayoutEx{f1f3da5 V.ED..... .......D 0,0-1080,1442 #7f090280 app:id/refresh_layout}
+                                    android.support.v4.widget.CircleImageView{7b3b57a G.ED..... ......ID 480,-120-600,0}
+                                    android.widget.ListView{f2ba12b VFED.VC.. .F.....D 0,0-1080,1442 #7f0900e3 app:id/listview}
+                                      android.widget.LinearLayout{2f0e988 V.E...... .......D 0,0-1080,420}
+                                        android.widget.FrameLayout{eeb0f21 G.E...... ......I. 0,0-0,0 #7f09052c app:id/pager_view}
+                                          android.support.v4.view.ViewPager{d37af46 VFED..... ......I. 0,0-0,0 #7f0901e0 app:id/pager}
+                                          com.nahuo.library.controls.FlowIndicator{e412507 V.E...... ......I. 0,0-0,0 #7f0901e1 app:id/layout_indicator}
+                                        android.widget.FrameLayout{56f1634 V.E...... ......ID 0,0-1080,390 #7f090356 app:id/bannerview}
+                                          com.nahuo.quicksale.customview.ViewFlow{9487c5d V.E...... ......ID 0,0-1080,390 #7f090357 app:id/viewflow}
+                                            android.widget.ImageView{3d1743b V.ED..C.. .......D 0,0-1080,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{c45a996 V.ED..C.. .......D 1080,0-2160,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{3591917 V.ED..C.. .......D 2160,0-3240,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{15ee104 V.ED..C.. ........ 3240,0-4320,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{6700706 V.ED..C.. ........ 4320,0-5400,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{47b01c7 V.ED..C.. ......ID 5400,0-6480,390 #7f09049f app:id/image_view}
+                                            android.widget.ImageView{9d493f4 V.ED..C.. ......ID 6480,0-7560,390 #7f09049f app:id/image_view}
+                                          com.nahuo.quicksale.customview.CircleFlowIndicator{6af79d2 V.ED..... ........ 494,341-585,372 #7f090358 app:id/viewflowindic}
+                                      android.widget.FrameLayout{367cfc3 V.E...C.. ........ 0,420-1080,2069}
+                                        android.widget.LinearLayout{a410aa3 V.E...... ........ 0,0-1080,1613}
+                                          android.widget.RelativeLayout{c0161a0 V.E...... ........ 0,0-1080,654}
+                                            android.widget.RelativeLayout{a158159 V.E...... ........ 0,0-1080,600}
+                                              android.widget.ImageView{561347d V.ED..... ........ 0,0-1080,600 #7f09030b app:id/iv_cover}
+                                              android.widget.ImageView{c67611e G.ED..... ......I. 0,0-0,0 #7f090526 app:id/iv_cover_pining}
+                                              android.widget.ImageView{2cfadff G.ED..... ......I. 0,0-0,0 #7f090609 app:id/iv_new_item_icon}
+                                              android.view.View{baaf7cc G.ED..... ......I. 0,0-0,0 #7f09060a app:id/iv_cover_ended_view}
+                                              android.widget.ImageView{313da15 G.ED..... ......I. 0,0-0,0 #7f090524 app:id/iv_cover_yg}
+                                              android.widget.ImageView{d24712a G.ED..... ......I. 0,0-0,0 #7f090525 app:id/iv_cover_ended}
+                                              android.widget.TextView{37b2b1b G.ED..... ......I. 0,0-0,0 #7f090528 app:id/txt_next_yg}
+                                            android.widget.RelativeLayout{475c4b8 G.E...... ......I. 0,0-0,0 #7f09060b app:id/tips_view}
+                                              android.widget.LinearLayout{6650291 G.E...... ......I. 0,0-0,0 #7f09060c app:id/open_textview}
+                                                android.widget.TextView{cf075f6 V.ED..... ......ID 0,0-0,0}
+                                                android.widget.TextView{8975df7 V.ED..... ......I. 0,0-0,0 #7f090450 app:id/tv_day}
+                                                android.widget.TextView{b1e7464 V.ED..... ......I. 0,0-0,0 #7f090455 app:id/tv_day_desc}
+                                                android.widget.TextView{cc636cd V.ED..... ......I. 0,0-0,0 #7f090579 app:id/tv_hh}
+                                                android.widget.TextView{4a5fb82 V.ED..... ......I. 0,0-0,0 #7f09057a app:id/tv_h}
+                                                android.widget.TextView{5d9e293 V.ED..... ......I. 0,0-0,0}
+                                                android.widget.TextView{18072d0 V.ED..... ......I. 0,0-0,0 #7f09057b app:id/tv_mm}
+                                                android.widget.TextView{38c72c9 V.ED..... ......I. 0,0-0,0 #7f09057c app:id/tv_m}
+                                                android.widget.TextView{e3c4dce V.ED..... ......I. 0,0-0,0}
+                                                android.widget.TextView{ab614ef V.ED..... ......I. 0,0-0,0 #7f09057d app:id/tv_ss}
+                                                android.widget.TextView{9c1ebfc V.ED..... ......I. 0,0-0,0 #7f09057e app:id/tv_s}
+                                                android.widget.TextView{e607285 V.ED..... ......I. 0,0-0,0}
+                                                android.widget.TextView{9d378da V.ED..... ......I. 0,0-0,0 #7f09057f app:id/tv_f}
+                                              android.widget.TextView{79110b G.ED..... ......I. 0,0-0,0 #7f09060d app:id/overed_text}
+                                          android.widget.TextView{3fcbe8 V.ED..... ........ 0,714-1080,771 #7f09030c app:id/tv_title}
+                                          android.widget.TextView{8bab201 V.ED..... ........ 0,801-1080,1397 #7f0902cf app:id/tv_content}
+                                          android.widget.RelativeLayout{78048a6 V.E...... ........ 0,1445-1080,1613 #7f090110 app:id/rl_bottom}
+                                            android.view.View{e25b2e7 V.ED..... ........ 36,0-1044,2}
+                                            android.widget.LinearLayout{839be94 G.E...C.. ......I. 0,0-0,0 #7f09060e app:id/tv_overed}
+                                              android.widget.ImageView{31f6d3d V.ED..... ......I. 0,0-0,0}
+                                              android.widget.TextView{1d84932 V.ED..... ......ID 0,0-0,0}
+                                            android.widget.Button{e109683 VFED..C.. ........ 660,24-1044,144 #7f09022e app:id/btn_pin}
+                                            android.widget.Button{73e3000 GFED..C.. ......I. 0,0-0,0 #7f09060f app:id/btn_overed}
+                                android.widget.LinearLayout{81aa039 V.E...... ........ 1080,0-2160,1442}
+                                  com.nahuo.quicksale.controls.refreshlayout.SwipeRefreshLayoutEx{53dc67e V.ED..... ........ 0,0-1080,1442 #7f090280 app:id/refresh_layout}
+                                    android.support.v4.widget.CircleImageView{13c17df G.ED..... ......ID 480,-120-600,0}
+                                    android.widget.ListView{b564c2c V.ED.VC.. ........ 0,0-1080,1442 #7f0900e3 app:id/listview}
+                    com.android.internal.policy.PhoneWindow$DecorView{4fc06f5 GFE...... R.....ID 0,0-1080,1718}
+                      android.widget.LinearLayout{febcc8a V.E...... ......ID 0,0-1080,1718}
+                        android.view.ViewStub{c7452fb G.E...... ......I. 0,0-0,0 #10203b6 android:id/action_mode_bar_stub}
+                        android.widget.FrameLayout{7f1ff18 V.E...... ......ID 0,0-1080,1718 #1020002 android:id/content}
+                          android.widget.ScrollView{2531d71 VFED.V... ......ID 0,0-1080,1718}
+                            android.widget.LinearLayout{6c22756 V.E...... ......ID 0,0-1080,2580}
+                              android.widget.RelativeLayout{b2b23d7 V.E...... ......ID 0,0-1080,660}
+                                android.widget.ImageView{d40bda6 V.ED..... ......ID 0,0-1080,660 #7f09029d app:id/iv_logobg}
+                                android.widget.TextView{593f4c4 V.ED..C.. ........ 455,579-625,660 #7f09029e app:id/tvScore}
+                                android.widget.LinearLayout{82b1fad V.E...... ........ 0,128-1080,531}
+                                  de.hdodenhof.circleimageview.CircleImageView{7bf8e8 V.ED..C.. ........ 390,0-690,300 #7f09029f app:id/iv_userhead}
+                                  android.widget.TextView{ad162e2 V.ED..... ........ 498,330-582,403 #7f0902a0 app:id/txt_name}
+                                android.widget.ImageView{4142673 V.ED..C.. ........ 720,30-870,180 #7f0902a1 app:id/my_share}
+                                android.widget.ImageView{3d9930 V.ED..C.. ........ 900,30-1050,180 #7f0902a2 app:id/my_setting}
+                              android.view.View{a0709a9 V.ED..... ........ 0,660-1080,708}
+                              android.widget.RelativeLayout{ba6cb2e V.E...C.. ......ID 0,708-1080,852 #7f0902a3 app:id/item_myorder}
+                                android.widget.ImageView{b80b6cf G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{9b185c V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{69d9765 V.ED..... ........ 724,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{2586c3a V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{f7bf0eb V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.LinearLayout{bef5e48 V.E...... ......ID 0,852-1080,1092}
+                                android.widget.RelativeLayout{75544e1 V.E...C.. ........ 0,0-216,240 #7f0902a4 app:id/my_order_pay}
+                                  android.widget.LinearLayout{1511206 V.E...... ........ 0,0-216,240}
+                                    android.widget.ImageView{9a6b0c7 V.ED..... ........ 63,30-153,120}
+                                    android.widget.TextView{6c016f4 V.ED..... ........ 45,144-171,201}
+                                  com.nahuo.library.controls.CircleTextView{b804e1d G.E...... ......I. 0,0-0,0 #7f090221 app:id/circle_order_text}
+                                    android.widget.RelativeLayout{4dc4892 V.E...... ......I. 0,0-0,0}
+                                      android.widget.TextView{2d39263 V.ED..... ......ID 0,0-0,0 #7f0902dd app:id/text}
+                                android.widget.RelativeLayout{641ae60 V.E...C.. .......D 216,0-432,240 #7f0902a5 app:id/my_order_ship}
+                                  android.widget.LinearLayout{725bde V.E...... ........ 0,0-216,240}
+                                    android.widget.ImageView{462f1bf V.ED..... ........ 63,30-153,120}
+                                    android.widget.TextView{c83508c V.ED..... ........ 45,144-171,201}
+                                  com.nahuo.library.controls.CircleTextView{ebc23d5 V.E...... .......D 132,18-186,72 #7f0902a6 app:id/circle_order_text1}
+                                    android.widget.RelativeLayout{4c457ea V.E...... ......ID 0,0-54,54}
+                                      android.widget.TextView{35eeadb V.ED..... ........ 10,6-44,47 #7f0902dd app:id/text}
+                                android.widget.RelativeLayout{b5ae978 V.E...C.. .......D 432,0-648,240 #7f0902a7 app:id/my_order_get}
+                                  android.widget.LinearLayout{3a82851 V.E...... ........ 0,0-216,240}
+                                    android.widget.ImageView{a8808b6 V.ED..... ........ 63,30-153,120}
+                                    android.widget.TextView{15759b7 V.ED..... ........ 45,144-171,201}
+                                  com.nahuo.library.controls.CircleTextView{a112524 V.E...... .......D 132,18-186,72 #7f0902a8 app:id/circle_order_text2}
+                                    android.widget.RelativeLayout{75f88d V.E...... ......ID 0,0-54,54}
+                                      android.widget.TextView{e03fa42 V.ED..... ........ 18,6-35,47 #7f0902dd app:id/text}
+                                android.widget.LinearLayout{efdda53 V.E...C.. ........ 648,0-864,240 #7f0902a9 app:id/my_order_overed}
+                                  android.widget.ImageView{9cd6f90 V.ED..... ........ 63,30-153,120}
+                                  android.widget.TextView{dd69089 V.ED..... ........ 45,144-171,201}
+                                android.widget.LinearLayout{75b788e V.E...C.. ........ 864,0-1080,240 #7f0902aa app:id/my_order_cancel}
+                                  android.widget.ImageView{c81c8af V.ED..... ........ 63,30-153,120}
+                                  android.widget.TextView{4c1f4bc V.ED..... ........ 45,144-171,201}
+                              android.view.View{48eac45 V.ED..... ........ 0,1092-1080,1140}
+                              android.widget.RelativeLayout{b9a8f9a V.E...C.. ......ID 0,1140-1080,1284 #7f0902ab app:id/item_myyft}
+                                android.widget.ImageView{3ac40cb G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{417a0a8 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{af2c7c1 V.ED..... ........ 724,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{2820b66 V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{7bc1ea7 V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.RelativeLayout{89a1f54 V.E...C.. ......ID 0,1284-1080,1428 #7f0902ac app:id/item_mypostfee}
+                                android.widget.ImageView{e231efd G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{d1377f2 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{701fe43 V.ED..... ........ 640,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{223dcc0 V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{307adf9 V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.RelativeLayout{8dd213e V.E...C.. ......ID 0,1428-1080,1572 #7f0902ad app:id/item_phqd}
+                                android.widget.ImageView{a3c3b9f G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{1ca04ec V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{b0c30b5 V.ED..... ........ 724,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{c06134a V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{db2f2bb V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.RelativeLayout{2c883d8 V.E...C.. ......ID 0,1572-1080,1716 #7f0902ae app:id/item_bgqd}
+                                android.widget.ImageView{89c2331 G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{61a1a16 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{13ff97 V.ED..... ........ 640,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{62e0584 V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{f5ec16d V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.view.View{195c1a2 V.ED..... ........ 0,1716-1080,1764}
+                              android.widget.RelativeLayout{30efe33 V.E...C.. ......ID 0,1764-1080,1908 #7f0902af app:id/item_mytuan}
+                                android.widget.ImageView{d47f5f0 G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{c330769 V.ED..... ........ 48,0-174,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{23255ee V.ED..... ........ 766,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{9b14a8f V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{ece811c V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.RelativeLayout{ebb125 V.E...C.. ......ID 0,1908-1080,2052 #7f0902b0 app:id/item_myrenzheng}
+                                android.widget.ImageView{bf1e2fa G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{8200ab V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{2d09308 V.ED..... ........ 850,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{fcb3aa1 V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{eeb34c6 V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.view.View{b5dfc87 V.ED..... ........ 0,2052-1080,2100}
+                              android.widget.RelativeLayout{15fd7b4 V.E...C.. ......ID 0,2100-1080,2244 #7f0902b1 app:id/item_setting_security}
+                                android.widget.ImageView{2bfdfdd G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{3d5d752 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{513da23 V.ED..... ......ID 976,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{ffcbb20 V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{a5f9cd9 G.ED..... ......ID 0,0-0,0 #7f090501 app:id/view_btm_line}
+                              android.view.View{556169e V.ED..... ........ 0,2244-1080,2292}
+                              android.widget.RelativeLayout{cbff57f V.E...C.. ......ID 0,2292-1080,2436 #7f0902b2 app:id/item_myhelp}
+                                android.widget.ImageView{9c2694c G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{a42d95 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{208feaa V.ED..... ......ID 976,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{ce86a9b V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{e52ce38 V.ED..... ......ID 48,142-1032,144 #7f090501 app:id/view_btm_line}
+                              android.widget.RelativeLayout{b670e11 V.E...C.. ......ID 0,2436-1080,2580 #7f0902b3 app:id/item_about}
+                                android.widget.ImageView{3505b76 G.ED..... ......I. 0,0-0,0 #7f0904fe app:id/iv_left_icon}
+                                android.widget.TextView{8591577 V.ED..... ........ 48,0-216,144 #7f0904ff app:id/tv_left_text}
+                                android.widget.TextView{38295e4 V.ED..... ......ID 976,0-976,144 #7f090500 app:id/tv_right_text}
+                                android.widget.ImageView{a9d7a4d V.ED..... ........ 1000,0-1032,144 #7f09023f app:id/iv_right_icon}
+                                android.view.View{4deb902 G.ED..... ......ID 0,0-0,0 #7f090501 app:id/view_btm_line}
+    Looper (main, tid 1) {8bf9213}
+      Message 0: { when=+1s664ms what=0 target=com.nahuo.quicksale.customview.ViewFlow$2 }
+      (Total messages: 1, polling=false, quitting=false)

@@ -1,0 +1,32 @@
+<resources
+    >
+
+    <string name="app_name">天天拼货团</string>
+    <string name="dialog_title">提示</string>
+    <string name="dialog_network_content">您的设备未连上网络，是否需要设置网络？</string>
+    <string name="dialog_btn_goto_network_setting">设置网络</string>
+    <string name="dialog_btn_close">关闭</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">点击加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
+
+    <!-- 自动更新 -->
+    <string name="download_failure">下载最新版本失败！</string>
+    <string name="is_latest_version_label">当前已是最新版本，祝您使用愉快。</string>
+    <string name="latest_version_title">程序需要更新啦！</string>
+    <string name="update_latest_version_title">最新版本(%1$s)正在下载更新&#8230;</string>
+    <string name="update_msg">检测到有新版本程序更新啦:\n版本：{0}\n\n更新内容：\n{1}</string>
+    <string name="later_on_wifi">在有wifi的情况下自动更新</string>
+    <string name="later_update_tip">正在下载更新&#8230;</string>
+    <string name="update">立即更新！</string>
+    <string name="ignore">下次提示</string>
+    <string name="download_progress">正在更新...%d%%</string>
+    <string name="forced_update_tip"><Data><![CDATA[<font color="#FF0000"><b>请您务必更新此版本，否则无法使用^_^</b></font>]]></Data></string>
+
+    <string name="bentuanyudao">本团介绍</string>
+
+</resources>

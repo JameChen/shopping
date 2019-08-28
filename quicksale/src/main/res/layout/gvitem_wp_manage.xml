@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@android:id/icon1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@android:string/ok"
+        android:scaleType="centerCrop" />
+
+    <com.nahuo.library.controls.CircleTextView
+        android:id="@+id/tv_count"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@android:id/icon1"
+        android:layout_marginLeft="-22dp"
+        android:layout_toRightOf="@android:id/icon1"
+        app:circlebackground="@color/light_red"
+        app:textColor="@color/white"
+        app:textSize="12" />
+
+    <TextView
+        android:id="@android:id/text1"
+        style="@style/Text.M.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@android:id/icon1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:textColor="#333333" />
+
+</RelativeLayout>

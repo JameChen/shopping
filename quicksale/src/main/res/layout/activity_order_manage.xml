@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/iv_back"
+            style="@style/button_titlebar_left_style"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_transparent_gray"
+            android:paddingLeft="10dp"
+            android:text="@string/titlebar_btnBack" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toRightOf="@+id/iv_back"
+            android:hint="请输入关键词"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/pn_message_left_white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rg_height"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:text="全部" />
+
+            <RadioButton
+                android:id="@+id/rb_wait_pay"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="待支付" />
+
+            <RadioButton
+                android:id="@+id/rb_wait_ship"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="待发货" />
+
+            <RadioButton
+                android:id="@+id/rb_shiped"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="待收货" />
+
+            <RadioButton
+                android:id="@+id/rb_done"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="@string/me_finish" />
+
+            <RadioButton
+                android:id="@+id/rb_refund"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="售后单"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_cancel"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="关闭/取消" />
+
+            <RadioButton
+                android:id="@+id/rb_close"
+                style="@style/rb_order_list"
+                android:onClick="onClick"
+                android:text="已关闭"
+                android:visibility="gone" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray" />
+
+    <include
+        android:id="@+id/layout_order_notify"
+        layout="@layout/order_head"
+        android:visibility="gone"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EBEBF1" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂时没有相关订单哦~"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/inputArea"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/lightgray"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/txtTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="运费明细>"
+                    android:textColor="#2255EE" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</com.nahuo.widget.TouchLinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 持证姓名 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/card_user_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/auth_card_name" />
+
+            <EditText
+                android:id="@+id/et_user_name"
+                style="@style/edittext_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:hint="@string/auth_card_name_hint"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/hint" />
+        </LinearLayout>
+        <!-- 证件号码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/card_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/auth_card_number" />
+
+            <EditText
+                android:id="@+id/et_card_number"
+                style="@style/edittext_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:hint="@string/auth_card_name_hint"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/hint" />
+        </LinearLayout>
+        <!-- 证件类型
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/card_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/auth_card_type" />
+
+            <Spinner
+                android:id="@+id/sp_card_type"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_weight="0.7"
+                style="@style/Widget.WP.Spinner"
+                />
+
+            <TextView
+                android:id="@+id/tv_card_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/hint" />
+        </LinearLayout>-->
+        <!-- 验证状态 -->
+
+        <LinearLayout
+            android:id="@+id/layout_card_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/card_state"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/auth_card_state" />
+
+            <TextView
+                android:id="@+id/tv_card_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/hint" />
+        </LinearLayout>
+        <!-- 证件照片 -->
+
+        <LinearLayout
+            android:id="@+id/layout_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <!-- 正面照 -->
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/auth_front_pic" />
+
+                <ImageView
+                    android:id="@+id/img_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rectangle_lightgray"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+            <!-- 反面照 -->
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/auth_back_pic" />
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rectangle_lightgray"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+            <!-- 手持证件照 -->
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_hand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="@string/auth_hand_pic" />
+
+                <ImageView
+                    android:id="@+id/img_hand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_rectangle_lightgray"
+                    android:onClick="onClick"
+                    android:scaleType="centerCrop" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_long"
+            android:layout_marginTop="50dp"
+            android:onClick="onClick"
+            android:text="@string/btn_submit" />
+        <!-- 一些文字说明，比如没通过的原因等 -->
+
+        <TextView
+            android:id="@+id/bottom_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/app_name" />
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

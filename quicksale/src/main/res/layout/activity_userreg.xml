@@ -1,0 +1,345 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".UserRegActivity">
+        <!--
+        <LinearLayout
+            android:id="@+id/userreg_stepIconView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/userreg_icon_step1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="30dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/step1" />
+
+                <ImageView
+                    android:id="@+id/userreg_next_toStep2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/next_unok" />
+
+                <ImageView
+                    android:id="@+id/userreg_icon_step2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/step2_unok" />
+
+                <ImageView
+                    android:id="@+id/userreg_next_toStep3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/next_unok" />
+
+                <ImageView
+                    android:id="@+id/userreg_icon_step3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="30dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/step3_unok" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/userreg_tvStep1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp"
+                    android:text="@string/userreg_step1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_content_default" />
+
+                <TextView
+                    android:id="@+id/userreg_tvStep2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/userreg_step2"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/fontsize_content_default" />
+
+                <TextView
+                    android:id="@+id/userreg_tvStep3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    android:text="@string/userreg_step3"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lightgray" />
+        </LinearLayout>
+             -->
+        <LinearLayout
+            android:id="@+id/userreg_firstView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/userreg_edtPhoneNo"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:hint="手机号码"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:paddingLeft="6dp"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/userreg_ckbAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:button="@drawable/checkbox_default_bg"
+                    android:checked="true"
+                    android:text="@string/userreg_ckbAgree_text"
+                    android:textSize="@dimen/fontsize_content_default" />
+
+                <TextView
+                    android:id="@+id/userreg_tvAgreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:clickable="true"
+                    android:text="@string/userreg_tvAgreement_text"
+                    android:textColor="@drawable/linkbutton"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/userreg_btnNext1"
+                style="@style/button_red_style_1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/userreg_button_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userreg_secondView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- android:visibility="gone" -->
+
+            <TextView
+                android:id="@+id/userreg_tvSmsKeyDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/userreg_tvSmsKeyDesc_text"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.nahuo.library.controls.EditTextEx
+                    android:id="@+id/userreg_edtSmsKey"
+                    style="@style/edittext_one_style"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3.5"
+                    android:drawableRight="@drawable/txt_clear_bg"
+                    android:hint="@string/userreg_edtSmsKey_hint"
+                    android:imeActionLabel="@string/userreg_button_next"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="68dp"
+                    android:singleLine="true"
+                    app:ex_title="@string/userreg_edtSmsKey_title" />
+
+                <Button
+                    android:id="@+id/userreg_btnGetSmsKey"
+                    style="@style/button_red_style_1"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="-4dp"
+                    android:layout_weight="2"
+                    android:text="@string/userreg_btnGetSmsKey_text"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/userreg_btnNext2"
+                style="@style/button_red_style_1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/userreg_button_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userreg_thirdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/userreg_edtUserName"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:imeOptions="actionNext"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                app:ex_title="@string/userreg_edtUsername_title" />
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/userreg_edtPassword"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:imeActionLabel="@string/userreg_button_next"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                app:ex_title="@string/userreg_edtPassword_title" />
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/userreg_edtsenPassword"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:imeActionLabel="@string/userreg_button_next"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                app:ex_title="@string/userreg_edtsenPassword_title" />
+
+            <Button
+                android:id="@+id/userreg_btnNext3"
+                style="@style/button_red_style_1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/userreg_button_next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userreg_fourthView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/userreg_edtShopName"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:imeOptions="actionNext"
+                android:paddingLeft="85dp"
+                android:singleLine="true"
+                app:ex_title="@string/userreg_edtShopName_title" />
+
+            <Button
+                android:id="@+id/userreg_btnUserReg"
+                style="@style/button_red_style_1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="@string/userreg_button_reg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userreg_finishView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/userreg_regSuccess_text"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <Button
+                android:id="@+id/userreg_btnGotoContact"
+                style="@style/button_gotoshop_style"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:text="@string/userreg_btnGotoContact_text" />
+
+            <Button
+                android:id="@+id/userreg_btnGotoHome"
+                style="@style/button_gotoshop_style"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:text="@string/userreg_btnGotoHome_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontsize_content_small" />
+
+        </LinearLayout>
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

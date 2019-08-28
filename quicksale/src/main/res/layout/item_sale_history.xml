@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="3dp"
+    android:paddingTop="3dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/textView_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/gray_92"
+        android:textSize="13sp"
+        android:text="dasdsa"
+        android:gravity="left|center"/>
+
+    <TextView
+        android:id="@+id/textView_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看"
+        android:visibility="gone"
+        android:drawableRight="@drawable/double_jian"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:textSize="13sp"
+        />
+</LinearLayout>

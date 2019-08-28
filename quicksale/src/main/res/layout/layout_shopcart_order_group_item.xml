@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EFF5"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/lladd"
+        layout="@layout/layout_time_left"
+        android:visibility="gone"/>
+    <View
+        android:id="@+id/line"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+
+        <CheckBox
+            android:id="@android:id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/mCheckBox"
+        />
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@android:string/ok"
+            android:src="@drawable/dp_red" />
+
+        <TextView
+            android:id="@android:id/title"
+            style="@style/Text.M.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/lightblack"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+</LinearLayout>

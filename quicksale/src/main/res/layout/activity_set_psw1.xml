@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <!-- 支付密码 -->
+
+        <EditText
+            android:id="@+id/first_psw"
+            style="@style/edittext_one_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+
+            android:hint="支付密码"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+        <!-- 确认支付密码 -->
+
+        <EditText
+            android:id="@+id/second_psw"
+            style="@style/edittext_one_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/edittext_vertical_spacing"
+            android:hint="@string/hint_second_psw"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yft_et_confirm_paypsw"
+            android:layout_marginTop="10dp"
+            android:gravity="center|left"
+            android:text="支付密码是为了保障您账户里的余额资金安全，用于余额支出"
+            android:textAppearance="@style/myTextAppearance.hint.micro"
+            android:textColor="#e6e60808" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_long"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"
+            android:text="@string/btn_confirm" />
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

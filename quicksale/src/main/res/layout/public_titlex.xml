@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:orientation="horizontal"
+       >
+
+        <ImageView
+            android:id="@+id/iv_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/category_nor"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="天天拼货团"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/circle_car_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/iv_chat_txt"
+                style="@style/title_iv"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/pin_tittle_mess_margin"
+                android:layout_centerInParent="true"
+                android:onClick="onClick"
+                android:src="@drawable/pn_message_right_white" />
+
+            <ImageView
+                android:id="@+id/iv_shopping_cart"
+                android:layout_width="@dimen/titlebar_icon_width"
+                android:layout_height="@dimen/titlebar_icon_height"
+                android:layout_alignParentRight="true"
+                android:onClick="onClick"
+                android:padding="@dimen/pin_huo_title_icon_padding"
+                android:layout_centerInParent="true"
+                android:src="@drawable/toolbar_cart"
+                android:visibility="invisible" />
+
+            <com.nahuo.library.controls.CircleTextView
+                android:id="@+id/circle_car_text"
+                android:layout_width="@dimen/circle_view_width_height"
+                android:layout_height="@dimen/circle_view_width_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/pin_tittle_margin"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:background="@color/light_red"
+                app:textColor="@color/white"
+                app:textSize="10" />
+            <ImageView
+                android:id="@+id/iv_all_search"
+                style="@style/title_iv"
+                android:layout_toLeftOf="@+id/iv_chat_txt"
+                android:paddingRight="@dimen/pin_tittle_margin"
+                android:onClick="onClick"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pn_message_left_white" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

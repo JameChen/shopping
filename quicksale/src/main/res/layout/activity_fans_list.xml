@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/lv_fans_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_share_shop"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="true" />
+
+    <Button
+        android:id="@+id/btn_share_shop"
+        style="@style/button_orange_no_cornors"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:text="分享" />
+
+</com.nahuo.widget.TouchRelativeLayout>

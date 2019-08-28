@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical" >
+
+    <com.nahuo.widget.TouchRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/layout_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_detail_line_spacing"
+            android:background="@color/white"
+            android:padding="12dp" >
+
+            <!-- 分享给微信朋友 -->
+
+            <TextView
+                android:id="@+id/tv_share_to_wx_friend"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_share_wp_to"
+                android:clickable="true"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/share_wx_frd"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/wx_friend" />
+            <!-- 分享微信朋友圈 -->
+
+            <TextView
+                android:id="@+id/tv_share_to_friend_circle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_share_wp_to"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/tv_share_to_wx_friend"
+                android:clickable="true"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/share_wx_moment"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/wx_friend_circle" />
+            <!-- 新浪微博 -->
+
+            <TextView
+                android:id="@+id/tv_share_to_sina_circle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_share_wp_to"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/tv_share_to_friend_circle"
+                android:clickable="true"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/share_wb"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/sina_circle" />
+            <!-- QQ -->
+
+            <TextView
+                android:id="@+id/tv_share_to_qq_circle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_share_to_sina_circle"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/share_qq"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/qq_circle" />
+            <!-- QQ空间 -->
+
+            <TextView
+                android:id="@+id/tv_share_to_qzone_circle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_share_to_sina_circle"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tv_share_to_qq_circle"
+                android:clickable="true"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/share_qzone"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/qzone_circle" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_first"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/copy_url"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <ImageView
+                    android:id="@+id/copy_url_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/copy_url_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/copy_url_img"
+                    android:text="@string/share_url"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/lightgray" />
+
+            <!-- 分享微铺安装链接 -->
+
+            <RelativeLayout
+                android:id="@+id/share_friend"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/share_friend_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/share_to_friend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/share_friend_img"
+                    android:text="@string/share_install_url"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/lightgray" />
+
+            <RelativeLayout
+                android:id="@+id/share_bank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <ImageView
+                    android:id="@+id/share_bank_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/share_bank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/share_bank_img"
+                    android:text="@string/share_bank"
+                    android:textSize="@dimen/fontsize_content_default" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="450dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_service"
+                android:textColor="@color/gray" />
+
+            <Button
+                android:id="@+id/share_nahuo_qq_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/qq_talk"
+                android:onClick="onClick"
+                android:text="@string/qq_talk"
+                android:textColor="#1A649D" />
+        </LinearLayout>
+    </com.nahuo.widget.TouchRelativeLayout>
+
+</ScrollView>

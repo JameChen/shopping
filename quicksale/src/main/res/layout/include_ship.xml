@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_margin"
+    android:orientation="vertical" >
+
+    <com.nahuo.library.controls.NoScrollListView
+        android:id="@+id/lst_order_info_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0px"
+        android:listSelector="@color/transparent" />
+
+    <TextView
+        android:id="@+id/txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:textColor="@color/black_overlay" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="4dp" >
+
+        <TextView
+            android:id="@+id/txt_express"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black_overlay" />
+
+        <Button
+            android:id="@+id/btn_edit_express"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:background="@drawable/address_edt"
+            android:visibility="gone"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/ext_express_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_overlay" />
+
+    <TextView
+        android:id="@+id/ext_express_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_overlay" />
+
+    <View
+        style="@style/line_view"
+        android:layout_marginTop="@dimen/activity_margin" />
+
+</LinearLayout>

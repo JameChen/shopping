@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/iv_back"
+            style="@style/button_titlebar_left_style"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_transparent_gray"
+            android:onClick="onClick"
+            android:paddingLeft="10dp"
+            android:text="@string/titlebar_btnBack" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="天天拼货团"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/layout_switch_bar"
+                android:layout_width="168dp"
+                android:layout_height="32dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/rd_pin_huo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_cb_left"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="正在开拼"
+                    android:textColor="@drawable/selector_cb_text"
+                    android:textSize="13sp"/>
+
+                <RadioButton
+                    android:id="@+id/rd_pin_huo_overed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_cb_right"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="往期回顾"
+                    android:textColor="@drawable/selector_cb_text"
+                    android:textSize="13sp"/>
+            </RadioGroup>
+            <TextView
+                android:id="@+id/tv_forecase"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/layout_switch_bar"
+                android:text="拼货预告"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_shopping_cart"
+            android:onClick="onClick"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/toolbar_cart"
+            android:padding="16dp"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_pin_huo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

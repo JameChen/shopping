@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_white_corner_bg"
+    android:orientation="vertical" >
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+        <TextView 
+            android:id="@+id/dlg_fahuo_post_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快递"
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+         <Button android:id="@+id/btn_dlg_fahuo_add"
+             android:layout_width="28dp"
+             android:layout_height="28dp"
+             android:layout_alignParentRight="true"
+             android:background="@drawable/add_blue"
+             android:layout_marginLeft="10dp"
+             android:layout_centerVertical="true"
+             />
+         <Spinner 
+             android:id="@+id/spinner_express_company"
+             android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:layout_toLeftOf="@id/btn_dlg_fahuo_add"
+                android:layout_toRightOf="@id/dlg_fahuo_post_label"/>
+         <EditText
+                android:id="@+id/et_dlg_fahuo_post_name"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_toRightOf="@id/dlg_fahuo_post_label"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:layout_toLeftOf="@id/btn_dlg_fahuo_add"
+                android:padding="5dp"
+                android:maxLength="12"
+                android:hint="输入快递公司名"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+        <TextView 
+            android:id="@+id/dlg_fahuo_post_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单号"
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+                android:id="@+id/et_dlg_fahuo_post_code"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_toRightOf="@id/dlg_fahuo_post_label1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:padding="5dp"
+                android:maxLength="30"
+                android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/contact_msg_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_cancle"
+            style="@style/button_blue_text_style"/>
+
+        <Button
+            android:id="@+id/contact_msg_set"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_confirm"
+            style="@style/button_blue_text_style"/>
+    </LinearLayout>
+</LinearLayout>

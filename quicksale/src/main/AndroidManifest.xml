@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nahuo.quicksale"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- IM -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- jpush -->
+    <permission
+        android:name="com.nahuo.quicksale.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- 支持所有屏幕分辨率的设备 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 推送需求的权限 -->
+    <uses-permission android:name="com.nahuo.quicksale.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 振动器权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 获取当前activity名字 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 写入外部存储卡权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 调用摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 以下是ShareSDK用到的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <!-- 下载完成不在通知栏显示 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 获取logcat日志 -->
+    <application
+        android:name=".app.BWApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:allowBackup">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="com.luck.picture.lib.Pic_File_Provider"
+            android:authorities="${applicationId}2.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths2" />
+        </provider>
+
+        <receiver android:name=".broadcast.NahuoBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤腾讯qq分享相关❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101258637" />
+                <!-- tencent[appid] -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤极光jpush相关❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+
+
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.nahuo.quicksale" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.nahuo.quicksale.DataProvider"
+            android:exported="true" />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.nahuo.quicksale" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.nahuo.quicksale" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- User defined.  For red_count_bg only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".broadcast.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <category android:name="com.nahuo.quicksale" />
+            </intent-filter>
+        </receiver>
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="android-default" />
+        <!-- </>值来自开发者平台取得的AppKey -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="b9937e67aad118517232fc98" />
+        <!-- 调测试极光账号 -->
+         <!--<meta-data-->
+         <!--android:name="JPUSH_APPKEY"-->
+         <!--android:value="d9d1a442d5d8b886d194eefa" />-->
+
+
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤单元测试❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+        <uses-library android:name="android.test.runner" />
+
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤环信keyIM❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+        <!-- 环信key正版 -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="nahuo-wp#nahuoim" />
+        <!-- 环信key测试 -->
+        <!--
+            <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1432180413061254#kefuchannelapp53898" />
+        -->
+        <!-- 开机自启动服务 -->
+        <receiver android:name=".hyphenate.receiver.StartServiceReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <!-- 声明sdk所需的service -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- <service -->
+        <!-- android:name="com.easemob.chat.EMChatService" -->
+        <!-- android:exported="true" /> -->
+        <!-- <service -->
+        <!-- android:name="com.easemob.chat.EMJobService" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> -->
+
+
+        <!-- &lt;!&ndash; 声明sdk所需的receiver &ndash;&gt; -->
+        <!-- <receiver android:name="com.easemob.chat.EMMonitorReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+
+
+        <!-- <data android:scheme="package" /> -->
+        <!-- </intent-filter> -->
+        <!-- &lt;!&ndash; 可选filter &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤百度统计相关❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="4b9c24eea1" />
+        <!--
+             96f13e52aa 正式环境
+			ff43ccbed0  测试环境 发布时一定要改
+        -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="test_master" />
+        <!-- android_master, test_master -->
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+
+        <!-- 高德地图key debug -->
+        <!-- <meta-data -->
+        <!-- android:name="com.amap.api.v2.apikey" -->
+        <!-- android:value="3075c5527e97a49058ba5e80b18368ea" /> -->
+        <!-- 高德地图key 正版 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="75106b5106d2c8122fcee2913b57505f" />
+        <!-- ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤自定义❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤ -->
+
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Start_AppTheme">
+            <intent-filter>
+                <data
+                    android:host="nahuo.com"
+                    android:scheme="quicksale" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize|keyboard" -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- android:theme="@style/LoginListViewDropDownTheme" -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" /> -->
+        <activity
+            android:name=".activity.MainNewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Precipitate_AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".GuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_guide"
+            android:screenOrientation="portrait"
+            android:theme="@style/Precipitate_AppTheme" />
+        <activity
+            android:name=".UserRegActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_userreg"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ForgotPwdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_forgotpwd"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ItemImageViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_uploaditem"
+            android:theme="@style/AppFullScreenTheme" />
+        <!-- <activity -->
+        <!-- android:name=".AllItemsActivity2" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/title_activity_all_item" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <activity
+            android:name=".ShareActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_share"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".ReceiveAccountActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/title_activity_receiveaccount" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <activity
+            android:name=".FastCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fast_camera"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ItemPreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.ItemPreview1Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".WPAgreeUseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".yft.YFTActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".yft.YFTActivity1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SelectItemGroupActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".QRCodeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".TradeLogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".TradeLogSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MapActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
+            android:name=".MyIncomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ChangeSignatureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".WithdrawLogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SecuritySettingsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".IdentityAuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".IdentityBankActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".MeSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ContactActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/me_my_link"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SetExpressFeeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/me_my_link"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".AddressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/me_my_link"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ChangePswActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ForgetPswActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SetPswActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SetPswActivity1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SetSafeQuestionsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BindCardAcivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BindCard2Acivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BaseInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.CommonSearchItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BGQDActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ShipLogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".WithdrawActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BindPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".AnswerSafeQuestionsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".HandleAddressActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SelectBankActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <receiver android:name=".broadcast.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ContactQQActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ContactWXActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".BaseSetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ItemDetailsActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".PicGalleryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.ColorPicGalleryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".im.ChatMainActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <activity
+            android:name=".hyphenate.ui.RecorderVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".hyphenate.ui.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- <activity -->
+        <!-- android:name=".im.ShowNormalFileActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.ChatActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.ShowVideoActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.AlertDialogActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.ShowBigImage" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.MaillistActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <!-- <activity -->
+        <!-- android:name=".im.NewFriendsMsgActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <activity
+            android:name=".im.ImSettingsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".im.BlacklistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".im.AddContactActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|adjustPan" /> -->
+        <activity
+            android:name=".ShopSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SharePopWindow"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_all_item"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_dialog_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.nahuo.Dialog.ShareNewPopWindow"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_all_item"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_dialog_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DetailsSharePopWindow"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_all_item"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_dialog_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DetailsSingleSharePopWindow"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_all_item"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_dialog_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DetailsChangSharePopWindow"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_all_item"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_dialog_theme"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".OrderActivityListActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".OrderManageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".OrderMutablePayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".NewsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".FreightBillActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="运费账单"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".BillDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="账单详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TradingDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="交易详情"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="false"/>
+        <activity
+            android:name=".NewsDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BindOrRegisterUserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BindThirdUserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".ChangeShopBannerActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".RecruitAgentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+        <!-- 自定义的contextmenu -->
+        <!-- <activity -->
+        <!-- android:name=".im.MyContextMenu" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/MyDialogStyle" /> -->
+        <activity
+            android:name=".ShopCreditActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetPayPswFragment"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name=".ShopCartActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/AppNoTitleTheme1"-->
+            <!--android:windowSoftInputMode="stateHidden" />-->
+        <activity
+            android:name=".activity.ShopCartNewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- <activity -->
+        <!-- android:name=".activity.ShopCartMainNewActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="stateHidden" /> -->
+        <activity
+            android:name=".SubmitOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".AddressActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HandleAddressActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <!-- <activity -->
+        <!-- android:name=".im.MoreRecordActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".WhyRecruitAgentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RefundByBuyerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name=".RefundBySellerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".RefundBySupperActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".orderdetail.GetSellOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".orderdetail.SendGoodsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".orderdetail.GetBuyOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".orderdetail.AgentOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".orderdetail.ChildOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".orderdetail.PickingBillActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LeaveMsgActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".orderdetail.ShipActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--<activity-->
+            <!--android:name=".SubmitOrderResultActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:screenOrientation="portrait" />-->
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- alipay sdk end -->
+        <activity
+            android:name=".ShipItemActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PHQDActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
+        <!--<activity-->
+            <!--android:name=".ShareItemActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <activity
+            android:name=".PayForMeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".PayForOtherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".SignUpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
+            android:name=".ScanLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".PinHuoForecaseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--<activity-->
+            <!--android:name=".Sq_meAcivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/AppNoTitleTheme1" />-->
+
+        <!-- 我的优惠券 -->
+        <activity
+            android:name=".CouponActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/my_coupon_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme" />
+
+        <!-- 我的收藏 -->
+        <!-- android:theme="@style/StyledIndicators" -->
+        <activity
+            android:name=".MyMainCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Topic.MyTopicAndActivityActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Topic.PostDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Topic.SubmitActivityAndTopicActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Topic.TopicPageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".PinHuoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <!-- <activity -->
+        <!-- android:name=".PinHuoNewActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="adjustNothing|stateHidden" /> -->
+        <!-- <activity -->
+        <!-- android:name=".PinHuoNew2Activity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" -->
+        <!-- android:windowSoftInputMode="adjustNothing|stateHidden" /> -->
+        <activity
+            android:name=".PinHuoNewOveredActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <!-- <activity -->
+        <!-- android:name=".EccShowActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="adjustNothing|stateHidden" /> -->
+        <activity
+            android:name=".activity.PinHuoDetailListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.StallReasonListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".CommonSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
+            android:name=".BaseInfoSecondActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
+            android:name=".ScoreListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
+            android:name=".activity.PaySucessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".activity.VideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme" />
+        <activity
+            android:name=".activity.VideoActivity1"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleFullTheme" />
+        <activity
+            android:name=".activity.FocusActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme" />
+        <activity
+            android:name=".activity.BankAuthActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme" />
+        <activity
+            android:name=".activity.MarketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme" />
+        <activity
+            android:name=".activity.SoonLeagueActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.CustomerServiceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme" />
+        <activity
+            android:name=".activity.PackageListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".activity.SortActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/AppNoTitleTheme1" /> -->
+        <activity
+            android:name=".activity.SortReasonActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.ShopItemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".activity.OrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".activity.LogisticsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".activity.AfterSaleListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+        <activity
+            android:name=".activity.FogetPayPassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5abb3928a40fa31d580000d0" /> <!-- 友盟 Appkey 自己应用注册申请来的 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- 渠道号，多渠道这里使用了占位符$ -->
+
+        <activity
+            android:name=".hyphenate.ui.ConversationListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".hyphenate.ui.ChatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name=".hyphenate.ui.ContextMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name=".hyphenate.ui.EaseShowVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".hyphenate.ui.EaseShowBigImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".hyphenate.ui.EaseShowNormalFileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".hyphenate.ui.EaseBaiduMapActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.PackageReceivedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppNoTitleTheme1"></activity>
+
+
+        <!-- ..............................直播................................... -->
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 消息收发辅助service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <!-- 00000000000 -->
+
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.push.TCPublishSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.play.TCLivePlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.play.TCVodPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.push.camera.TCLivePublisherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"
+            />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.userinfo.TCEditUseInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.videopublish.TCVideoPublisherActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.push.screen.TCScreenRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/RecordActivityTheme"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        >
+        <activity
+            android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="com.nahuo.live.xiaozhibo.common.utils.TcFileProvider"
+            android:authorities="com.tencent.qcloud.xiaozhibo.nahuo.tcfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <service
+            android:name="com.nahuo.live.xiaozhibo.push.screen.TCScreenRecordService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <activity
+            android:name="com.nahuo.live.xiaozhibo.mainui.LiveListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+        <service
+            android:name="com.nahuo.live.xiaozhibo.permission.FloatingVideoService"
+            />
+
+    </application>
+
+</manifest>

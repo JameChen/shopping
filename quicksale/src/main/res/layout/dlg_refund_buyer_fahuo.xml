@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_white_corner_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/draw_top_corner_black"
+        android:gravity="center"
+        android:text="买家退款发货"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="快递："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_buyer_express_name"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:background="@drawable/single_bg"
+            android:hint="请填写快递单号"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="单号："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_buyer_express_code"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            
+            android:layout_weight="7"
+            android:background="@drawable/single_bg"
+            android:hint="多个单号可用逗号隔开"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="备注："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_buyer_express_desc"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="7"
+            android:background="@drawable/single_bg"
+            android:hint="备注信息"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sure_cancle_buyer_fahuo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_cancle"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/sure_confirm_buyer_fahuo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="确定"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

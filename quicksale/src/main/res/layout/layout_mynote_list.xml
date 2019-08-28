@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <!-- 下拉刷新和加载更多 -->
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/recommend_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:ptr="http://schemas.android.com/apk/res/com.nahuo.application"
+        android:cacheColorHint="@android:color/transparent"
+        android:columnWidth="140dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="true"
+        android:divider="@null"
+        android:dividerHeight="0px"
+        android:stretchMode="columnWidth" />
+
+
+</LinearLayout>

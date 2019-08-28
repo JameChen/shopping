@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="good_size_default">
+        <item>均码</item>
+        <item>XXS</item>
+        <item>XS</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+    </string-array>
+    <string-array name="good_color_default">
+        <item>如图</item>
+        <item>黑色</item>
+        <item>白色</item>
+        <item>灰色</item>
+        <item>绿色</item>
+    </string-array>
+    <string-array name="wp_manage_item_texts">
+        <item>我的订单</item>
+        <item>代理管理</item>
+        <item>我的收入</item>
+        <item>配货单</item>
+    </string-array>
+
+    <integer-array name="wp_manage_item_icons">
+        <item>@drawable/wp_mng_order</item>
+        <item>@drawable/wp_mng_agent</item>
+        <item>@drawable/wp_mng_income</item>
+        <item>@drawable/wp_mng_ship</item>
+    </integer-array>
+
+    <string-array name="chat_menu_texts">
+
+        <item>查看聊天记录</item>
+        <item>@string/clear_msg</item>
+    </string-array>
+    <string-array name="menu_upload_image_texts">
+        <item>@string/uploaditem_pw_btnTakePhoto</item>
+        <item>@string/uploaditem_pw_btnFromAlbum</item>
+    </string-array>
+    <string-array name="photo_menu1_texts">
+        <item>@string/camera_Lookup</item>
+        <item>@string/camera_Delete</item>
+    </string-array>
+    <string-array name="handle_image_texts">
+        <item>@string/uploaditem_pw_btnLookup</item>
+        <item>@string/uploaditem_pw_btnDelete</item>
+    </string-array>
+    <string-array name="menu_qrcode_texts">
+        <item>@string/qrcode_pw_save_text</item>
+        <item>@string/qrcode_pw_share_text</item>
+    </string-array>
+    <string-array name="menu_receive_account_texts">
+        <item>@string/uploaditem_pw_btnDelete</item>
+        <item>@string/uploaditem_pw_btnLookup</item>
+    </string-array>
+    <string-array name="address_click_items">
+        <item>@string/address_set_default</item>
+        <item>@string/edit</item>
+        <item>@string/delete</item>
+    </string-array>
+    <string-array name="time_bucket_texts">
+        <item>全部时间段</item>
+        <item>最近三天</item>
+        <item>最近七天</item>
+        <item>最近一个月</item>
+        <item>一个月之前</item>
+    </string-array>
+</resources>

@@ -1,0 +1,362 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/uploaditem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:scrollbarStyle="outsideOverlay"
+        tools:context=".UploadItemActivity" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/submit_activity_and_topic_title"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:gravity="left"
+                        android:hint="标题30字内"
+                        android:paddingRight="30dp"
+                        android:textColorHint="#aaaaaa"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/btn_set_mode_voice"
+                        android:layout_width="38dp"
+                        android:layout_height="46dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="13dp"
+                        android:visibility="gone"
+                        android:src="@drawable/microphone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/line_height_mid"
+                    android:background="@color/line_gray" />
+
+                <EditText
+                    android:id="@+id/submit_activity_and_topic_content"
+                    style="@style/edittext_noborder_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="top"
+                    android:hint="帖子内容(50字以上)..."
+                    android:minHeight="70dp"
+                    android:onClick="onClick"
+                    android:textColorHint="#aaaaaa"
+                    android:textSize="14sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp" >
+
+                    <com.nahuo.library.dynamicgrid.DynamicGridView
+                        android:id="@+id/submit_activity_and_topic_gvUploadImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:horizontalSpacing="3dp"
+                        android:listSelector="@null"
+                        android:numColumns="5"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:scrollingCache="true"
+                        android:verticalSpacing="3dp" />
+
+                    <Button
+                        android:id="@+id/submit_activity_and_topic_btnAddImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:drawablePadding="3dp"
+                        android:drawableTop="@drawable/add"
+                        android:text="添加照片" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_height_mid"
+                android:background="@color/line_gray" />
+
+            <TextView
+                android:id="@+id/submit_activity_view_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="第一张为活动封面图"
+                android:textColor="@color/lightgray" />
+
+            <TableLayout
+                android:id="@+id/submit_activity_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <!-- 活动分类 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:weightSum="10" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/hdfl" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="活动分类"
+                        android:textSize="@dimen/fontsize_upload_item_left" />
+
+                    <Spinner
+                        android:id="@+id/submit_activity_type"
+                        style="@style/Widget.WP.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="6"
+                        android:gravity="right|center_vertical"
+                        android:hint="招募代理"
+                        android:inputType="numberDecimal"
+                        android:paddingRight="30dp"
+                        android:textColor="#8e8d92"
+                        android:textColorHint="#8e8d92"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_mid"
+                    android:background="@color/line_gray"
+                    android:visibility="gone" />
+                <!-- 谁可看帖 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="谁可看帖"
+                        android:textSize="@dimen/fontsize_upload_item_left" />
+
+                    <Button
+                        android:id="@+id/submit_activity_visible"
+                        style="@style/button_notbg_style"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="7"
+                        android:ellipsize="end"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#8e8d92"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_mid"
+                    android:background="@color/line_gray"
+                    android:visibility="gone" />
+                <!-- 限本组成员查看 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="限本组成员可看"
+                        android:textSize="@dimen/fontsize_upload_item_left" />
+
+                    <Button
+                        android:id="@+id/submit_activity_group"
+                        style="@style/button_notbg_style"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="7"
+                        android:ellipsize="end"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#8e8d92"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/submit_topic_view"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <!-- 谁可看帖 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="谁可看帖"
+                        android:textSize="@dimen/fontsize_upload_item_left" />
+
+                    <Button
+                        android:id="@+id/submit_topic_visible"
+                        style="@style/button_notbg_style"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="7"
+                        android:ellipsize="end"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#8e8d92"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_mid"
+                    android:background="@color/line_gray"
+                    android:visibility="gone" />
+                <!-- 限本组成员查看 -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:text="限本组成员可看"
+                        android:textSize="@dimen/fontsize_upload_item_left" />
+
+                    <Button
+                        android:id="@+id/submit_topic_group"
+                        style="@style/button_notbg_style"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="7"
+                        android:ellipsize="end"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="30dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#8e8d92"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_emotions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_emotions"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#F6F6F6"
+            android:clickable="true"
+            android:drawableLeft="@drawable/chatting_biaoqing_btn_enable"
+            android:onClick="onClick"
+            android:paddingLeft="8dp"
+            android:visibility="visible"/>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_gravity="top"
+            android:fadingEdge="none"
+            android:numColumns="8"
+            android:verticalSpacing="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="30dp"
+    tools:context="com.nahuo.quicksale.fragment.AuthenticationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_default_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+
+        <com.nahuo.library.controls.EditTextEx
+            android:id="@+id/et_pass_word_num"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/txt_clear_bg"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textSize="@dimen/fontsize_content_middle"
+            android:hint="支付密码" />
+
+        <ImageView
+            android:id="@+id/img_see_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:src="@drawable/see_pwd" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="支付密码可用于余额支付或提现"
+        android:textColor="@color/gray_92"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_small"
+        android:layout_marginTop="@dimen/button_vertical_spacing"
+        android:text="确定" />
+</LinearLayout>

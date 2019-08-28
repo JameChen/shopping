@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_item_height_medium"
+    android:gravity="center_vertical" >
+
+        <com.nahuo.library.controls.CircleImageView2
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+            android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:maxLines="2"
+        android:layout_toRightOf="@id/icon"
+        android:text="@string/app_name" 
+        android:ellipsize="end"
+        android:maxWidth="128dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        >
+
+        <ImageView
+            android:id="@+id/more_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher" 
+            android:layout_gravity="center_vertical"
+            />
+        <Button 
+            android:id="@+id/right_btn"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:background="@color/btn_bg_blue_small"
+            android:text="恢复"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:visibility="gone" />
+
+</RelativeLayout>

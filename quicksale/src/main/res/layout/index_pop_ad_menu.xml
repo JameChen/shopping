@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/bannerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.nahuo.quicksale.customview.ViewFlow
+                android:id="@+id/viewflow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <com.nahuo.quicksale.customview.ViewFlowCircleIndicator
+                android:id="@+id/viewflowindic"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center|bottom"
+                android:padding="2dip"
+                app:activeColor="#ff3e3e"
+                app:activeType="fill"
+                app:circleSeparation="10dip"
+                app:inactiveColor="#FFFFF0"
+                app:inactiveType="fill"
+                app:radius1="3dp"
+                app:sidebuffer="0" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/iv_del"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/del_pd_bg"
+            android:gravity="center"
+            android:src="@drawable/icon_ad_dete"
+            android:text="×"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+</LinearLayout>

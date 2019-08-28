@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1"
+    android:paddingBottom="20dp" >
+
+    <ImageView
+        android:id="@+id/shop_item_head_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="#ffa633"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <com.nahuo.library.controls.CircleImageView2
+        android:id="@+id/shop_item_head_shop_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop_logo_normal1" />
+    <!-- 微铺名称 -->
+
+    <TextView
+        android:id="@+id/shop_item_head_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/shop_item_head_shop_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxWidth="188dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/shop_item_head_shop_logo"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/shop_item_head_shop_name"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/shop_item_head_item_agent_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_item_head_shop_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/shop_item_head_weixun"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_toLeftOf="@+id/shop_item_head_shop_logo"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/weixun_circle" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="咨询卖家"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shop_item_head_agent_this_shop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/shop_item_head_shop_logo"
+        android:onClick="onClick"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_agent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/add_agent_circle" />
+
+        <TextView
+            android:id="@+id/tv_apply_statu"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="申请代理"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shop_item_head_signture"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp"
+        android:background="#f8f8f8"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="3"
+        android:padding="7dp"
+        android:textColor="#8e8d92"
+        android:textSize="13sp" />
+
+</RelativeLayout>

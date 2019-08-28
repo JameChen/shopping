@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/bannerview"
+android:layout_width="match_parent"
+android:layout_height="110dp"
+android:layout_gravity="center"
+android:layout_marginTop="6dp">
+
+<com.nahuo.quicksale.customview.ViewFlow
+    android:id="@+id/viewflow"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="center_vertical" />
+
+    <com.nahuo.quicksale.customview.ViewFlowCircleIndicator
+        android:id="@+id/viewflowindic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="6dp"
+        android:padding="2dip"
+        app:activeColor="#ff3e3e"
+        app:activeType="fill"
+        app:circleSeparation="2dip"
+        app:inactiveColor="#FFFFF0"
+        app:inactiveType="fill"
+        app:radius1="3dp"
+        app:sidebuffer="0" />
+</FrameLayout>

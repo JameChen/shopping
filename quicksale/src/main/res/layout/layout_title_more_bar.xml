@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/pin_huo_red"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/titlebar_btnLeft"
+        style="@style/button_titlebar_left_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/titlebar_right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/titlebar_icon_loading"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/loading_mini"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/titlebar_btnRight"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/fontsize_title_button_middle" />
+
+
+        <Button
+            android:id="@+id/titlebar_btnmore"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/fontsize_title_button_middle"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/my_share"
+            style="@style/title_iv"
+            android:layout_centerInParent="true"
+            android:paddingRight="@dimen/pin_tittle_margin"
+            android:src="@drawable/pn_share_left_white"
+            android:paddingLeft="@dimen/pin_tittle_margin"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontsize_content_Large" />
+
+</RelativeLayout>

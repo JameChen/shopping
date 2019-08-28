@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/bottom_layout"
+            layout="@layout/bottom_panel_layout"></include>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/lightgray" />
+
+        <FrameLayout
+            android:id="@+id/fragment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom_layout" />
+
+        <RelativeLayout
+            android:id="@+id/layout_explain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/beijing"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_ex"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="54dp"
+                    android:src="@drawable/sous_pihuo_ex" />
+
+                <ImageView
+                    android:id="@+id/iv_jian_tou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_ex"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_toLeftOf="@+id/iv_ex"
+                    android:src="@drawable/you_jian_tou" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_jian_tou"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/pinhuo_wenzi" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_sq_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="320dp">
+
+                    <ImageView
+                        android:id="@+id/ll"
+                        android:layout_width="150dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/shouc_icon_ex" />
+
+                    <ImageView
+                        android:id="@+id/ii"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/ll"
+                        android:src="@drawable/up_jiantou" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ii"
+                        android:src="@drawable/icon_clle_expl" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.nahuo.widget.TouchFrameLayout>

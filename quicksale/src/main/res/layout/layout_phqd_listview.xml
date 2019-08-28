@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:background="#eee"></View>
+
+    <!--图层1-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <ImageView
+            android:id="@android:id/icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_warehouse"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="广州1号仓"
+            android:layout_toRightOf="@android:id/icon"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt2_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/base_red"/>
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="本月还可申请三次"
+            android:layout_alignParentRight="true"
+            android:layout_below="@android:id/icon"
+            android:layout_marginBottom="5dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"/>
+
+    <!--第二层-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配货方式:"
+            android:layout_alignParentLeft="true"
+            android:padding="3dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt2_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/txt2"
+            android:textSize="16sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/fhsz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发货设置"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
+            android:background="@drawable/button_bg"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+    <!--第三层-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="可发货2039件"
+            android:layout_alignParentLeft="true"
+            android:padding="3dp"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/btnUp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/btn_red"
+            android:src="@drawable/up_icon"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <com.nahuo.library.controls.NoScrollListView
+        android:id="@+id/list"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        style="@style/Text.M.Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:background="@color/white"
+        android:dividerHeight="10dp"
+        android:divider="@color/white"/>
+
+</LinearLayout>

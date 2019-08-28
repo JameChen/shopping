@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="vertical"
+    android:paddingRight="6dp" >
+
+    <FrameLayout
+        android:id="@+id/layout_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:src="@drawable/empty_photo" 
+            android:paddingLeft="6dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_close_red" 
+            android:layout_gravity="top|left"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="2dp"
+            />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/tv_upload_status"
+        android:layout_toRightOf="@id/layout_cover"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="上传标题" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:progressDrawable="@drawable/style_progressbar" />
+
+        <TextView
+            android:id="@+id/tv_extra_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="失败原因"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_upload_status"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="点击重传" />
+
+</RelativeLayout>

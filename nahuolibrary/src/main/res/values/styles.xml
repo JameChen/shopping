@@ -1,0 +1,57 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<style name="AppBaseTheme" parent="android:Theme.Light"></style>-->
+
+    <!--&lt;!&ndash; Application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--&lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;-->
+    <!--</style>-->
+    <!-- 自定义等待提示框样式 -->
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Alteringdialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+
+    <!-- 文本框基类样式 -->
+    <style name="edittext_base_style">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/lightblack</item>
+        <item name="android:textSize">@dimen/fontsize_title_button_max</item>
+    </style>
+    <!-- 没边框文本框样式 -->
+    <style name="edittext_noborder_style" parent="edittext_base_style">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="PopupAnimationInRightOutRight" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popwindow_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/popwindow_out_to_right</item>
+    </style>
+
+    <style name="PopupAnimationInLeftOutLeft" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popwindow_in_from_left</item>
+        <item name="android:windowExitAnimation">@anim/popwindow_out_to_left</item>
+    </style>
+
+    <style name="LightPopDialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/light_pop_dialog_appear</item>
+        <item name="android:windowExitAnimation">@anim/light_pop_dialog_disappear</item>
+    </style>
+
+</resources>

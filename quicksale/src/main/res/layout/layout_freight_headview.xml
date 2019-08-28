@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未结算预付运费"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="（周结）"
+                android:textSize="18sp"
+                android:textColor="@color/map_alpha"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/freight_head_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/bg_rectangle_orange"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/freight_head_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/wrap_wrap"
+                android:text="结束时间"
+                android:textSize="16sp"
+                android:paddingLeft="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <TextView
+                style="@style/style_freghity_bill"
+                android:text="已付"
+                />
+            <TextView
+                style="@style/style_freghity_bill"
+                android:text="实际"
+                />
+            <TextView
+                style="@style/style_freghity_bill"
+                android:text="结余"
+                />
+
+            <TextView
+                style="@style/style_freghity_bill"
+                android:text="详情"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/id_fright_bill_titleTime"
+            style="@style/wrap_wrap"
+            android:contentDescription="时间"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_gravity="right"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/id_freight"
+            style="@style/wrap_wrap"
+            android:text="未结算运费 (周结) :"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_fright_bill_titleMoney"
+        style="@style/wrap_wrap"
+        android:contentDescription="10086"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="23sp"
+        android:textColor="@color/bg_red_btn"
+        />
+
+</LinearLayout>

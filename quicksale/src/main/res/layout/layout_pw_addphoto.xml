@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pw_addphoto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/pw_addphoto_btnTakePhoto"
+        style="@style/button_blue_text_single_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:text="@string/pw_btnTakePhoto" />
+
+    <Button
+        android:id="@+id/pw_addphoto_btnFromAlbum"
+        style="@style/button_blue_text_single_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:text="@string/pw_btnFromAlbum" />
+
+    <Button
+        android:id="@+id/pw_addphoto_btnCancel"
+        style="@style/button_blue_text_single_style"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:text="@string/pw_btnCancel" />
+
+</LinearLayout>

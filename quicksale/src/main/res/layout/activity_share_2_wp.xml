@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginTop="10dp"
+        >
+
+        <EditText
+            android:id="@+id/et_item_desc"
+            style="@style/edittext_upload_item"
+            android:minHeight="58dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:hint="商品描述" />
+        <!-- 上家货代价 -->
+
+        <LinearLayout style="@style/up_item_line_style" >
+
+            <TextView
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:text="供货商供货" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥" />
+            <TextView
+                android:id="@+id/tv_supply_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:background="@color/line_gray" />
+
+        <LinearLayout 
+            android:id="@+id/layout_add_price"
+            style="@style/up_item_line_style" >
+
+            <TextView
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:text="你给下家代理" />
+
+            <EditText
+                android:id="@+id/et_add_rate"
+                style="@style/edittext_gray_bg"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center_vertical"
+                android:text="%    ¥ " />
+
+            <EditText
+                android:id="@+id/et_agent_price"
+                style="@style/edittext_gray_bg"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:background="@color/line_gray" />
+
+        <LinearLayout style="@style/up_item_line_style" >
+
+            <TextView
+                android:id="@+id/tv_retail_price_key"
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="你的零售" />
+				<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="￥ " />
+            <EditText
+                android:id="@+id/et_retail_price"
+                style="@style/edittext_gray_bg"
+                android:layout_width="80dp"
+                android:layout_height="36dp"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:layout_marginBottom="16dp"
+            android:background="@color/line_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layout_item_shop_category"
+            style="@style/up_item_line_style"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_cat_key"
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="本店分类" 
+                />
+
+            <TextView
+                android:id="@+id/tv_item_shop_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_toRightOf="@id/tv_cat_key"
+                android:layout_toLeftOf="@+id/iv_right"
+                android:gravity="right"
+                android:text="默认分类" 
+                android:textColor="#8e8d92"
+                />
+
+            <ImageView
+                android:id="@id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/more_mini" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:background="@color/line_gray" />
+        <!-- 谁可看货 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_visible_range"
+            style="@style/up_item_line_style"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/tv_visible_range_key"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:text="谁可看货" 
+                android:drawableRight="@drawable/question_mark"
+                android:paddingRight="24dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/tv_visible_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:maxLines="2"
+                android:layout_toLeftOf="@+id/iv_right"
+				android:layout_toRightOf="@id/tv_visible_range_key"                
+                android:text="公开" 
+                android:gravity="right"
+                android:textColor="#8e8d92"/>
+
+            <ImageView
+                android:id="@id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/more_mini" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:background="@color/line_gray" />
+        <!-- 谁来发货 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_who_ship"
+            style="@style/up_item_line_style" >
+
+            <TextView
+                android:id="@+id/tv_who_ship_key"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="谁来发货"
+                android:drawableRight="@drawable/question_mark"
+                android:paddingRight="24dp"
+                android:gravity="center"/>
+
+            <Spinner
+                android:id="@+id/sp_who_ship"
+                style="@style/Widget.WP.Spinner.a"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_small"
+            android:layout_marginBottom="16dp" 
+            android:background="@color/line_gray" />
+        <!-- 商品标题 -->
+
+        <LinearLayout style="@style/up_item_line_style" 
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/single_line_item_height"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="@dimen/up_item_left_text_width"
+                android:layout_height="wrap_content"
+                android:text="商品名称" />
+
+            <EditText
+                android:id="@+id/et_item_title"
+ 				style="@style/edittext_upload_item"
+                android:layout_width="match_parent"
+                android:hint="商品名称" 
+                android:textColor="#8e8d92"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</com.nahuo.widget.TouchFrameLayout>	

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        layout="@layout/custom_title" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.nahuo.library.controls.pulltorefresh.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res/com.nht"
+            android:id="@+id/homedetail_pull_refresh_listview_myitems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="140dp"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollingCache="true"
+            android:stretchMode="columnWidth" />
+
+        <include
+            android:id="@+id/lv_header"
+            layout="@layout/layout_good_list_header"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/home_layout_empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="175dp"
+                    android:src="@drawable/no_data_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="130dp"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/my_item_no_data_tips"
+                    android:textColor="#7d7d7d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/my_item_no_data_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="210dp"
+                    android:lineSpacingExtra="8dp"
+                    android:text="@string/my_item_no_data_tips1"
+                    android:textColor="#7d7d7d"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="-20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/my_item_no_data_tips"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/no_data_arrow_right" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/layout_upload_progress"
+            layout="@layout/layout_upload_progress"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

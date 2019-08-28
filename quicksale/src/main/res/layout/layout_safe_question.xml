@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_titlebar_default" />
+    <com.nahuo.widget.TouchRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/edittext_vertical_spacing"
+
+            />
+
+        <TextView
+            android:id="@+id/switch_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/safeq_switch_question"
+            android:textColor="@color/hint"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/answer_key"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_below="@id/tv_question"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/safeq_answer" />
+
+        <EditText
+            android:id="@+id/et_answer"
+            style="@style/edittext_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_question"
+            android:layout_toRightOf="@id/answer_key" />
+
+        <Button
+            android:id="@+id/btn_submit_safe_questions"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_long"
+            android:layout_below="@id/answer_key"
+            android:layout_marginTop="@dimen/button_vertical_spacing"
+            android:onClick="onClick"
+            android:text="@string/btn_submit" />
+
+        <TextView
+            android:id="@+id/tv_forget_answer_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_submit_safe_questions"
+            android:layout_marginTop="28dp"
+            android:text="@string/security_forget_safeq_answer"
+            android:textColor="@color/hint" />
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>
+

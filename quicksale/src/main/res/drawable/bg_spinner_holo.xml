@@ -1,0 +1,8 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/spinner_ab_pressed_holo_light_am" android:state_focused="true"/>
+    <item android:drawable="@drawable/spinner_ab_pressed_holo_light_am" android:state_selected="true"/>
+    <item android:drawable="@drawable/spinner_ab_pressed_holo_light_am" android:state_pressed="true"/>
+    <item android:drawable="@drawable/spinner_default_holo_light_am"/>
+
+</selector>

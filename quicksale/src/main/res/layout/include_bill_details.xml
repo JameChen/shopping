@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fff2f2f2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="40dp">
+        <TextView
+            android:id="@+id/orders_way_tv"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:paddingLeft="35dp"
+            android:text="申通"/>
+            <TextView
+                android:id="@+id/orders_price_tv"
+                style="@style/style_freghity_bill"
+                android:text="15.00"/>
+            <TextView
+                android:id="@+id/orders_mg_tv"
+                style="@style/style_freghity_bill"
+                android:text="3.33"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/orders_action_tv"
+                    style="@style/wrap_wrap"
+                    android:text="查看包裹"
+                    android:background="@drawable/bg_corn_btn"
+                    android:textColor="@color/bg_red_btn"
+                    android:textSize="16sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+            </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/orders_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="订单号"
+        android:paddingLeft="35dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+    <TextView
+        android:id="@+id/orders_remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="备注"
+        android:layout_marginLeft="35dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+</LinearLayout>

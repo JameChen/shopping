@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rect_white_stroke_gray_corner"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@android:id/title"
+        style="@style/Text.L.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray" />
+
+    <TextView
+        android:id="@android:id/text1"
+        style="@style/Text.L.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <TextView
+            style="@style/Text.L.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应支付：" />
+
+        <TextView
+            android:id="@android:id/text2"
+            style="@style/Text.L.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="899"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@android:id/summary"
+            style="@style/Text.L.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="16dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:gravity="right"
+            android:text="立即付款 " />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ye_pin_margin_bottom_head"
+        android:paddingLeft="@dimen/ye_pin_margin_left"
+        android:paddingRight="@dimen/ye_pin_margin_right"
+        android:paddingTop="@dimen/ye_pin_margin_top_head">
+
+        <ImageView
+            android:id="@+id/iv_group_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/app_logo" />
+
+        <!--<com.nahuo.library.controls.CircleImageView2
+            android:id="@+id/iv_group_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop_logo_normal1" />-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_groupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/fontsize_title_button_min"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_groupCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/gray_80"
+                android:text=""
+                android:textSize="@dimen/fontsize_content_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_add_topicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:background="@drawable/ye_pin_red_corner"
+            android:text="加入"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fontsize_title_button_min" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/ll_contents"
+        android:background="#eee" />
+
+    <ListView
+        android:id="@+id/topic_top_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_line"
+        android:background="#ffffff"
+        android:divider="#eeeeee"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone"></ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/topic_top_list"
+        android:background="#eee"
+        android:visibility="gone" />
+
+</RelativeLayout>

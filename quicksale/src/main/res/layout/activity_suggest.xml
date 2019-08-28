@@ -1,0 +1,27 @@
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <EditText
+        android:id="@+id/et_content"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:gravity="top"
+        android:hint="我的吐槽或者建议" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_marginTop="@dimen/button_vertical_spacing"
+        android:text="提交" 
+        android:onClick="onClick"
+        />
+
+</com.nahuo.widget.TouchLinearLayout>

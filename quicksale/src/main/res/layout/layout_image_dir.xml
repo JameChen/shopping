@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/imgDir_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"/>
+    
+       <!--  android:src="@drawable/logo_bg"  -->
+
+    <TextView
+        android:id="@+id/imgDir_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="70dp"
+        android:textSize="@dimen/fontsize_content_normal" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/imgDir_count"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/fontsize_content_small" >
+    </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="79dp"
+                android:background="@color/lightgray" />
+</RelativeLayout>

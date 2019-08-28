@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+    <!-- 标题栏普通按钮样式 -->
+    <style name="button_titleNormalButtonStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">18dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- 标题栏返回按钮样式 -->
+    <style name="button_titleCancelButtonStyle" parent="button_titleNormalButtonStyle">
+        
+    </style>
+
+    <!-- 标题栏左菜单栏按钮样式 -->
+    <style name="button_titleLeftMenuButtonStyle" parent="button_titleNormalButtonStyle">
+        <item name="android:src">@drawable/menu_leftmenu</item>
+    </style>
+
+
+
+ 
+
+</resources>

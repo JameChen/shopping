@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    >
+
+    <TextView
+        android:id="@+id/yft_paypsw_tips"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:text="@string/yft_paypsw_tips"
+        android:layout_marginBottom="16dp"
+         android:gravity="center"
+        android:textAppearance="@style/myTextAppearance.hint.micro" />
+
+    <com.nahuo.library.controls.EditTextEx
+        android:id="@+id/yft_et_paypsw"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:layout_below="@id/yft_paypsw_tips"
+        android:drawableRight="@drawable/txt_clear_bg"
+        android:hint="@string/yft_paypsw"
+        android:imeOptions="actionNext"
+        android:singleLine="true" 
+        android:inputType="textPassword"
+        />
+
+    <com.nahuo.library.controls.EditTextEx
+        android:id="@+id/yft_et_confirm_paypsw"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:layout_below="@id/yft_et_paypsw"
+        android:drawableRight="@drawable/txt_clear_bg"
+        android:hint="@string/yft_confirm_paypsw"
+        android:imeOptions="actionNext"
+        android:singleLine="true" 
+        android:layout_marginTop="@dimen/edittext_vertical_spacing"
+        android:visibility="gone"
+        android:inputType="textPassword"
+        />
+
+    <TextView
+        android:id="@+id/ts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="支付密码是为了保障您账户里的余额资金安全，用于余额支出"
+        android:layout_below="@+id/yft_et_confirm_paypsw"
+        android:gravity="center|left"
+        android:textColor="#e6e60808"
+        android:textAppearance="@style/myTextAppearance.hint.micro" />
+    <Button
+        android:id="@+id/yft_btn_confirm"
+        style="@style/button_blue_style"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ts"
+        android:layout_marginTop="10dp"
+        android:text="@string/yft_btn_confirm" />
+
+</RelativeLayout>

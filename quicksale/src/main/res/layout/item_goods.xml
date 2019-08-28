@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+ >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/tv_sort"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_sort"
+            android:text="12"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+        <TextView
+            android:id="@+id/tv_try_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_pic"
+            android:background="@drawable/bg_sort_msg"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="正在讲解"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/iv_pic"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text=""
+            android:textColor="@color/txt_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_tittle"
+            android:layout_below="@+id/tv_tittle"
+            android:layout_marginTop="3dp"
+            android:text=""
+            android:textColor="@color/txt_black"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_right_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_price"
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_try_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_live_shape_red"
+                android:paddingBottom="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="5dp"
+                android:text="试穿一下"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_shop_cart"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/goods_item_shop_cart"
+                android:paddingBottom="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="5dp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".WithdrawActivity">
+
+        <LinearLayout
+            android:id="@+id/layout_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="@string/withdraw_money" />
+
+                <com.nahuo.library.controls.EditTextEx
+                    android:id="@+id/et_money"
+                    style="@style/edittext_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/withdraw_money_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:id="@+id/withdraw_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/withdraw_tips"
+                android:textColor="@color/hint" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/button_blue_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_long"
+                android:layout_marginTop="@dimen/button_vertical_spacing"
+                android:onClick="onClick"
+                android:text="@string/btn_submit" />
+
+            <TextView
+                android:id="@+id/tv_forget_paypsw"
+                style="@style/myTextAppearance.medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="@string/forget_paypsw"
+                android:textColor="@color/light_blue"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 提现成功之后显示的内容 -->
+
+        <LinearLayout
+            android:id="@+id/layout_withdraw_suc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/withdraw_apply_suc"
+                android:textAppearance="@style/myTextAppearance.big" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/withdraw_tips"
+                android:textColor="@color/hint" />
+        </LinearLayout>
+
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

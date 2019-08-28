@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@drawable/fenxiangdp_banner"
+            android:gravity="center"
+            android:text="安全、轻松，自动分账"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:text="@string/pre_share_shop" />
+
+        <TextView
+            android:id="@+id/tv_know_more"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingLeft="12dp"
+            android:text="了解更多>"
+            android:textColor="#2BA1FD" />
+
+        <Button
+            android:id="@+id/btn_share_shop"
+            style="@style/button_orange_style_1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="12dp"
+            android:onClick="onClick"
+            android:text="马上分享给朋友" />
+
+        <CheckBox
+            android:id="@+id/cb_no_longer_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="知道了，不再提示"
+            android:textColor="#827C7C" />
+    </LinearLayout>
+
+</ScrollView>
+</com.nahuo.widget.TouchFrameLayout>

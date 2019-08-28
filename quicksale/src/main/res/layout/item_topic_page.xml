@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/topic_page_item_cover"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:scaleType="centerCrop" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ye_pin_margin_bottom"
+        android:paddingLeft="@dimen/ye_pin_margin_left"
+        android:paddingRight="@dimen/ye_pin_margin_right"
+        android:paddingTop="@dimen/ye_pin_margin_top">
+
+        <com.nahuo.library.controls.CircleImageView2
+            android:id="@+id/topic_page_item_cover"
+            style="@style/ye_pin_pic"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop_logo_normal1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ye_pin_margin_two_left"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/fontsize_title_button_min" />
+
+            <TextView
+                android:id="@+id/topic_page_item_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="@color/gray_80"
+                android:textSize="@dimen/fontsize_content_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_topic_page_item_viewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/yepin_eye"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/topic_page_item_postcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/yepin_mess"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/gray_6"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_username"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:ellipsize="end"-->
+    <!--android:maxWidth="168dp"-->
+    <!--android:singleLine="true"-->
+
+    <!--android:textAppearance="@style/text_username" />-->
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ye_pin_margin_left"
+        android:paddingRight="@dimen/ye_pin_margin_right">
+
+        <TextView
+            android:id="@+id/topic_page_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ye_pin_margin_top"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/gray_3"
+            android:textSize="16sp" />
+
+        <com.nahuo.quicksale.customview.PinHuoTextView
+            android:id="@+id/topic_page_item_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ye_pin_margin_top"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+        <!--android:lineSpacingMultiplier="1.5"-->
+
+
+        <com.nahuo.library.controls.NoScrollGridView
+            android:id="@+id/gv_pics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="5dp"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@android:color/transparent"
+            android:verticalSpacing="2dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+
+            <!--<TextView
+                android:id="@+id/topic_page_item_postcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:drawableLeft="@drawable/list_comment_ic"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="5451"
+                android:textColor="@color/hint"
+                android:textSize="@dimen/text_size_small" />-->
+
+            <!-- <TextView
+                 android:id="@+id/topic_page_item_create"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignTop="@id/topic_page_item_postcount"
+                 android:drawableLeft="@drawable/list_time_ic"
+                 android:drawablePadding="3dp"
+                 android:gravity="center_vertical"
+                 android:text="2"
+                 android:textColor="@color/hint"
+                 android:textSize="@dimen/text_size_small" />-->
+
+            <!-- <TextView
+                 android:id="@+id/txt_topic_page_item_viewed"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignTop="@id/topic_page_item_create"
+                 android:layout_marginRight="20dp"
+                 android:layout_toLeftOf="@id/topic_page_item_postcount"
+                 android:drawableLeft="@drawable/list_viewed_ic"
+                 android:drawablePadding="3dp"
+                 android:gravity="center_vertical"
+                 android:text="0"
+                 android:textColor="@color/hint"
+                 android:textSize="@dimen/text_size_small" />-->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="10dp"
+        android:background="#eee"></View>
+
+</LinearLayout>

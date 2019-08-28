@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <!-- 收货人 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收货人    "
+                        android:textSize="@dimen/fontsize_content_middle" />
+
+                    <EditText
+                        android:id="@+id/et_consignee"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/lightgray" />
+
+                <!-- 地区信息 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/me_areainfo"
+                        android:textSize="@dimen/fontsize_content_middle" />
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="15dp"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:onClick="onClick"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/lightgray" />
+                <!-- 详细 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/me_areadetail"
+                        android:textSize="@dimen/fontsize_content_middle" />
+
+                    <EditText
+                        android:id="@+id/et_detail_address"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/lightgray" />
+                <!-- 联系电话 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/me_my_link"
+                        android:textSize="@dimen/fontsize_content_middle" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:inputType="phone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/lightgray" />
+                <!-- 邮政编码
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/me_postcode"
+                        android:textSize="@dimen/fontsize_content_middle" />
+
+                    <EditText
+                        android:id="@+id/et_post_code"
+                        style="@style/edittext_noborder_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:inputType="number"
+                        />
+                </LinearLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/lightgray" />
+                <!-- 保存 -->
+
+                <Button
+                    android:id="@+id/btn_save"
+                    style="@style/button_blue_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height_long"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="22dp"
+                    android:onClick="onClick"
+                    android:text="@string/btn_save" />
+                <!-- 设置默认 -->
+
+                <Button
+                    android:id="@+id/btn_default"
+                    style="@style/button_blue_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height_long"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:onClick="onClick"
+                    android:text="@string/address_btnsetting" />
+                <!-- 删除 -->
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    style="@style/button_blue_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height_long"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:onClick="onClick"
+                    android:text="@string/camera_Delete" />
+            </LinearLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

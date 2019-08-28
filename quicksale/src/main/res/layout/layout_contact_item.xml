@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/contact_item_name"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+android:layout_alignParentLeft="true"
+android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/fontsize_content_middle" />
+        
+        <TextView
+            android:id="@+id/contact_item_content"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+android:layout_alignParentLeft="true"
+android:layout_centerVertical="true"
+            android:textSize="@dimen/fontsize_content_middle" />
+
+        <Button
+            android:id="@+id/contact_item_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+android:layout_alignParentRight="true"
+android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="65dp"
+            android:background="@null"
+            android:textColor="@color/blue"
+            android:text="@string/contact_item_edit" />
+        
+        <Button
+            android:id="@+id/contact_item_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+android:layout_centerVertical="true"
+            android:background="@null"
+            android:textColor="@color/blue"
+            android:text="@string/contact_item_delete" />
+        
+    </RelativeLayout>

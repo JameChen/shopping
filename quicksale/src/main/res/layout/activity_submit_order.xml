@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EFF5">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_bar" />
+
+    <com.nahuo.quicksale.customview.BounceListView
+        android:id="@+id/lv_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:divider="@android:color/white"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/listview_item_bg" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@android:id/content"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/layout_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/base_red"></View>
+
+        <ImageView
+            android:id="@+id/iv_down_icon"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_downx" />
+
+        <RelativeLayout
+            android:id="@+id/layout_totalproductamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品金额"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_totalproductamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/shop_text_red"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_fee_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预收运费(多退少补)"
+                android:textSize="15sp"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/icon_order_details_fee"/>
+
+            <TextView
+                android:id="@+id/tv_gotoYunFei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/tv_fee_left"
+                android:background="@color/transparent"
+                android:text="运费多退少补>"
+                android:textColor="#399cf9"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@android:id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/shop_text_red"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_fee_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@android:id/text2"
+                android:text=""
+                android:textColor="@color/txt_gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="商品优惠"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/shop_text_red"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_discountamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="运费立减"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_discountamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/shop_text_red"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_couponamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠券"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_couponamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/shop_text_red"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/white"></View>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_up_icon"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_above="@android:id/content"
+        android:layout_centerInParent="true"
+        android:padding="6dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/top_upx" />
+
+    <RelativeLayout
+        android:id="@android:id/content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="8dp"
+        >
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@android:id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_red2"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/submit_order"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+
+</com.nahuo.widget.TouchRelativeLayout>

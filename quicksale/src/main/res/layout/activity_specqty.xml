@@ -1,0 +1,113 @@
+<com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/specqty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecQtyActivity" >
+
+    <LinearLayout
+        android:id="@+id/specqty_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:id="@+id/specqty_colorView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/specqty_tvColor_text"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <TextView
+                android:id="@+id/specqty_tvColors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/more_mini"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/fontsize_content_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:id="@+id/specqty_sizeView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/specqty_tvSize_text"
+                android:textSize="@dimen/fontsize_content_normal" />
+
+            <TextView
+                android:id="@+id/specqty_tvSizes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/more_mini"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/pink"
+                android:textSize="@dimen/fontsize_content_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgray" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/specqty_btnSave"
+        style="@style/button_red_style_1"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="@string/specqty_btnSave_text" />
+
+    <ListView
+        android:id="@+id/specqty_lvSpecQty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/specqty_btnSave"
+        android:layout_below="@id/specqty_layout_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/single_bg"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:scrollbarStyle="outsideOverlay" />
+
+</com.nahuo.widget.TouchRelativeLayout>

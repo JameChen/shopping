@@ -1,0 +1,156 @@
+Activity Resolver Table:
+  Schemes:
+      ttpht:
+        f175504 com.nahuo.quicksale/.StartActivity
+      tencent1101258637:
+        dee9aed com.nahuo.quicksale/com.tencent.tauth.AuthActivity
+
+  Non-Data Actions:
+      cn.jpush.android.ui.PushActivity:
+        21a5d22 com.nahuo.quicksale/cn.jpush.android.ui.PushActivity
+      android.intent.action.MAIN:
+        f175504 com.nahuo.quicksale/.StartActivity
+      com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY:
+        7e633b3 com.nahuo.quicksale/.SharePopWindow
+
+Receiver Resolver Table:
+  Schemes:
+      package:
+        36bd70 com.nahuo.quicksale/cn.jpush.android.service.PushReceiver
+
+  Non-Data Actions:
+      cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+      cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY:
+        36bd70 com.nahuo.quicksale/cn.jpush.android.service.PushReceiver
+      android.intent.action.SCREEN_ON:
+        925296e com.nahuo.quicksale/.broadcast.NahuoBroadcastReceiver
+      com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP:
+        86580f com.nahuo.quicksale/.broadcast.AppRegister
+      cn.jpush.android.intent.MESSAGE_RECEIVED:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+      android.net.conn.CONNECTIVITY_CHANGE:
+        36bd70 com.nahuo.quicksale/cn.jpush.android.service.PushReceiver
+        925296e com.nahuo.quicksale/.broadcast.NahuoBroadcastReceiver
+      cn.jpush.android.intent.UNREGISTRATION:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+      android.intent.action.USER_PRESENT:
+        36bd70 com.nahuo.quicksale/cn.jpush.android.service.PushReceiver
+        925296e com.nahuo.quicksale/.broadcast.NahuoBroadcastReceiver
+      cn.jpush.android.intent.NOTIFICATION_OPENED:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+      cn.jpush.android.intent.REGISTRATION:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+      cn.jpush.android.intent.NOTIFICATION_RECEIVED:
+        9a6f8e9 com.nahuo.quicksale/.broadcast.JPushReceiver
+
+Service Resolver Table:
+  Non-Data Actions:
+      cn.jpush.android.intent.PUSH_TIME:
+        2a2409c com.nahuo.quicksale/cn.jpush.android.service.PushService
+      cn.jpush.android.intent.REPORT:
+        2a2409c com.nahuo.quicksale/cn.jpush.android.service.PushService
+      cn.jpush.android.intent.DaemonService:
+        36d3aa5 com.nahuo.quicksale/cn.jpush.android.service.DaemonService
+      cn.jpush.android.intent.PushService:
+        2a2409c com.nahuo.quicksale/cn.jpush.android.service.PushService
+      cn.jpush.android.intent.REGISTER:
+        2a2409c com.nahuo.quicksale/cn.jpush.android.service.PushService
+
+Permissions:
+  Permission [com.nahuo.quicksale.permission.JPUSH_MESSAGE] (648bbdd):
+    sourcePackage=com.nahuo.quicksale
+    uid=10370 gids=null type=0 prot=signature
+    perm=Permission{dfe6e7a com.nahuo.quicksale.permission.JPUSH_MESSAGE}
+    packageSetting=PackageSetting{48e1623 com.nahuo.quicksale/10370}
+
+Key Set Manager:
+  [com.nahuo.quicksale]
+      Signing KeySets: 169
+
+Packages:
+  Package [com.nahuo.quicksale] (48e1623):
+    userId=10370
+    pkg=Package{75a662b com.nahuo.quicksale}
+    codePath=/data/app/com.nahuo.quicksale-1
+    resourcePath=/data/app/com.nahuo.quicksale-1
+    legacyNativeLibraryDir=/data/app/com.nahuo.quicksale-1/lib
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=null
+    versionCode=33 targetSdk=22
+    versionName=2.2.0.0
+    splits=[base, lib_dependencies_apk, lib_slice_0_apk, lib_slice_1_apk, lib_slice_2_apk, lib_slice_3_apk, lib_slice_4_apk, lib_slice_5_apk, lib_slice_6_apk, lib_slice_7_apk, lib_slice_8_apk, lib_slice_9_apk]
+    applicationInfo=ApplicationInfo{ce0ca88 com.nahuo.quicksale}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]
+    dataDir=/data/user/0/com.nahuo.quicksale
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesLibraries:
+      android.test.runner
+    usesLibraryFiles:
+      /system/framework/android.test.runner.jar
+    timeStamp=2017-03-30 17:00:30
+    firstInstallTime=2017-03-28 13:35:59
+    lastUpdateTime=2017-03-30 17:00:31
+    signatures=PackageSignatures{6d2829e [69bdc21]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA LARGE_HEAP ]
+    declared permissions:
+      com.nahuo.quicksale.permission.JPUSH_MESSAGE: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.VIBRATE
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.WAKE_LOCK
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.RECORD_AUDIO
+      android.permission.ACCESS_COARSE_LOCATION
+      com.nahuo.quicksale.permission.JPUSH_MESSAGE
+      android.permission.RECEIVE_USER_PRESENT
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.FLASHLIGHT
+      android.permission.GET_TASKS
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.WRITE_SETTINGS
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+      android.permission.CAMERA
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.READ_PHONE_STATE
+      android.permission.MANAGE_ACCOUNTS
+      android.permission.GET_ACCOUNTS
+      android.permission.BAIDU_LOCATION_SERVICE
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+      android.permission.READ_LOGS
+    install permissions:
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      android.permission.ACCESS_FINE_LOCATION: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      com.nahuo.quicksale.permission.JPUSH_MESSAGE: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.READ_EXTERNAL_STORAGE: granted=true
+      android.permission.ACCESS_COARSE_LOCATION: granted=true
+      android.permission.READ_PHONE_STATE: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.FLASHLIGHT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.CAMERA: granted=true
+      android.permission.GET_ACCOUNTS: granted=true
+      android.permission.WRITE_EXTERNAL_STORAGE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.RECORD_AUDIO: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0:  installed=true hidden=false stopped=false notLaunched=false enabled=0
+      gids=[3003]
+      runtime permissions:
+      enabledComponents:
+        cn.jpush.android.service.PushReceiver
+        cn.jpush.android.service.AlarmReceiver

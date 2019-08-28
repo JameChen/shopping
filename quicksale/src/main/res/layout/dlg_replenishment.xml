@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_white_corner_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:text="提交补货申请"
+        android:textSize="16sp"
+        />
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+        <TextView 
+            android:id="@+id/et_dlg_replenishment_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补货数量:"
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:id="@+id/et_dlg_replenishment_count"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:inputType="number"
+            android:layout_toRightOf="@id/et_dlg_replenishment_count_label"
+            android:background="@drawable/bg_rect_gray_corner"
+            android:padding="5dp"
+            android:maxLength="30"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+        <TextView 
+            android:id="@+id/et_dlg_replenishment_remark_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补货备注(可不填):"
+            android:textColor="@color/black_overlay"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+                android:id="@+id/et_dlg_replenishment_remark"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:padding="5dp"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:hint="例如颜色尺码等需求说明"
+            android:textColorHint="@color/lightgray"
+                android:maxLength="30"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/et_dlg_replenishment_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textColor="@color/black_overlay"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/contact_msg_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_cancle"
+            style="@style/button_blue_text_style"/>
+
+        <Button
+            android:id="@+id/contact_msg_set"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_confirm"
+            style="@style/button_blue_text_style"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/trade_details_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:contentDescription="交易详情" />
+
+        <TextView
+            android:id="@+id/trade_details_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="17dp"
+            android:textSize="20dp" />
+
+        <include
+            android:id="@+id/trade_include1"
+            layout="@layout/include_trade_detail" />
+
+        <include
+            android:id="@+id/trade_include2"
+            layout="@layout/include_trade_detail" />
+
+        <include
+            android:id="@+id/trade_include3"
+            layout="@layout/include_trade_detail" />
+
+        <include
+            android:id="@+id/trade_include4"
+            layout="@layout/include_trade_detail" />
+        <TextView
+            android:id="@+id/trade_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单记录："
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"/>
+
+        <com.nahuo.quicksale.controls.TransWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"></com.nahuo.quicksale.controls.TransWebView>
+
+    </LinearLayout>
+</LinearLayout>

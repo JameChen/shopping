@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <CheckBox
+        android:id="@android:id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:layout_toRightOf="@android:id/checkbox"
+        android:contentDescription="@android:string/ok" />
+
+    <TextView
+        android:id="@android:id/title"
+        style="@style/Text.M.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@android:id/icon"
+        android:lines="2" />
+
+    <TextView
+        android:id="@android:id/text1"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/title"
+        android:layout_toRightOf="@android:id/icon" />
+
+    <EditText
+        android:id="@android:id/edit"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_alignBaseline="@android:id/text1"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@android:id/text1"
+        android:background="@drawable/bg_rect_gray"
+        android:focusable="false"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@android:id/summary"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@android:id/text1"
+        android:layout_toRightOf="@android:id/edit"
+        android:text="@string/units_of_good" />
+
+    <TextView
+        android:id="@android:id/text2"
+        style="@style/Text.M.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@android:id/text1"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

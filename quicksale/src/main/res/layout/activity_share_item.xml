@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_cover"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="4dp"
+                        android:padding="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/empty_photo" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_toRightOf="@+id/iv_cover"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="c6819夏装新款韩版时尚休闲" />
+
+                    <TextView
+                        android:id="@+id/tv_agent_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@+id/iv_cover"
+                        android:text="给代理：￥100.00"
+                        android:textColor="@color/item_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_retail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_toRightOf="@+id/tv_agent_price"
+                        android:text="零售：￥100.00"
+                        android:textColor="@color/item_gray" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/line_view"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_share_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="8dp"
+                    android:text="@string/share_earn_money_text"
+                    android:textColor="@color/item_gray" />
+
+                <View style="@style/line_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="立即分享到社交平台赚钱" />
+
+                <TableLayout
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="16dp">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/tv_one_key_share"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_one_key"
+                            android:text="一键转图" />
+
+                        <TextView
+                            android:id="@+id/tv_share_to_friend_circle"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_wx_moment"
+                            android:text="微信朋友圈" />
+
+                        <TextView
+                            android:id="@+id/tv_share_to_wx_friend"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_wx_frd"
+                            android:text="微信好友" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/tv_share_to_qq_circle"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_qq"
+                            android:text="QQ好友" />
+
+                        <TextView
+                            android:id="@+id/tv_share_to_qzone_circle"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_qzone"
+                            android:text="QQ空间" />
+
+                        <TextView
+                            android:id="@+id/tv_share_to_sina_circle"
+                            style="@style/share_grid_item"
+                            android:drawableTop="@drawable/share_wb"
+                            android:text="新浪微博" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white" 
+        android:paddingTop="40dp"
+        android:paddingBottom="48dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="上架完成"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="您选中的款式已上架到“我的店铺”"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/check_true1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" 
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="48dp"
+            >
+
+            <Button
+                style="@style/Button.Wihte.Rect.Gray_Stroke"
+                android:id="@+id/btn_go_on_upload"
+                android:layout_width="120dp"
+                android:layout_height="38dp"
+                android:layout_margin="8dp"
+                android:text="继续上架" />
+
+            <Button
+                style="@style/Button.Wihte.Rect.Gray_Stroke"
+                android:id="@+id/btn_share"
+                android:layout_width="120dp"
+                android:layout_height="38dp"
+                android:layout_margin="8dp"
+                android:text="分享赚钱" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

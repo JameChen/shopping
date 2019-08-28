@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/draw_top_tab_center" />
+    <item android:drawable="@drawable/draw_top_tab_center_trans" />
+</selector>
+

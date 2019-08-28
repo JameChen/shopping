@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@color/line_gray" />
+
+    <com.nahuo.quicksale.tab.BottomControlPanel
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <com.nahuo.quicksale.tab.ImageText
+            android:id="@+id/it_pin_huo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.nahuo.quicksale.tab.ImageText
+            android:id="@+id/it_sort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.nahuo.quicksale.tab.ImageText
+            android:id="@+id/it_ye_pin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.nahuo.quicksale.tab.ImageText
+            android:id="@+id/it_shop_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.nahuo.quicksale.tab.ImageText
+            android:id="@+id/it_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </com.nahuo.quicksale.tab.BottomControlPanel>
+
+    <RelativeLayout
+        android:id="@+id/layout_explain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/beijing"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_ex"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="54dp"
+                android:src="@drawable/sous_pihuo_ex" />
+
+            <ImageView
+                android:id="@+id/iv_jian_tou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_ex"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="-10dp"
+                android:layout_toLeftOf="@+id/iv_ex"
+                android:src="@drawable/you_jian_tou" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_jian_tou"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pinhuo_wenzi" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_sq_me"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="320dp">
+
+                <ImageView
+                    android:id="@+id/ll"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/shouc_icon_ex" />
+
+                <ImageView
+                    android:id="@+id/ii"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/ll"
+                    android:src="@drawable/up_jiantou" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ii"
+                    android:src="@drawable/icon_clle_expl" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

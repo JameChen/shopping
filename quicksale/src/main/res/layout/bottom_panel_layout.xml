@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.quicksale.customview.BottomControlPanel xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    >
+
+    <com.nahuo.quicksale.customview.BottomView
+        android:id="@+id/btn_pin_huo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <com.nahuo.quicksale.customview.BottomView
+        android:id="@+id/btn_ye_pin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.nahuo.quicksale.customview.BottomView
+        android:id="@+id/btn_market"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        />
+
+    <com.nahuo.quicksale.customview.BottomView
+        android:id="@+id/btn_chat"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        />
+    <com.nahuo.quicksale.customview.BottomView
+        android:id="@+id/btn_me"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</com.nahuo.quicksale.customview.BottomControlPanel>

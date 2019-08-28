@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        style="@style/Text.M.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/consignee" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:padding="8dp">
+
+                        <requestFocus />
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        style="@style/Text.M.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/contact_phone_edt_phoneNo" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:inputType="phone"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        style="@style/Text.M.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/address" />
+
+                    <EditText
+                        android:id="@+id/et_province"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="@string/provinve"
+                        android:inputType="text"
+                        android:onClick="onClick"
+                        android:padding="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_city"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="@string/city"
+                        android:inputType="text"
+                        android:onClick="onClick"
+                        android:padding="8dp" />
+
+                    <EditText
+                        android:id="@+id/et_area"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="@string/area"
+                        android:inputType="text"
+                        android:onClick="onClick"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        style="@style/Text.M.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/address_detail" />
+
+                    <EditText
+                        android:id="@+id/et_address_detail"
+                        style="@style/Text.M.Gray"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:padding="8dp" />
+                </TableRow>
+
+                <Button
+                    android:id="@android:id/button1"
+                    style="@style/button_red_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="onClick"
+                    android:padding="8dp"
+                    android:text="@android:string/ok" />
+            </TableLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

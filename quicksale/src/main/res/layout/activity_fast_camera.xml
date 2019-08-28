@@ -1,0 +1,101 @@
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fast_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+            android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/camera_flashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/camera_flashlight_auto_bg"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:id="@+id/camera_cutCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/camera_cut_bg"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+    
+        <SurfaceView
+            android:id="@+id/camera_mSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+                android:background="@color/black_transparent" >
+
+            <LinearLayout
+                android:id="@+id/camera_takedPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+        
+        <ImageView
+                android:id="@+id/camera_focus"
+            android:layout_width="75dp"
+           android:visibility="gone"
+            android:layout_height="75dp"
+android:src="@drawable/fast_camera_focus"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/black" >
+
+        <Button
+            android:id="@+id/camera_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/camera_close"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/camera_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/camera_enter"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/camera_cheese"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/camera_cheese_bg"/>
+    </RelativeLayout>
+
+</com.nahuo.widget.TouchLinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/post_detail_activity_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/wv_activity_imgs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+
+            android:textColor="@color/txt_blue"
+            android:textSize="16sp" />
+
+        <com.nahuo.library.controls.NoScrollGridView
+            android:id="@+id/wv_activity_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_10"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="80dp"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@null"
+            android:numColumns="auto_fit"
+            android:scrollingCache="true"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/img_person_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/person_icon" />
+
+            <TextView
+                android:id="@+id/txt_activity_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/img_person_icon"
+                android:text="0"
+                android:textColor="@color/top_bar_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@id/txt_activity_person"
+                android:text="人参加"
+                android:textColor="@color/txt_gray" />
+
+            <TextView
+                android:id="@+id/txt_activity_leave_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/top_bar_bg"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_activity_leave_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/txt_activity_leave_time"
+                android:text="剩余:"
+                android:textColor="@color/txt_gray" />
+
+            <ImageView
+                android:id="@+id/img_post_detail_time_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/txt_activity_leave_label"
+                android:src="@drawable/img_clock_icon" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_activity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_red_long"
+            android:gravity="center"
+            android:text="立即报名"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View style="@style/line_view" />
+
+    <!-- 点赞 -->
+    <LinearLayout
+        android:id="@+id/layout_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-3dp"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/like_user_bg"
+            android:orientation="horizontal" >
+            <com.nahuo.library.controls.FlowLayout
+                android:id="@+id/flowlayout_likes"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="0人点赞" />
+        </LinearLayout>
+        <View style="@style/line_view"/>
+    </LinearLayout>
+
+    <View style="@style/line_view" android:layout_marginTop="10dp"/>
+
+</LinearLayout>

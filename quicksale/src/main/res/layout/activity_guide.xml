@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    tools:context=".GuideActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/guide_v"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:id="@+id/guide_btnLogin"
+            android:background="@color/transparent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:text="" />
+        <Button
+            android:id="@+id/guide_btnForward"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/guide_viewPager_footer1"
+            style="@style/viewPager_footer"
+            android:background="@drawable/viewpager_footer_focused" />
+
+        <View
+            android:id="@+id/guide_viewPager_footer2"
+            style="@style/viewPager_footer"
+            android:background="@drawable/viewpager_footer_unfocused" />
+    </LinearLayout>
+
+</RelativeLayout>

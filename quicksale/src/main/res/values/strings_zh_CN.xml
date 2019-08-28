@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msg_roaming">消息漫游</string>
+    <string name="gorup_not_found">找不到这个群组</string>
+    <string name= "no_more_messages">没有更多的消息了</string>
+    <string name="join_public_group">加入公开群</string>
+    <string name="chatroom_allow_owner_leave"> 允许聊天室群主离开</string>
+    <string name="delete_msg_when_exit_group">退出群组时删除聊天数据</string>
+    <string name="set_transfer_file_by_userself">无需用户实现上传下载</string>
+    <string name="set_autodownload_thumbnail">是否自动下载缩略图附件</string>
+    <string name="auto_accept_group_invitation">自动同意群组加群邀请</string>
+    <string name="adaptive_video_encode">视频自适应码率编码</string>
+    <string name="multi_device_management">多设备管理</string>
+    <string name="Current_version">当前版本</string>
+    <string name="Not_Set">未设置</string>
+    <string name="Upload_the_log">上传日志中</string>
+    <string name="The_new_group_chat">新建群组</string>
+    <string name="add_public_group_chat">添加公开群</string>
+    <string name="add_public_chat_room">添加聊天室</string>
+    <string name="group_not_found">找不到这个群组</string>
+    <string name="group_name">群聊名称</string>
+    <string name="Group_chat_profile">群聊简介</string>
+    <string name="Whether_the_public">是否公开</string>
+    <string name="call_option">通话设置</string>
+    <string name="sdk_service_check">SDK接口诊断</string>
+    <string name="btn_service_check">诊断</string>
+    <string name="check_service_start">开始诊断\n</string>
+    <string name="notify">新消息提醒</string>
+    <string name="newnotify">接收新消息通知</string>
+    <string name="shake">震动</string>
+    <string name="chatset">聊天设置</string>
+    <string name="yangshengqi">使用扬声器播放语音</string>
+    <string name="push_settings">消息推送设置</string>
+    <string name="book_black">通讯录黑名单</string>
+    <string name="set_custom_appkey">自定义App key</string>
+    <string name="set_custom_server">自定义server</string>
+    <string name="title_live">互动视频</string>
+    <string name="msg_live_invite">%1$s 邀请你参与互动视频 - %2$s</string>
+    <string name="alert_request_tobe_talker">请求连麦 &#8230;</string>
+    <string name="alert_request_tobe_audience">请求下麦 &#8230;</string>
+    <string name="connect_conflict">同一帐号已在其他设备登录</string>
+    <string name="em_user_remove">此用户已被移除</string>
+    <string name="user_forbidden">用户被服务器限制连接</string>
+    <string name="copy">复制</string>
+    <string name="forward">转发</string>
+    <string name="recall">撤回</string>
+    <string name="msg_recall_by_self">您撤回了一条消息</string>
+    <string name="msg_recall_by_user">%1$s 撤回了一条消息</string>
+    <string name="Please_enter_a_username">请输入用户名</string>
+    <string name="Exit_the_group_chat">退出群聊</string>
+    <string name="accept_join_group">%s同意加入群</string>
+    <string name="refuse_join_group">%s拒绝加入群</string>
+    <string name="at_your_in_group">%s在群聊中@了你</string>
+    <string name="emojicon_test_name">示例</string>
+    <string name="Failed_to_download_file">下载文件失败:</string>
+    <string name="downwaiting">正在下载文件请稍后</string>
+    <string name="is_down_please_wait">正在下载视频请稍候</string>
+    <string name="Open_the_equipment_failure">打开设备失败!</string>
+    <string name="ok">确定</string>
+    <string name="The_video_to_start">录像开始</string>
+    <string name="Whether_to_send">是否发送？</string>
+    <string name="recording_video">录制视频</string>
+    <string name="Video_footage">拍摄录像</string>
+    <string name="search_on">搜索</string>
+    <string name="search_off">取消</string>
+    <string name="fucous_no">+ 关注</string>
+    <string name="fucous_yes">取消关注</string>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="fixappbarlayoutbehavior">com.nahuo.quicksale.controls.FixAppBarLayoutBehavior</string>
+    <string name="flingbehavior">com.nahuo.quicksale.controls.FlingBehavior</string>
+    <string name="loading_no_more">已经到底了.....</string>
+    <string name="menu_add_str">正在添加到拿货车....</string>
+    <string name="menu_chang_str">正在修改....</string>
+    <string name="get_items_v2">正在加载场次数据...</string>
+    <string name="create_temp_loading">正在创建订单，请耐心等待...</string>
+    <string name="chat_connect_des">正在连接客服中...</string>
+    <string name="chat_connect_no">没有开启聊天系统...</string>
+    <string name="refund_apply_des">申请通过后，货款将在场次结束后，自动退至天天账户余额中，可在APP“我的 - 我的钱包”查看</string>
+    <string name="tab_name_pin_huo">拼货</string>
+    <string name="tab_name_ye_pin">约拼</string>
+    <string name="tab_name_sort">分类</string>
+    <string name="tab_name_shop_cart">拿货车</string>
+    <string name="tab_name_me">我的</string>
+    <string name="cube_ptr_pull_down">下拉</string>
+    <string name="cube_ptr_pull_down_to_refresh">下拉刷新</string>
+    <string name="cube_ptr_release_to_refresh">释放刷新</string>
+    <string name="cube_ptr_refreshing">加载中...</string>
+    <string name="cube_ptr_refresh_complete">更新完成.</string>
+
+    <string name="cube_ptr_last_update">上次更新:&#160;</string>
+    <string name="cube_ptr_seconds_ago">&#160;秒之前</string>
+    <string name="cube_ptr_minutes_ago">&#160;分钟之前</string>
+    <string name="cube_ptr_hours_ago">&#160;小时之前</string>
+
+    <string name="draw_clear_layout">清除筛选</string>
+    <string name="draw_ok_layout">确定</string>
+    <string name="item_price">价格</string>
+    <string name="cancel">取消</string>
+    <!--<string name="app_name">天天拼货团女装批发服装批发</string>-->
+    <string name="app_main_sort">分类</string>
+    <string name="share_content">亲，我开通天天拼货团了，跟我一起来拼货吧</string>
+    <string name="layout_empty_message">网络不给力啊，点击界面刷新。</string>
+    <!--<string name="action_settings">Settings</string>-->
+    <!-- Dialog -->
+    <string name="dialog_title_update">程序更新</string>
+    <string name="dialog_msg_no_update">当前已是最新版本，祝您使用愉快。</string>
+    <string name="dialog_msg_update">检测到有新版本程序更新啦，最新版本{0}，当前程序版本{1}，快去下载更新吧！</string>
+    <!-- 标题栏 -->
+    <string name="titlebar_title">标题</string>
+    <string name="titlebar_btnBack"></string>
+    <string name="titlebar_btnRight">更多</string>
+    <string name="titlebar_btnFinish">完成</string>
+    <string name="titlebar_btnPrevious">上一步</string>
+    <string name="titlebar_btnNext">下一步</string>
+    <string name="titlebar_btnHome">首页</string>
+    <string name="titlebar_btnEdit">编辑</string>
+    <string name="titlebar_btnCancel">取消</string>
+    <string name="titlebar_btnComplete">完成</string>
+    <string name="titlebar_btnAdd">添加</string>
+    <string name="titlebar_btnSave">保存</string>
+    <string name="titlebar_btnOK">确定</string>
+    <string name="titlebar_btnImgDir">相册</string>
+    <!-- 软键盘回车键文本 -->
+    <string name="action_focus_next">下一个</string>
+    <string name="action_step_next">下一步</string>
+    <string name="action_done_ok">确定</string>
+    <!-- 引导页界面 -->
+    <string name="title_activity_guide">马上体验</string>
+    <string name="guide_btnForward_text">马上体验</string>
+    <!-- 登录界面 -->
+    <string name="title_activity_login">登录</string>
+    <string name="login_btnLogin_text">登录 / 注册</string>
+    <string name="login_btnReg_text">免费注册</string>
+    <string name="login_btnForgotPwd_text">忘记密码?</string>
+    <string name="login_btnSmsLogin_text">短信快捷登录</string>
+    <string name="login_btnPassLogin_text">账号密码登录</string>
+    <string name="login_edtAccount_title">账　号：</string>
+    <string name="login_edtAccount_hint">手机号</string>
+    <string name="login_edtPassword_title">密　码：</string>
+    <string name="login_edtAccount_empty">手机/账号不能为空</string>
+    <string name="login_edtAccount_error">手机/账号格式不正确</string>
+    <string name="login_edtPassword_empty">密码不能为空</string>
+    <string name="login_edtPassword_hint">请输入密码</string>
+    <string name="login_edtInvitation_code_hint">注册邀请码 (无邀请码可不填) </string>
+    <string name="login_edtSmsPassword_hint">验证码</string>
+    <string name="login_doLogin_loading">正在登录，请稍候&#8230;</string>
+    <string name="login_sms_doLogin_loading">验证登录中，请稍候&#8230;</string>
+    <!-- 开通天天拼货团 -->
+    <string name="title_activity_userreg">开通店铺</string>
+    <string name="userreg_step1">获取验证码</string>
+    <string name="userreg_step2">填写账号信息</string>
+    <string name="userreg_step3">填写店铺信息</string>
+    <string name="userreg_edtPhoneNo_title">手机号码：</string>
+    <string name="userreg_ckbAgree_text">注册表示您已阅读并同意</string>
+    <string name="userreg_ckbAgree_unCheck">请先阅读并同意使用协议</string>
+    <string name="userreg_tvAgreement_text">使用协议</string>
+    <string name="userreg_button_next">下一步</string>
+    <string name="userreg_button_reg">立即开通</string>
+    <string name="userreg_tvSmsKeyDesc_text">验证码已经发送到您%s号码</string>
+    <string name="userreg_edtSmsKey_title">验证码：</string>
+    <string name="userreg_edtSmsKey_hint">输入短信验证码</string>
+    <string name="userreg_btnGetSmsKey_text">重新获取</string>
+    <string name="userreg_edtUsername_title">掌柜昵称：</string>
+    <string name="userreg_edtPassword_title">登录密码：</string>
+    <string name="userreg_edtsenPassword_title">确认密码：</string>
+    <string name="userreg_edtShopName_title">店铺名称：</string>
+    <string name="userreg_edt_notmust">非必填：</string>
+    <string name="userreg_edtDomain_title">店铺域名：</string>
+    <string name="userreg_edtTel_title">客服电话：</string>
+    <string name="userreg_edtTel_hint">请填写手机号码</string>
+    <string name="userreg_regSuccess_text">注册成功！</string>
+    <string name="userreg_btnGotoHome_text">进入天天拼货团 ></string>
+    <string name="userreg_btnGotoContact_text">立即去设置联系方式</string>
+    <string name="userreg_getSmsKey_loading">正在获取短信验证码，请稍候&#8230;</string>
+    <string name="userreg_getSmsKey_success">验证码已经发送到您的手机，请查看手机短信！</string>
+    <string name="userreg_validate_loading">正在验证，请稍候&#8230;</string>
+    <string name="userreg_registUser_loading">正在注册用户，请稍候&#8230;</string>
+    <string name="userreg_registUser_success">用户注册成功，请填写店铺资料开通店铺</string>
+    <string name="userreg_registShop_loading">正在开通天天拼货团，请稍候&#8230;</string>
+    <string name="userreg_edtPhoneNo_empty">手机号码不能为空</string>
+    <string name="userreg_edtPhoneNo_error">手机号码格式不正确</string>
+    <string name="userreg_edtSmsKey_empty">请输入6位数的验证码</string>
+    <string name="userreg_edtUserName_empty">昵称不能为空</string>
+    <string name="userreg_edtPwd_empty">新密码不能为空</string>
+    <string name="userreg_edtPwd_error">新密码不能少于6位数</string>
+    <string name="userreg_edtPwd_has_senpwd">新密码与确认密码不一致</string>
+    <string name="userreg_edtShopName_empty">店铺名称不能为空</string>
+    <string name="userreg_edtDomain_empty">店铺域名不能为空</string>
+    <string name="userreg_edtDomain_error">店铺域名只能已字母开头，并且由字母、数字、和减号”-”组成长度为 6~50个字符的字符串</string>
+    <string name="userreg_edtQQ_empty">客服QQ不能为空</string>
+    <string name="userreg_edtTel_empty">客服电话不能为空</string>
+    <string name="userreg_edtTel_error">客服电话必须为手机号</string>
+    <!-- 找回密码 -->
+    <string name="title_activity_forgotpwd">找回密码</string>
+    <string name="forgotpwd_step1">获取验证码</string>
+    <string name="forgotpwd_step2">设置新密码</string>
+    <string name="forgotpwd_tip">* 输入手机号码即可找回对应账号的密码</string>
+    <string name="forgotpwd_button_next">下一步</string>
+    <string name="forgotpwd_edtPhoneNo_title">手机号码：</string>
+    <string name="forgotpwd_edtSmsKey_title">验证码：</string>
+    <string name="forgotpwd_edtSmsKey_hint">输入短信验证码</string>
+    <string name="forgotpwd_btnNext1_text">获取验证码</string>
+    <string name="forgotpwd_btnGetSmsKey_text">重新获取</string>
+    <string name="forgotpwd_btnResetPwd_text">确认</string>
+    <string name="forgotpwd_edtPwd_title">新密码：</string>
+    <string name="forgotpwd_edtSecondPwd_title">确认新密码：</string>
+    <string name="forgotpwd_findSuccess_text">恭喜您，密码找回成功！</string>
+    <string name="forgotpwd_btnGotoLogin_text">重新登录</string>
+    <string name="forgotpwd_getSmsKey_loading">正在获取短信验证码，请稍候&#8230;</string>
+    <string name="forgotpwd_getSmsKey_yu_yin_loading">正在获取语音验证码，请稍候&#8230;</string>
+    <string name="forgotpwd_tvSmsKeyDesc_text">验证码已经发送到您%s号码</string>
+    <string name="forgotpwd_getSmsKey_success">验证码已经发送到您的手机，请查看手机短信！</string>
+    <string name="forgotpwd_getSmsKey_success_yuyin">语音验证码已发送，请注意接听电话</string>
+    <string name="forgotpwd_validate_loading">正在验证，请稍候&#8230;</string>
+    <string name="forgotpwd_savePwd_loading">正在重置密码，请稍候&#8230;</string>
+    <string name="forgotpwd_edtPhoneNo_empty">手机号码不能为空</string>
+    <string name="forgotpwd_edtPhoneNo_error">手机号码格式不正确</string>
+    <string name="forgotpwd_edtSmsKey_empty">请输入4位数的验证码</string>
+    <string name="forgotpwd_edtPwd_empty">新密码不能为空</string>
+    <string name="forgotpwd_edtPwd_error">新密码不能少于4位数</string>
+    <string name="forgotpwd_edtSecondPwd_empty">请输入确认密码</string>
+    <string name="forgotpwd_pwd_compare">两次输入的密码不一致</string>
+    <!-- 主界面 -->
+    <string name="main_title">首页</string>
+    <string name="main_shopinfo">正在获取身份信息</string>
+    <string name="main_tabitem_allitem">供货商</string>
+    <string name="main_tabitem_order_ask">订单咨询</string>
+    <string name="main_tabitem_myitem">天天拼货团</string>
+    <string name="main_tabitem_share">发送</string>
+    <string name="main_tabitem_me">管理</string>
+    <string name="title_activity_main">天天拼货团</string>
+    <string name="main_net_status">（未连接）</string>
+    <string name="main_buyOnline">在线拿货</string>
+    <string name="main_ShopShare">店铺推广</string>
+    <string name="main_uploadItem">上传商品</string>
+    <string name="main_saleOrder">订单管理</string>
+    <string name="main_shopMsg">店铺小语</string>
+    <string name="main_nahuoOrder">拿货订单</string>
+    <string name="main_shopPreview">天天拼货团预览</string>
+    <string name="main_shopSet">天天拼货团设置</string>
+    <string name="main_proxPhone">上新</string>
+    <string name="main_more">更多</string>
+    <string name="main_getShopInfo_loading">正在加载店铺信息，请稍候&#8230;</string>
+    <string name="main_exit_confirm">是否要退出天天拼货团？</string>
+    <string name="main_shopInfo_null">程序无法获取店铺资料，不能执行此项操作，请检查您的网络是否正常！</string>
+    <!-- 上传商品 -->
+    <string name="title_activity_selectPhoto">选择照片</string>
+    <string name="title_activity_uploaditem">上传商品</string>
+    <string name="uploaditem_maxImageCount">可添加9张图片</string>
+    <string name="uploaditem_tvPrice_text">供货价格</string>
+    <string name="uploaditem_tvSpecQty_text">规格与库存</string>
+    <string name="uploaditem_btnSpecQty_text">如图/均码</string>
+    <string name="uploaditem_price_hint">点我输入</string>
+    <string name="uploaditem_tvCategory_text">分类</string>
+    <string name="uploaditem_tvRaisePrice_text">零售加价率</string>
+    <string name="uploaditem_tvRetailPrice_text">零售价格</string>
+    <string name="uploaditem_tvRaisePrice_remark">* 仅用于辅助计算零售价，不做保存</string>
+    <string name="uploaditem_visible_range">谁可看货</string>
+    <string name="uploaditem_edtCategory_hint">请选择分类</string>
+    <string name="uploaditem_tvDescription_text">描述</string>
+    <string name="uploaditem_edtName_hint">商品名称，自动截取前100个字</string>
+    <string name="uploaditem_edtDescription_hint">描述一下这个商品&#8230;</string>
+    <string name="uploaditem_pw_btnTakePhoto">拍照</string>
+    <string name="uploaditem_pw_btnFromAlbum">从手机相册选择</string>
+    <string name="uploaditem_pw_btnCancel">取消</string>
+    <string name="uploaditem_pw_btnLookup">查看</string>
+    <string name="uploaditem_pw_btnSetCoverImg">设为主图</string>
+    <string name="uploaditem_pw_btnDelete">删除</string>
+    <string name="uploaditem_image_upload_success">上传成功</string>
+    <string name="uploaditem_image_upload_fail">上传失败</string>
+    <string name="uploaditem_image_add">添加</string>
+    <string name="uploaditem_submit_confirm">您确认要提交商品资料到天天拼货团？</string>
+    <string name="uploaditem_submit_confirm_second">有%s张图片未成功上传，是否继续提交商品资料到天天拼货团？</string>
+    <string name="uploaditem_submit_loading">正在提交商品资料&#8230;</string>
+    <string name="uploaditem_submit_success">商品资料提交成功</string>
+    <string name="uploaditem_submit_second">商品资料提交失败，是否尝试再提交一次？</string>
+    <string name="uploaditem_submit_failed">商品资料提交失败</string>
+    <string name="uploaditem_upload_begin">正在上传图片到服务器&#8230;</string>
+    <string name="uploaditem_upload_running">正在上传第%s张图片</string>
+    <string name="uploaditem_upload_status_success">第%s张图片上传成功</string>
+    <string name="uploaditem_upload_status_fail">第%s张图片上传失败</string>
+    <string name="uploaditem_upload_failed">图片未成功上传，商品资料终止提交！</string>
+    <string name="uploaditem_noImage">请先添加商品图片</string>
+    <string name="uploaditem_edtPrice_empty">请设置商品价格</string>
+    <string name="uploaditem_specqty_empty">请设置商品规格数量</string>
+    <string name="uploaditem_itemcat_empty">请选择商品分类</string>
+    <string name="uploaditem_name_empty">请填写商品名称</string>
+    <string name="uploaditem_description_empty">请填写商品描述</string>
+    <string name="uploaditem_edtRetailPrice_empty">请输入零售价格</string>
+    <string name="uploaditem_edtPrice_wrong_with_retailPrice">零售价格不能小于批发价格</string>
+    <string name="uploaditem_exit">不保存资料退出？</string>
+
+    <!-- 规格数量 -->
+    <string name="title_activity_specqty">规格数量</string>
+    <string name="specqty_tvColor_text">颜色</string>
+    <string name="specqty_tvSize_text">尺码</string>
+    <string name="specqty_btnSave_text">保存</string>
+    <string name="specqty_pw_title">选择%s</string>
+    <string name="specqty_pw_empty">没有可选的%s哦，赶紧添加吧！</string>
+    <string name="specqty_pw_system">默认%s</string>
+    <string name="specqty_pw_user">自定义%s</string>
+    <string name="specqty_pw_edtNew_hint">输入新的%s</string>
+    <string name="specqty_pw_btnAdd">添加</string>
+    <string name="specqty_pw_btnOK">确定</string>
+    <string name="specqty_pw_btnDel">删除</string>
+    <string name="specqty_loaddata_loading">正在初始化数据，请稍候&#8230;</string>
+    <string name="specqty_addData_loading">正在保存数据，请稍候&#8230;</string>
+    <string name="specqty_pw_edtNew_empty">%s不能为空</string>
+    <string name="specqty_pw_edtNew_exsits">已存在此%s，不能重复添加</string>
+    <string name="specqty_pw_uncheck">至少需要勾选一项哦</string>
+    <string name="specqty_pw_delete_empty">请勾选要删除的%s，只可删除自定义数据</string>
+    <string name="specqty_item_del">删除</string>
+    <string name="buy_count">数量</string>
+    <string name="buy_now">立即购买</string>
+    <!-- 商品分类 -->
+    <string name="title_activity_itemcat">商品分类</string>
+    <string name="itemcat_edtItemCat_title">分类名称：</string>
+    <string name="itemcat_edtItemCat_empty">分类名称不能为空</string>
+    <string name="itemcat_edtItemCat_error">已存在此分类，不能重复添加</string>
+    <string name="itemcat_btnAdd_text">添加</string>
+    <string name="itemcat_empty">亲，您还没有添加商品分类哦！</string>
+    <string name="itemcat_item_delete">删除</string>
+    <string name="itemcat_loadData_loading">正在加载，请稍候&#8230;</string>
+    <string name="itemcat_delete_loading">正在删除，请稍候&#8230;</string>
+    <string name="itemcat_tvItemCat_cat">类目</string>
+    <string name="itemcat_tvItemCat_cat_children">分类</string>
+    <string name="itemcat_tvItemCat_style">风格</string>
+    <string name="itemcat_tvItemCat_cat_hint">请选择类目</string>
+    <string name="itemcat_tvItemCat_catChildren_hint">请选择分类</string>
+    <string name="itemcat_tvItemCat_style_hint">请选择风格</string>
+    <!-- 店铺预览 -->
+    <string name="title_activity_shoppreview">店铺预览</string>
+    <!-- 天天拼货团设置 -->
+    <string name="title_activity_shopset">天天拼货团设置</string>
+    <string name="shopset_shopdata">天天拼货团资料</string>
+    <string name="shopset_shoplogo">店标背景</string>
+    <string name="shopset_btnExit_text">退出登录</string>
+    <string name="shopset_exit_confirm">确定要退出登录吗？</string>
+    <!-- 店标背景 -->
+    <string name="title_activity_shoplogo">店标背景</string>
+    <string name="shoplogo_btnUpdateLogo">更换店标</string>
+    <string name="shoplogo_btnUpdateBackground">更换背景图</string>
+    <string name="shoplogo_save_confirm">确认要应用当前个性化设置？</string>
+    <string name="shoplogo_save_loading">正在保存设置，请稍候&#8230;</string>
+    <!-- 天天拼货团资料 -->
+    <string name="title_activity_shopdata">天天拼货团资料</string>
+    <string name="shopdata_name">店铺名称</string>
+    <string name="shopdata_qq">客服QQ</string>
+    <string name="shopdata_tel">客服电话</string>
+    <string name="shopdata_address">店铺地址</string>
+    <string name="shopdata_getShopInfo_loading">正在加载，请稍候&#8230;</string>
+    <string name="shopdata_saveShopInfo_loading">正在保存，请稍候&#8230;</string>
+    <string name="shopdata_edtName_empty">店铺名称不能为空</string>
+    <string name="shopdata_edtQQ_empty">客服QQ不能为空</string>
+    <string name="shopdata_edtTel_empty">客服电话不能为空</string>
+    <string name="shopdata_edtTel_error">客服电话必须为手机号</string>
+    <string name="shopdata_save_confirm">您确认要保存修改吗？</string>
+    <!-- 更多 -->
+    <string name="title_activity_more">更多</string>
+    <string name="more_about">关于我们</string>
+    <string name="more_check_app_update">版本更新</string>
+    <string name="more_clear_cache">清除缓存</string>
+    <string name="more_check_app_update_loading">正在检查程序更新，请稍候&#8230;</string>
+    <string name="more_clearCache_confirm">清除本地缓存数据不会影响程序运行，确定要清除吗？</string>
+    <string name="more_clearCache_loading">正在清理缓存，请稍候&#8230;</string>
+    <!-- 关于天天拼货团 -->
+    <string name="title_activity_about">新手帮助</string>
+    <!--
+    <string name="about_desc1">微信批发代理神器</string>
+    <string name="about_desc2">告别手工下载图片，一键转发到朋友圈、在线提交订单、分色分码快速捡货、轻松发展海量下线代理</string>
+    <string name="about_desc3">特别提示\n\n谢绝滥用一键转发到朋友圈功能，鄙视没有节操的刷微信朋友圈。天天拼货团保留停止不良行为用户使用天天拼货团的权利</string>
+    -->
+    <string name="items_loadData_loading">加载数据...</string>
+
+    <!-- 上新 -->
+    <string name="title_activity_all_item">供货商上新</string>
+    <string name="all_item_share">分享</string>
+    <string name="all_item_wp">转到天天拼货团</string>
+    <string name="all_item_show_old">浏览原商品</string>
+    <string name="all_item_del">删除</string>
+    <string name="all_item_visible_range">谁可看货</string>
+    <string name="all_item_supply_price">上家供货价</string>
+    <string name="all_item_supply_retailprice">零售价</string>
+    <string name="all_item_add_rate">加价给下家</string>
+    <string name="all_item_agent_price">代理价</string>
+    <string name="all_item_retail_price">建议零售价</string>
+    <string name="all_item_retail_add_rate">零售加价率</string>
+    <string name="all_item_notchange">价格不可更改</string>
+    <string name="all_item_notchange1">*以上加价率，仅用于辅助计算，不做保存</string>
+    <string name="all_item_retail_price_uneditable">*供货商不允许进行修改</string>
+    <string name="all_item_no_data_goto_shop_search">体验一把</string>
+    <string name="all_item_no_data_tips">站住！新来的？\n猛击左上角 “+”\n\n对着天天拼货团二维码，扫一扫\n输入对方的账号，搜一搜\n\n在打开的页面点击 “申请代理”\n接下来，天天看新货啦~</string>
+    <!-- 订单咨询 -->
+    <string name="title_activity_order_ask">订单咨询</string>
+    <string name="orderask_item_time">2014&#8211;5&#8211;1 10:10:10</string>
+    <string name="orderask_item_title">这是标题</string>
+    <string name="orderask_item_lastmsg">这是最后一条信息</string>
+    <!-- 订单咨询详细 -->
+    <string name="title_activity_order_ask_detail">订单咨询</string>
+    <string name="orderask_detail_item_createTime">2014&#8211;5&#8211;1 10:10:10</string>
+    <string name="orderask_detail_item_msg">这是一条消息哈哈哈哈</string>
+    <string name="order_ask_send">发送</string>
+    <!-- 我的供货商 -->
+    <string name="title_activity_vendor">我的供货商</string>
+    <string name="vendor_item_userid">供货商ID</string>
+    <string name="vendor_item_username">供货商名字</string>
+    <string name="vendor_changrate">修改加价率</string>
+    <string name="vendor_receiveaccount">收款信息</string>
+    <string name="vendor_cancel">取消代理</string>
+    <string name="vendor_pricerate">原加价率：</string>
+    <string name="vendor_new_pricerate">加价率：</string>
+    <string name="vendor_new_pricerate_end">%</string>
+    <!-- 天天拼货团 -->
+    <string name="title_activity_my_items">我的店铺</string>
+    <string name="title_visible_range">谁可看货</string>
+    <string name="wp_today">今天</string>
+    <string name="wp_upload_new">上传新款</string>
+    <string name="my_item_no_data_tips">招分销、找代理？\n2步轻松搞定：</string>
+    <string name="my_item_no_data_tips1">1、上传商品\n2、分享天天拼货团招募代理</string>
+
+    <!-- 发送 -->
+    <string name="title_activity_share">发送</string>
+    <string name="share_install_url">发送天天拼货团安装链接</string>
+    <string name="share_bank">发送收款账号</string>
+    <string name="share_url">复制我的天天拼货团链接（网址）</string>
+    <!-- 收款账号编辑 -->
+    <string name="title_activity_receiveaccount">填写收款账号</string>
+    <string name="receiveaccount_remark">手工填写/补充说明</string>
+    <string name="receiveaccount_remark_action">确定</string>
+    <string name="receiveaccount_edit">修改信息</string>
+    <string name="receiveaccount_share_wx">发送到微信</string>
+    <string name="receiveaccount_save">保存</string>
+    <string name="layout_pw_receive_account_menu_btnDelete">删除</string>
+    <string name="layout_pw_receive_account_menu_btnLookup">查看</string>
+    <string name="layout_pw_receive_account_menu_btnCancel">取消</string>
+    <!-- 我的 -->
+    <string name="title_activity_me">我的</string>
+    <string name="title_activity_my_income">我的收入</string>
+    <string name="me_loading">正在保存设置，请稍候&#8230;</string>
+    <string name="me_check_app_update_loading">正在检查程序更新，请稍候&#8230;</string>
+    <string name="me_yft">衣付通</string>
+    <string name="me_my_order">订单管理</string>
+    <string name="me_my_vendor">我的供货商</string>
+    <string name="me_my_income">我的收入</string>
+    <string name="me_withdraw_log">提现记录</string>
+    <string name="me_trade_log">交易记录</string>
+    <string name="me_security_settings">安全设置</string>
+    <string name="me_online_statement">在线结算</string>
+    <string name="me_my_agent">我的代理商</string>
+    <string name="me_base_set">天天拼货团设置</string>
+    <string name="me_qr_code">账号/二维码</string>
+    <string name="me_version">版本更新</string>
+    <string name="me_about">新手帮助</string>
+    <string name="me_exit">退出登陆</string>
+    <string name="hint_long_press_to_edit">长按分组名称可编辑</string>
+    <string name="hint_search_agent">搜索代理</string>
+    <string name="title_new_apply">新申请</string>
+    <string name="btn_accept">接受</string>
+    <string name="btn_reject">拒绝</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_update">修改</string>
+    <string name="btn_next">下一步</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_submit_bind">实名认证并绑定</string>
+    <string name="btn_cancle">取消</string>
+    <string name="me_login_psw">登录密码</string>
+    <string name="me_radion1">采用所有供货商之和</string>
+    <string name="me_radion2">采用自定义运费</string>
+    <string name="me_my_address">收件地址</string>
+    <string name="me_my_expfee">运费设置</string>
+    <string name="me_Consignee">收货人  </string>
+    <string name="me_areainfo">地区信息</string>
+    <string name="me_areadetail">地区详细</string>
+    <string name="me_postcode">邮政编码</string>
+    <string name="me_my_chat">客服设置</string>
+    <string name="title_change_login_psw">修改登录密码</string>
+    <string name="hint_cur_login_psw">当前登录密码</string>
+    <string name="title_wp_qrcode">天天拼货团二维码</string>
+    <string name="hint_qr_code">扫描我的天天拼货团二维码，可一键代理我的货源。\n可打印出来贴在档口、店铺、名片上面</string>
+    <string name="express_tips">因为您设置的运费，有可能低于供货商的运费，从而导致无法进行代理结算。当订单金额不足以进行结算时，买家付款前订单必须先经由您的确认，并修改金额才能支付。</string>
+    <string name="address_btnsetting">设为默认地址</string>
+    <string name="hint_qr_code_longclick">（长按二维码下载到本地）</string>
+    <string name="qrcode_pw_save_text">保存二维码到本地</string>
+    <string name="qrcode_pw_share_text">分享我的天天拼货团</string>
+
+    <!-- 自定义拍照 -->
+    <string name="camera_close">取消</string>
+    <string name="camera_enter">确定</string>
+    <string name="camera_Lookup">查看</string>
+    <string name="camera_Delete">移除</string>
+    <string name="camera_Cancel">取消</string>
+    <string name="title_activity_fast_camera">FastCameraActivity</string>
+
+    <item name="Tag_Url" type="id"/>
+    <item name="Tag_OldUrl" type="id"/>
+    <item name="Tag_ItemName" type="id"/>
+    <item name="Tag_ID" type="id"/>
+    <item name="Tag_MyID" type="id"/>
+    <item name="Tag_Price" type="id"/>
+    <item name="Tag_OldPrice" type="id"/>
+    <item name="Tag_MyStatuID" type="id"/>
+    <item name="Tag_RetailPrice" type="id"/>
+    <item name="Tag_Name" type="id"/>
+    <item name="Tag_Userid" type="id"/>
+    <item name="Tag_Username" type="id"/>
+    <item name="Tag_Position" type="id"/>
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+    <item name="tag_issource" type="id"></item>
+    <item name="tag_upload_failed" type="id"></item>
+    <item name="tag_ItemSourceType" type="id"></item>
+    <item name="tag_SourceID" type="id"></item>
+
+    <string name="enter">确认</string>
+    <string name="giveup">放弃</string>
+    <string name="save">保存</string>
+    <string name="set">设置</string>
+    <string name="pass">跳过</string>
+    <!-- 衣付通 -->
+    <string name="yft_titlebar_text">在线结算</string>
+    <string name="list_more_msg">正在加载更多</string>
+    <string name="yft_btn_open">马上开通</string>
+    <string name="yft_btn_back">返回代理相册</string>
+    <string name="yft_agreement_title">在线结算协议</string>
+    <string name="yft_agreement_title1">你已成功开通在线结算服务！</string>
+    <string name="yft_agreement_title2">在线结算协议></string>
+    <string name="yft_agreement_init_title">天天拼货团在线结算功能火爆公测啦</string>
+    <string name="yft_agreement_init_context">主要功能：\n\n1、支持微信支付、支付宝等购买，免收所有手续费，且提供担保交易\n\n2、告别手工报单，订单同步展示给上级商家\n\n3、自动分配各级代理的利润，智能结算，即时到账</string>
+    <string name="yft_agreement_init_context1">在线结算主要功能：\n\n1、支持微信支付、支付宝等购买，免收所有手续费，且提供担保交易\n\n2、告别手工报单，订单同步展示给上级商家\n\n3、自动分配各级代理的利润，智能结算，即时到账</string>
+    <string name="yft_agreement_content_all1">　　在使用天天拼货团在线支付结算服务之前，您应当阅读并遵守《天天拼货团在线结算用户服务协议》（以下简称“本协议”）、《天天拼货团使用服务协议》以及《天天拼货团交易规则》等相关协议及业务规则。\n　  天天拼货团依据本协议为用户（以下或称“您”）提供在线结算支付服务。本协议对用户和天天拼货团均具有法律约束力。\n　　天天拼货团在此特别提醒您认真阅读和充分理解本协议各条款，特别是其中所涉及的免除或限制天天拼货团责任、限制用户权利、争议解决和法律适用等条款。请您审慎阅读并选择是否接受本协议（未成年人应在监护人陪同下阅读）。除非您接受本协议所有条款，否则您无权使用天天拼货团的在线结算服务。您一经注册并且使用天天拼货团在线支付结算服务即视为对本协议的理解和接受。\n\n　　一、【天天拼货团在线支付结算服务的确认和接受】\n    1、天天拼货团在线支付结算服务，是由天天拼货团联合微信支付、支付宝等向您提供的在线结算服务。\n       \n   2、买家或您向指定的收款人支付款项时，需要在天天拼货团APP页面输入您本人银行卡卡号、有效期(信用卡需填写)、姓名、身份证号（国内银行卡用户需填写）、银行预留手机号码及账单地址等信息，经第三方支付平台与银行信息交互及系统校验通过后完成支付。\n    3、收款人只要经由天天拼货团在线支付结算服务收到款项，天天拼货团将免收所有第三方支付平台交易手续费。\n    4、天天拼货团的在线结算服务将依据微信支付服务的流程和功能的随时调整而调整。\n \n   5、天天拼货团有权根据业务运营的调整，单方修改或变更本协议的内容，并将通过天天拼货团公布最新的服务协议，不另作个別通知。若您于任何修改或变更本协议后继续使用天天拼货团在线支付结算服务，则视为您已阅读、了解并同意接受上述修改或变更，若您不同意，则您应主动立即停用天天拼货团的在线结算服务。\n\n　　二、【天天拼货团在线支付结算服务的开通】\n\n    在使用天天拼货团在线支付结算服务前，您需符合下列要求：\n    1、您已经注册了天天拼货团账号，并且知悉并且同意《天天拼货团使用服务协议》。\n    2、您开通了天天拼货团在线支付结算服务，并且符合当地的法律法规，并能独立承担法律责任。\n　　3、您已开设了有效的银行账户。\n  　4、您需提供真实、有效、完整的注册信息，并及时更新。\n　　三、【天天拼货团在线服务的功能】\n　　您使用天天拼货团在线支付结算服务可实现以下功能，具体以您申请开通时天天拼货团实际提供的为准。\n　　1、支付功能\n　　您通过天天拼货团APP向卖家或您指定的收款人支付款项时，天天拼货团将根据您的支付指令，从您选定的银行卡中扣划相应金额至卖家或您指定的收款人。\n　　2、收款功能\n    您通过天天拼货团APP向其他人收取款项或其他人通过天天拼货团APP向您支付款项时，在您开通并使用天天拼货团在线结算后，可收取相关款项。\n    3、智能结算功能\n\n    根据天天拼货团“供货商—代理商—消费者”（B2B2C）、“卖家—消费者”（B2C）的这两种商品流通属性，如果是B2B2C的流通属性，一旦消费者产生了消费行为，消费额将自动分款给代理商以及供货商。如果是B2C的流通属性，消费额直接到达卖家的账户。\n例如：代理商代理了某供货商的一款50元的衣服，并且在50元的基础上增加了5元钱的利润转到自己的天天拼货团里，消费者从代理商的天天拼货团里购得这款衣服，消费者为这款衣服支付的55元钱将自动把其中的五元钱打到代理商的账户里，同时将另外的50元打给供货商。从而实现智能结算。\n不管这件商品中间经历了几级代理商，最终的消费者为这款商品支付的消费额都能智能分配各级代理商的利润。\n&#160;&#160;&#160;&#160;4、查询功能\n　  天天拼货团将记录您使用天天拼货团结算服务中的相关交易，您可以在天天拼货团查询相关交易记录。\n　　5、绑定/解绑银行卡功能\n　　在您开通天天拼货团在线支付结算服务后，您的天天拼货团账号可以绑定新的银行卡，或解除已绑定的银行卡。\n　　6、修改/重置密码功能\n　　您在使用天天拼货团结算服务时，可以对原有密码进行修改，或通过提供银行卡及个人信息等资料申请密码重置。\n　　7、退款功能\n    如您使用天天拼货团在线支付结算服务过程中发生款项退还的，天天拼货团可直接将款项退还至天天拼货团衣付通账户余额中。\n    8、提现功能\n    如您需要对天天拼货团在线支付结算服务过程中的发生的退款进行提现，您必须绑定身份证和银行卡，且提现的款项将在您提现行为发生后的两个工作日之内到达您绑定的银行账户。\n  　四、【服务费用】\n　　天天拼货团在线支付结算服务是天天拼货团联合财付通公司的微信支付以及支付包一起为您提供的支付服务，当您使用天天拼货团在线支付结算服务时，天天拼货团免收一切手续费。同时，天天拼货团保留制定及调整服务费的权利。除非双方另有约定，如收取服务费用，您同意天天拼货团有权从您交易款项中实时扣除该费用。\n　　五、【账户安全】\n    1、当您使用天天拼货团在线服务服务时，您应自行设置相关支付密码，并予以妥善保管。\n    2、您应妥善保管银行卡及其密码、CVV码、有效期以及微信帐号及其密码、财付通账号及其密码等有关信息，且不得让其他任何人使用，否则，由此导致的风险和损失应由您自行承担。\n　　3、如您不慎遗失或泄露上述账号及其密码、发现第三人冒用或盗用上述账号及其密码或发现其他任何未经您本人合法授权的情形，您应及时通知天天拼货团的客服部门（客服电话：020—82028126），以减少可能发生的损失。天天拼货团在接到上述通知前，对第三人使用天天拼货团在线支付结算服务已发生的效力不承担任何责任，但有确切证据证明天天拼货团存在故意或重大过失的除外。\n    六、【天天拼货团在线支付结算服务的使用】\n　　1、在您申请开通使用天天拼货团在线支付结算服务，且您及对方符合指定条件或状态时，天天拼货团开始提供支付与结算服务。在您使用天天拼货团在线支付结算服务时所发出的支付指令是不可撤销的，天天拼货团有权根据您发出的指令进行支付。\n　　2、如果您尚未开通天天拼货团在线支付结算服务，当他人通过天天拼货团在线支付结算服务向您支付款项时，此笔交易将无法完成，此笔款项将无法成功到达你的账户，直到您开通天天拼货团在线支付结算服务并主动发起收款。\n　　如果对方尚未开通天天拼货团在线支付结算服务，当您通过天天拼货团在线支付结算服务向对方支付款项时，此笔交易将无法完成，此笔款项也无法成功到达你的账户，直到对方开通天天拼货团在线支付结算服务并主动发起收款。\n　　3、天天拼货团在线支付结算服务并非银行或金融机构，无法提供资金即时到账服务，您认可资金于途中流转需要合理时间。\n　　4、您使用天天拼货团在线支付结算服务期间，天天拼货团无须对为您保管、代收或代付款项的货币贬值、汇率损失和利息损失及其他风险担责，并且天天拼货团无须向您支付此等款项的任何孳息。\n　　5、当您使用天天拼货团在线支付结算服务时，如您未遵守法律法规、本协议及相关操作提示和业务规则，由此造成的风险和损失由您自行承担，天天拼货团不向您承担任何风险和损失。\n　　6、您使用天天拼货团在线支付结算服务时，应当仔细确认交易及其金额后进行支付。收到您的支付指令后，天天拼货团有权根据您的指令委托银行或第三方从您银行卡中扣划资金给收款人，届时您不应以未在交易单据中签名、签名不符、非本人意愿交易等原因要求天天拼货团退款或承担其他责任。\n　　7、您对使用天天拼货团在线支付结算服务过程中发出指令的合法性、真实性、完整性及有效性承担全部责任；您承诺天天拼货团依照您的指令进行操作的一切风险由您自行承担。您认可天天拼货团在线支付结算服务的相关交易信息均以天天拼货团系统记录的为准。\n　　8、您授权天天拼货团有权留存您在开通天天拼货团在线支付结算服务时填写的相应信息，以供后续向您持续性地提供相应服务，包括但不限于将本信息用于向您推广、提供其他更加优质的产品或服务。\n　　9、您同意天天拼货团有权以电子邮件、天天拼货团网站公告、电话或传真等方式通知您关于使用天天拼货团在线支付结算服务的信息。\n　　10、您承诺不为任何非法目的或以任何非法方式使用天天拼货团在线支付结算服务，也不将天天拼货团在线支付结算服务用于禁止或限制物品的交易。\n　　11、您不得利用天天拼货团在线支付结算服务实施下列任一的行为：\n　　  （1）反对宪法所确定的基本原则，危害国家安全、泄漏国家秘密、颠覆国家政权、破坏国家统一；\n　　  （2）侵害他人名誉、隐私权、商业秘密、商标权、著作权、专利权及其他权利；\n　　  （3）冒用他人名义使用天天拼货团在线支付结算服务；\n　　  （4）从事任何不法交易行为，如贩卖枪支、毒品、禁药、盗版软件或其他违禁物；\n　　  （5）提供赌博资讯或以任何方式引诱他人参与赌博；\n　　  （6）涉嫌实施或实施洗钱、套现或进行传销活动；\n　　  （7）使用无效信用卡或他人信用卡进行交易；\n　　  （8）使用无效银行账户或他人银行账户进行交易；\n　　  （9）侵害天天拼货团在线支付结算服务系統；\n　　  （10）违反法律法规、监管规定、天天拼货团或其关联公司网站的条款、协议、规则、通告等相关规定，而被上述任一主体终止提供服务；\n　　  （11）从事其他违反国家法律、法规、规章及政策法令的行为，或其他违反本协议的行为。\n　　七、【遵守当地法律监管】\n　　1、您在使用天天拼货团在线支付结算服务过程中应当遵守当地相关的法律法规，并尊重当地的道德和风俗习惯。如果您的行为违反了当地法律法规或道德风俗，您应当为此独立承担责任。\n　　2、如您所属的国家或地区禁止或限制本协议内容的全部或部分，则您应立即停止使用天天拼货团在线支付结算服务。\n　　3、您应避免因使用天天拼货团在线支付结算服务而使天天拼货团卷入政治和公共事件，否则天天拼货团有权暂停或终止对您的服务。\n　　八、【责任范围及限制】\n　　1、天天拼货团仅对本协议中所列明的义务承担责任，且该责任范围仅以您实际遭受的经济损失为限。\n　　2、天天拼货团仅提供天天拼货团在线支付结算服务，并不参与具体的商品或服务交易，您使用天天拼货团在线支付结算服务时，因商品或服务交易本身所产生的任何纠纷或责任应由您自行解决或承担。\n　　3、天天拼货团在线支付结算服务是在现有技术水平下提供的，天天拼货团将尽力为您提供服务，但无法保证该服务完全符合您的预期。\n　　九、【不可抗力及其他免责事由】\n　　1、在使用天天拼货团在线支付结算服务的过程中，可能会遇到不可抗力等风险因素，使天天拼货团在线支付结算服务发生中断。不可抗力是指不能预见、不能克服、不能避免且对一方或双方造成重大影响的客观事件，包括但不限于洪水、地震、瘟疫和风暴等自然灾害以及战争、动乱、政府行为等社会事件。出现上述情况时，天天拼货团将努力在第一时间与相关单位配合及时进行修复，但由此给您造成的损失天天拼货团在法律允许的范围内免责。\n　　2、在法律允许的范围内，天天拼货团对以下情形导致的服务中断或受阻不承担责任：\n　　  （1）受到计算机病毒、木马或其他恶意程序、黑客攻击的破坏；\n　　  （2）用户或天天拼货团的电脑软件、系统、硬件和通信线路出现故障；\n　　  （3）用户操作不当；\n　　  （4）用户通过非天天拼货团授权的方式使用天天拼货团在线支付结算服务；\n　　  （5）银行系统或银行网络出现故障；\n　　  （6）其他天天拼货团无法控制或合理预见的情形。\n　　3、您在使用天天拼货团在线支付结算服务的过程中，天天拼货团不对下列风险担责：\n　　  （1）来自他人匿名或冒名的含有威胁、诽谤、令人反感或非法内容的信息；\n　　  （2）遭受他人误导、欺骗或其他导致任何心理、生理上的伤害以及经济上的损失；\n　　  （3）其他因网络信息或用户行为引起的风险。\n　　4、您在使用天天拼货团在线支付结算服务的过程中，天天拼货团在法律规定的范围内可处理违法违规内容，但其不构成天天拼货团的义务或承诺。\n　　十、【暂停、中断或终止服务】\n　　1、天天拼货团有权基于业务调整或风险管控的需要，暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　2、天天拼货团在发现您有可疑交易时，有权不经通知暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　3、天天拼货团发现您违反本协议约定的，有权暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　十一、【知识产权保护】\n　　1、天天拼货团在线支付结算服务中提供的内容（包括但不限于网页、文字、图片、音频、视频、图表等）的知识产权归天天拼货团及其关联公司所有，用户在使用天天拼货团在线支付结算服务中所产生内容的知识产权归用户或相关权利人所有。\n　　2、除另有特别声明外，天天拼货团提供的在线支付结算服务时所依托软件的著作权、专利权及其他知识产权均归天天拼货团及其关联公司所有。\n　　3、上述知识产权均受到法律保护，未经天天拼货团、用户或相关权利人书面许可，任何人不得以任何形式进行使用或创造相关衍生作品。\n　　十二、【法律适用及争端解决】\n　　1、本协议签订地为中华人民共和国广东省广州市天河区。\n　　2、本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。\n　　3、您和天天拼货团因本协议产生任何纠纷或争议的，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交至本协议签订地有管辖权的人民法院解决。\n　　十三、【其他条款】\n　　1、本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。\n　　2、本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。\n    天天拼货团\n</string>
+    <string name="yft_agreement_content_part">&#160;&#160;&#160;&#160;欢迎使用在线结算服务！\n&#160;&#160;&#160;&#160;【协议要点-必看】\n&#160;&#160;&#160;&#160;1.天天拼货团在线支付结算服务，是由天天拼货团联合微信支付、支付宝等向您提供的在线结算服务。\n&#160;&#160;&#160;&#160;2.收款人只要经由天天拼货团在线支付结算服务收到款项，天天拼货团将免收所有第三方支付平台交易手续费。\n&#160;&#160;&#160;&#160;3.为保障消费者权益，遵循国家相关法律，开通天天拼货团在线结算服务的卖家必须遵守7天无理由退换货，为买家提供7天售后保障服务。</string>
+    <string name="yft_agreement_content_all">　　在使用天天拼货团在线支付结算服务之前，您应当阅读并遵守《天天拼货团在线结算用户服务协议》（以下简称“本协议”）、《天天拼货团使用服务协议》以及《天天拼货团交易规则》等相关协议及业务规则。\n　  天天拼货团依据本协议为用户（以下或称“您”）提供在线结算支付服务。本协议对用户和天天拼货团均具有法律约束力。\n　　天天拼货团在此特别提醒您认真阅读和充分理解本协议各条款，特别是其中所涉及的免除或限制天天拼货团责任、限制用户权利、争议解决和法律适用等条款。请您审慎阅读并选择是否接受本协议（未成年人应在监护人陪同下阅读）。除非您接受本协议所有条款，否则您无权使用天天拼货团的在线结算服务。您一经注册并且使用天天拼货团在线支付结算服务即视为对本协议的理解和接受。\n\n　　一、【天天拼货团在线支付结算服务的确认和接受】\n    1、天天拼货团在线支付结算服务，是由天天拼货团联合微信支付、支付宝等向您提供的在线结算服务。\n       \n   2、买家或您向指定的收款人支付款项时，需要在天天拼货团APP页面输入您本人银行卡卡号、有效期(信用卡需填写)、姓名、身份证号（国内银行卡用户需填写）、银行预留手机号码及账单地址等信息，经第三方支付平台与银行信息交互及系统校验通过后完成支付。\n    3、收款人只要经由天天拼货团在线支付结算服务收到款项，天天拼货团将免收所有第三方支付平台交易手续费。\n    4、天天拼货团的在线结算服务将依据微信支付服务的流程和功能的随时调整而调整。\n \n   5、天天拼货团有权根据业务运营的调整，单方修改或变更本协议的内容，并将通过天天拼货团公布最新的服务协议，不另作个別通知。若您于任何修改或变更本协议后继续使用天天拼货团在线支付结算服务，则视为您已阅读、了解并同意接受上述修改或变更，若您不同意，则您应主动立即停用天天拼货团的在线结算服务。\n\n　　二、【天天拼货团在线支付结算服务的开通】\n\n    在使用天天拼货团在线支付结算服务前，您需符合下列要求：\n    1、您已经注册了天天拼货团账号，并且知悉并且同意《天天拼货团使用服务协议》。\n    2、您开通了天天拼货团在线支付结算服务，并且符合当地的法律法规，并能独立承担法律责任。\n　　3、您已开设了有效的银行账户。\n  　4、您需提供真实、有效、完整的注册信息，并及时更新。\n　　三、【天天拼货团在线服务的功能】\n　　您使用天天拼货团在线支付结算服务可实现以下功能，具体以您申请开通时天天拼货团实际提供的为准。\n　　1、支付功能\n　　您通过天天拼货团APP向卖家或您指定的收款人支付款项时，天天拼货团将根据您的支付指令，从您选定的银行卡中扣划相应金额至卖家或您指定的收款人。\n　　2、收款功能\n    您通过天天拼货团APP向其他人收取款项或其他人通过天天拼货团APP向您支付款项时，在您开通并使用天天拼货团在线结算后，可收取相关款项。\n    3、智能结算功能\n\n    根据天天拼货团“供货商—代理商—消费者”（B2B2C）、“卖家—消费者”（B2C）的这两种商品流通属性，如果是B2B2C的流通属性，一旦消费者产生了消费行为，消费额将自动分款给代理商以及供货商。如果是B2C的流通属性，消费额直接到达卖家的账户。\n例如：代理商代理了某供货商的一款50元的衣服，并且在50元的基础上增加了5元钱的利润转到自己的天天拼货团里，消费者从代理商的天天拼货团里购得这款衣服，消费者为这款衣服支付的55元钱将自动把其中的五元钱打到代理商的账户里，同时将另外的50元打给供货商。从而实现智能结算。\n不管这件商品中间经历了几级代理商，最终的消费者为这款商品支付的消费额都能智能分配各级代理商的利润。\n&#160;&#160;&#160;&#160;4、查询功能\n　  天天拼货团将记录您使用天天拼货团结算服务中的相关交易，您可以在天天拼货团查询相关交易记录。\n　　5、绑定/解绑银行卡功能\n　　在您开通天天拼货团在线支付结算服务后，您的天天拼货团账号可以绑定新的银行卡，或解除已绑定的银行卡。\n　　6、修改/重置密码功能\n　　您在使用天天拼货团结算服务时，可以对原有密码进行修改，或通过提供银行卡及个人信息等资料申请密码重置。\n　　7、退款功能\n    如您使用天天拼货团在线支付结算服务过程中发生款项退还的，天天拼货团可直接将款项退还至天天拼货团衣付通账户余额中。\n    8、提现功能\n    如您需要对天天拼货团在线支付结算服务过程中的发生的退款进行提现，您必须绑定身份证和银行卡，且提现的款项将在您提现行为发生后的两个工作日之内到达您绑定的银行账户。\n  　四、【服务费用】\n　　天天拼货团在线支付结算服务是天天拼货团联合财付通公司的微信支付以及支付包一起为您提供的支付服务，当您使用天天拼货团在线支付结算服务时，天天拼货团免收一切手续费。同时，天天拼货团保留制定及调整服务费的权利。除非双方另有约定，如收取服务费用，您同意天天拼货团有权从您交易款项中实时扣除该费用。\n　　五、【账户安全】\n    1、当您使用天天拼货团在线服务服务时，您应自行设置相关支付密码，并予以妥善保管。\n    2、您应妥善保管银行卡及其密码、CVV码、有效期以及微信帐号及其密码、财付通账号及其密码等有关信息，且不得让其他任何人使用，否则，由此导致的风险和损失应由您自行承担。\n　　3、如您不慎遗失或泄露上述账号及其密码、发现第三人冒用或盗用上述账号及其密码或发现其他任何未经您本人合法授权的情形，您应及时通知天天拼货团的客服部门（客服电话：020—82028126），以减少可能发生的损失。天天拼货团在接到上述通知前，对第三人使用天天拼货团在线支付结算服务已发生的效力不承担任何责任，但有确切证据证明天天拼货团存在故意或重大过失的除外。\n    六、【天天拼货团在线支付结算服务的使用】\n　　1、在您申请开通使用天天拼货团在线支付结算服务，且您及对方符合指定条件或状态时，天天拼货团开始提供支付与结算服务。在您使用天天拼货团在线支付结算服务时所发出的支付指令是不可撤销的，天天拼货团有权根据您发出的指令进行支付。\n　　2、如果您尚未开通天天拼货团在线支付结算服务，当他人通过天天拼货团在线支付结算服务向您支付款项时，此笔交易将无法完成，此笔款项将无法成功到达你的账户，直到您开通天天拼货团在线支付结算服务并主动发起收款。\n　　如果对方尚未开通天天拼货团在线支付结算服务，当您通过天天拼货团在线支付结算服务向对方支付款项时，此笔交易将无法完成，此笔款项也无法成功到达你的账户，直到对方开通天天拼货团在线支付结算服务并主动发起收款。\n　　3、天天拼货团在线支付结算服务并非银行或金融机构，无法提供资金即时到账服务，您认可资金于途中流转需要合理时间。\n　　4、您使用天天拼货团在线支付结算服务期间，天天拼货团无须对为您保管、代收或代付款项的货币贬值、汇率损失和利息损失及其他风险担责，并且天天拼货团无须向您支付此等款项的任何孳息。\n　　5、当您使用天天拼货团在线支付结算服务时，如您未遵守法律法规、本协议及相关操作提示和业务规则，由此造成的风险和损失由您自行承担，天天拼货团不向您承担任何风险和损失。\n　　6、您使用天天拼货团在线支付结算服务时，应当仔细确认交易及其金额后进行支付。收到您的支付指令后，天天拼货团有权根据您的指令委托银行或第三方从您银行卡中扣划资金给收款人，届时您不应以未在交易单据中签名、签名不符、非本人意愿交易等原因要求天天拼货团退款或承担其他责任。\n　　7、您对使用天天拼货团在线支付结算服务过程中发出指令的合法性、真实性、完整性及有效性承担全部责任；您承诺天天拼货团依照您的指令进行操作的一切风险由您自行承担。您认可天天拼货团在线支付结算服务的相关交易信息均以天天拼货团系统记录的为准。\n　　8、您授权天天拼货团有权留存您在开通天天拼货团在线支付结算服务时填写的相应信息，以供后续向您持续性地提供相应服务，包括但不限于将本信息用于向您推广、提供其他更加优质的产品或服务。\n　　9、您同意天天拼货团有权以电子邮件、天天拼货团网站公告、电话或传真等方式通知您关于使用天天拼货团在线支付结算服务的信息。\n　　10、您承诺不为任何非法目的或以任何非法方式使用天天拼货团在线支付结算服务，也不将天天拼货团在线支付结算服务用于禁止或限制物品的交易。\n　　11、您不得利用天天拼货团在线支付结算服务实施下列任一的行为：\n　　  （1）反对宪法所确定的基本原则，危害国家安全、泄漏国家秘密、颠覆国家政权、破坏国家统一；\n　　  （2）侵害他人名誉、隐私权、商业秘密、商标权、著作权、专利权及其他权利；\n　　  （3）冒用他人名义使用天天拼货团在线支付结算服务；\n　　  （4）从事任何不法交易行为，如贩卖枪支、毒品、禁药、盗版软件或其他违禁物；\n　　  （5）提供赌博资讯或以任何方式引诱他人参与赌博；\n　　  （6）涉嫌实施或实施洗钱、套现或进行传销活动；\n　　  （7）使用无效信用卡或他人信用卡进行交易；\n　　  （8）使用无效银行账户或他人银行账户进行交易；\n　　  （9）侵害天天拼货团在线支付结算服务系統；\n　　  （10）违反法律法规、监管规定、天天拼货团或其关联公司网站的条款、协议、规则、通告等相关规定，而被上述任一主体终止提供服务；\n　　  （11）从事其他违反国家法律、法规、规章及政策法令的行为，或其他违反本协议的行为。\n　　七、【遵守当地法律监管】\n　　1、您在使用天天拼货团在线支付结算服务过程中应当遵守当地相关的法律法规，并尊重当地的道德和风俗习惯。如果您的行为违反了当地法律法规或道德风俗，您应当为此独立承担责任。\n　　2、如您所属的国家或地区禁止或限制本协议内容的全部或部分，则您应立即停止使用天天拼货团在线支付结算服务。\n　　3、您应避免因使用天天拼货团在线支付结算服务而使天天拼货团卷入政治和公共事件，否则天天拼货团有权暂停或终止对您的服务。\n　　八、【责任范围及限制】\n　　1、天天拼货团仅对本协议中所列明的义务承担责任，且该责任范围仅以您实际遭受的经济损失为限。\n　　2、天天拼货团仅提供天天拼货团在线支付结算服务，并不参与具体的商品或服务交易，您使用天天拼货团在线支付结算服务时，因商品或服务交易本身所产生的任何纠纷或责任应由您自行解决或承担。\n　　3、天天拼货团在线支付结算服务是在现有技术水平下提供的，天天拼货团将尽力为您提供服务，但无法保证该服务完全符合您的预期。\n　　九、【不可抗力及其他免责事由】\n　　1、在使用天天拼货团在线支付结算服务的过程中，可能会遇到不可抗力等风险因素，使天天拼货团在线支付结算服务发生中断。不可抗力是指不能预见、不能克服、不能避免且对一方或双方造成重大影响的客观事件，包括但不限于洪水、地震、瘟疫和风暴等自然灾害以及战争、动乱、政府行为等社会事件。出现上述情况时，天天拼货团将努力在第一时间与相关单位配合及时进行修复，但由此给您造成的损失天天拼货团在法律允许的范围内免责。\n　　2、在法律允许的范围内，天天拼货团对以下情形导致的服务中断或受阻不承担责任：\n　　  （1）受到计算机病毒、木马或其他恶意程序、黑客攻击的破坏；\n　　  （2）用户或天天拼货团的电脑软件、系统、硬件和通信线路出现故障；\n　　  （3）用户操作不当；\n　　  （4）用户通过非天天拼货团授权的方式使用天天拼货团在线支付结算服务；\n　　  （5）银行系统或银行网络出现故障；\n　　  （6）其他天天拼货团无法控制或合理预见的情形。\n　　3、您在使用天天拼货团在线支付结算服务的过程中，天天拼货团不对下列风险担责：\n　　  （1）来自他人匿名或冒名的含有威胁、诽谤、令人反感或非法内容的信息；\n　　  （2）遭受他人误导、欺骗或其他导致任何心理、生理上的伤害以及经济上的损失；\n　　  （3）其他因网络信息或用户行为引起的风险。\n　　4、您在使用天天拼货团在线支付结算服务的过程中，天天拼货团在法律规定的范围内可处理违法违规内容，但其不构成天天拼货团的义务或承诺。\n　　十、【暂停、中断或终止服务】\n　　1、天天拼货团有权基于业务调整或风险管控的需要，暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　2、天天拼货团在发现您有可疑交易时，有权不经通知暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　3、天天拼货团发现您违反本协议约定的，有权暂停、中断或终止向您提供天天拼货团在线支付结算服务。\n　　十一、【知识产权保护】\n　　1、天天拼货团在线支付结算服务中提供的内容（包括但不限于网页、文字、图片、音频、视频、图表等）的知识产权归天天拼货团及其关联公司所有，用户在使用天天拼货团在线支付结算服务中所产生内容的知识产权归用户或相关权利人所有。\n　　2、除另有特别声明外，天天拼货团提供的在线支付结算服务时所依托软件的著作权、专利权及其他知识产权均归天天拼货团及其关联公司所有。\n　　3、上述知识产权均受到法律保护，未经天天拼货团、用户或相关权利人书面许可，任何人不得以任何形式进行使用或创造相关衍生作品。\n　　十二、【法律适用及争端解决】\n　　1、本协议签订地为中华人民共和国广东省广州市天河区。\n　　2、本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。\n　　3、您和天天拼货团因本协议产生任何纠纷或争议的，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交至本协议签订地有管辖权的人民法院解决。\n　　十三、【其他条款】\n　　1、本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。\n　　2、本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。\n    天天拼货团\n</string>
+    <string name="yft_agreement_content_all_btn">查看全部></string>
+    <string name="yft_agreement_btn">同意开通</string>
+    <string name="yft_agreement_hint">请详细查看协议，开通后代表您已阅读且完全同意本协议</string>
+    <string name="yft_phone_num">手机号码</string>
+    <string name="yft_sms_key">验证码</string>
+    <string name="yft_btn_next">下一步</string>
+    <string name="yft_btn_confirm">确认</string>
+    <string name="yft_paypsw_tips">支付密码不能跟登录密码一样，至少为6位数</string>
+    <string name="yft_paypsw">支付密码</string>
+    <string name="yft_confirm_paypsw">确认支付密码</string>
+    <string name="yft_get_sms_key">获取验证码</string>
+    <string name="yft_setting_paypsw">正在设置支付密码，请稍候&#8230;</string>
+    <string name="yft_set_paypsw_suc">设置支付密码成功</string>
+    <string name="yft_paypsw_same_as_loginpsw">设置失败：支付密码与登录密码一样！</string>
+    <string name="safeq_answer">答案</string>
+    <string name="safeq_switch_question">换一个问题</string>
+    <string name="safeq_checking_answers">正在校验答案，请稍候&#8230;</string>
+    <string name="safeq_empty_answer">答案不能为空</string>
+    <string name="safeq_has_set_questions">您已成功设置了安全问题，安全问题不能修改</string>
+    <string name="available_money">可用余额(¥)</string>
+    <string name="not_available_money">不可用余额</string>
+    <string name="top_up">充值</string>
+    <string name="withdraw">提现</string>
+
+    <!-- 安全设置 -->
+    <string name="title_security_settings">安全设置</string>
+    <string name="title_change_pay_psw">修改支付密码</string>
+    <string name="security_bind_phone">绑定手机</string>
+    <string name="security_authentication">身份验证</string>
+    <string name="security_withdraw">银行卡绑定</string>
+    <string name="security_bingcard">银行卡绑定</string>
+    <string name="security_pay_psw">支付密码</string>
+    <string name="security_safe_question">安全问题</string>
+    <string name="security_forget_safeq_answer">请联系APP售前客服，或QQ：800002677</string>
+    <string name="hint_old_paypsw">旧支付密码</string>
+    <string name="hint_first_psw">新支付密码</string>
+    <string name="hint_second_psw">确认新支付密码</string>
+    <string name="forget_paypsw">忘记支付密码？</string>
+    <string name="btn_confirm">确定</string>
+    <string name="title_find_pay_psw">找回支付密码</string>
+    <string name="create_group">新建分组</string>
+    <!-- 身份验证 -->
+    <string name="auth_card_number">身份证号</string>
+    <string name="auth_card_name">持证姓名</string>
+    <string name="auth_card_type">证件类型</string>
+    <string name="auth_card_state">验证状态</string>
+    <string name="auth_card_name_hint">必须本人，提交后不能修改！</string>
+    <string name="auth_hand_pic">手持证件\n露脸照片</string>
+    <string name="auth_front_pic">证件\n正面照片</string>
+    <string name="auth_back_pic">证件\n反面照片</string>
+
+    <!--银行身份验证-->
+    <string name="really_user_name">真实姓名</string>
+    <string name="identity_card_number">身份证号</string>
+    <string name="user_bank_name">开户银行</string>
+    <string name="user_bank_card">银行卡号</string>
+    <string name="identity_title">为确保资金安全，姓名、身份证、银行卡开户人必须为同一人</string>
+
+    <string name="hint_auth_name">请填写姓名</string>
+    <string name="hint_card_number">请填写身份证号</string>
+    <string name="hint_auth_bank_name">请选择银行</string>
+    <string name="hint_auth_bank_card_number">储蓄卡银行卡号</string>
+
+    <!-- 提现 -->
+    <string name="withdraw_money">提现金额</string>
+    <string name="withdraw_apply_suc">提现申请完成</string>
+    <string name="withdraw_tips">*天天拼货团手机端免收所有手续费。\n*充值的资金不可用于直接提现，只能用于下次交易。\n*提现日期采用T+2到帐，即自提现日起2个工作日后到帐，周六日、节假日往后延迟。</string>
+    <!-- 充值 -->
+    <string name="topup_money">充值金额</string>
+    <string name="pay_way">支付方式</string>
+    <string name="topup_tips">严禁信用卡套现，充值金额只能用于支付订单，不能提现</string>
+    <string name="pay_wx">微信支付</string>
+    <!-- 登录密码 -->
+    <string name="loginpsw_old">旧登录密码</string>
+    <string name="loginpsw_new">登录密码</string>
+    <string name="loginpsw_new_confirm">确认登录密码</string>
+    <string name="loginpsw_forget">忘记支付密码?</string>
+    <!-- 修改绑定银行卡 -->
+    <string name="bingcard_tips">修改绑定银行卡,需要先设置支付密码！</string>
+
+    <!-- 修改签名 -->
+    <string name="change_signature_hint_text">还没有签名哦^_^,快点击我进行签名吧！</string>
+    <string name="change_signature_title">修改签名</string>
+    <string name="address_default">默认</string>
+    <string name="address_province">省份:</string>
+    <string name="address_city">城市:</string>
+    <string name="address_area">区域:</string>
+    <string name="edit">编辑</string>
+    <string name="me_finish">已完成</string>
+    <string name="delete">删除</string>
+    <string name="address_set_default">设为默认地址</string>
+
+    <!-- 二维码扫描 -->
+    <string name="zxing_camera_desc">将二维码图像置于矩形方框内，离手机摄像头10CM左右，系统会自动识别。</string>
+
+    <!-- 联系方式 -->
+    <string name="me_setting">设置</string>
+    <string name="me_my_link">联系方式</string>
+    <string name="me_phone">手机</string>
+    <string name="me_webchat">微信</string>
+    <string name="me_qq">QQ&#160;&#160;</string>
+    <string name="me_mail">邮箱</string>
+    <string name="me_address">地址</string>
+    <string name="me_nocontents">未设置</string>
+    <string name="me_hascontents">已设置</string>
+    <string name="title_activity_meAccount">账号/设置</string>
+    <string name="contact_wx_edt_name">微信昵称：</string>
+    <string name="contact_wx_edt_no">微信号：</string>
+    <string name="contact_qq_edt_name">昵称：</string>
+    <string name="contact_qq_edt_no">号码：</string>
+    <string name="contact_address_edt_address">地址：</string>
+    <string name="contact_email_edt_email">邮箱：</string>
+    <string name="contact_phone_edt_name">联系人：</string>
+    <string name="contact_phone_edt_phoneNo">手机号：</string>
+    <string name="contact_item_edit">修改</string>
+    <string name="contact_item_delete">删除</string>
+    <string name="title_activity_contact_qq">QQ客服</string>
+    <string name="title_activity_contact_wx">微信客服</string>
+    <string name="contact_msg">您还没有设置联系方式呢！为了方便买家联系到您，您可以在个人设置里填写联系方式，商品详情页将展示您的QQ和微信。</string>
+    <string name="contact_2qq_set_msg">注：设置为QQ客服的号码，需要到腾讯网页开启QQ客服功能才能正常使用。</string>
+    <string name="contact_2qq_set">现在开启QQ客服功能 ></string>
+    <string name="contact_msg_overlook">不再显示</string>
+
+    <!-- 基本设置 -->
+    <string name="me_base_set_item_retail_enabled_check">启用</string>
+    <string name="me_base_set_item_retail_raise_text">零售价加价率：</string>
+    <string name="me_base_set_item_retail_raise_tip">* 用于上新或代理时辅助计算零售价</string>
+    <string name="me_base_set_item_retail_enabled_text">是否统一零售价：</string>
+    <string name="me_base_set_item_retail_enabled_tip">* 启用统一零售价，则您上传的商品，下级所有代理商均不能修改零售价</string>
+
+    <!-- 微询 -->
+    <string name="main_tabitem_chat">客服</string>
+    <string name="chat_title">客服</string>
+    <string name="chat_mail">联系人</string>
+    <string name="location_prefix">[我的位置]</string>
+    <string name="voice">[语音]</string>
+    <string name="picture">[图片]</string>
+    <string name="video">[视频]</string>
+    <string name="file">[文件]</string>
+    <string name="voice_call">[语音通话]</string>
+    <string name="location_recv">[%1$s的位置]</string>
+    <string name="delete_message">删除消息</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="text_delivered_msg">送达</string>
+    <string name="resend">重发</string>
+    <string name="confirm_resend">确认重发该信息？</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="connect_failuer_toast">请检查网络或稍候重试</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="search_header">S</string>
+    <string name="title_imsetting">聊天设置</string>
+    <string name="clear_msg">清空聊天记录</string>
+    <string name="my_chat_no_data_tips">点击右上角,添加微询好友</string>
+    <string name="loading">正在加载中&#8230;</string>
+    <string name="loading_topic">正在加载回帖中&#8230;</string>
+    <string name="loading_work_warehouse">保存中&#8230;</string>
+    <string name="loading_shop_cart_del">正在删除&#8230;</string>
+    <string name="loading_refund">申请退款中&#8230;</string>
+    <!-- 店铺首页 -->
+    <string name="shop_item_header_agent">我要代理</string>
+    <string name="share_wp_to">分享我的天天拼货团给好友</string>
+    <string name="wx_friend_circle">微信朋友圈</string>
+    <string name="sina_circle">新浪微博</string>
+    <string name="qq_circle">QQ</string>
+    <string name="qzone_circle">QQ空间</string>
+    <string name="copy_url_circle">复制链接</string>
+    <string name="wx_friend">微信好友</string>
+    <string name="qq_talk">QQ交谈</string>
+    <string name="customer_service">官方客服：800002677</string>
+    <string name="wx_version_too_low">对不起，您的设备不支持微信支付，请安装5.0版本以上的微信。</string>
+    <string name="copy_tips">复制</string>
+    <string name="seven_days_commitment">“7天无理由退换货”指用户（下称“卖家”）使用天天拼货团提供的技术支持及服务向其买家提供的特别售后服务，允许买家按本规则及天天拼货团其他公示规则的规定对其已购特定商品进行退换货。具体为，以签收日后的第二天零时起计算时间，满168小时为7天），若因买家主观原因不愿完成本次交易，卖家有义务向买家提供退换货服务；若卖家未履行其义务，则买家有权按照本规则向天天拼货团发起对该卖家的投诉，并申请“7无理由退换货”赔付。\n卖家在申请“7天无理由退换货”服务之前，应仔细阅读本协议。一旦卖家申请该服务并成功提交相关信息，则默认为确认并接受本协议所有内容，同时默认为确认并接受《消费者保障服务之“商品描述属实保障”服务规则》。\n\n一、保障范围：\n1、买家在收到货品后因不满意货品希望退换货的时侯。\n2、因质量问题产生的退换货，所有邮费必须卖家承担，七天内无理由退换货质量问题的界定为货品破损或残缺。\n3、退换货要求具备商品收到时完整的外包装、配件、吊牌等；购买物品被洗过、穿过、人为破坏或标牌拆卸的不予退换；所有预定或订制特殊尺码的不予退换。\n4、非商品质量问题的退换货，应由买家承担往返运费。\n特别提醒：为避免由于商品滞留造成的经济损失，所有退换货商品，买家应在所规定之时间内发回（以物流签收运单显示时间为准）超过规定时间仍不能将退换商品发出的，请买家与卖家自行协商处理办法。\n\n二、买家提出“7天退换”维权申请的条件：\n\n1、买家提出赔付申请所指向的卖家已参加“消费者保障服务”并承诺提供“7天无理由退换货”服务；\n2、买家已要求卖家提供“7天无理由退换货”服务而被卖家拒绝，或无法联系到该卖家，或卖家中断其经营或服务；\n3、买家的赔付申请在形式上符合相关法律法规的规定；\n4、赔付申请金额仅以买家实际支付的商品价款为限；\n5、买家提出“7天无理由退换货”赔付申请应在选择以“7天无理由退换货”为退货原因的退款过程中或交易成功之日起14 天内；\n\n三、赔付流程：\n\n1、在满足本规则第二条的前提下，买家可在“买家中心－订单管理”页面通过保障卡通道向酷有发起“7天无理由退换货”赔付申请；\n2、在收到买家“7天无理由退换货”赔付申请后，酷有有权根据协调情况要求交易双方提供必要证明，并确认及判定；\n3、当酷有根据相关规则判定买家“7天无理由退换货”赔付申请成立，则有权通知支付宝公司自卖家的支付宝账户直接扣除相应金额款项先行赔付给买家。\n4、非商品质量问题而由买家发起的退换货行为:1)商家包邮产品由双方分别承担发货运费；2)非商家包邮产品，所有邮费均由买家承担。\n\n\n四、买家可享受的保障权益：\n买家在购买了支持7天退换服务的商品，即可享受卖家提供的7天退换服务。具体为：凡自签收货物之日起7天内，在不影响2次销售的情况下，买家可以向卖家提出退换货要求，卖家应无条件同意。\n\n五、邮费说明 ：\n                                                                     \n1.如果是买家原因（非商品质量问题）退换货，由买家自行承担所有退换货运费。其中，如果是商家包邮商品由双方分别承担发货运费；如果是非商家包邮商品，所有退换货邮费均由买 家承担。\n2.如果是商品质量问题、收到的货物与网上描述不符而导致的退货，退货费用则应由卖家承担。\n\n六、不影响第二次销售的判断标准：\n\n1.一旦拆封无法复原商品不可退货（质量问题除外）影响二次销售；\n2.所退换商品要求具备商品收到时完整的外包装、配件、吊牌等；\n3.商品及配件有磨损、损坏、被使用的痕迹，影响二次销售的不予退换。\n4.购买物品被洗过、穿过、人为破坏或标牌拆卸的不提供退换；\n</string>
+    <string name="category">分类</string>
+    <string name="shopping_cart">拿货车</string>
+    <string name="empty_shop_car">清空失效商品</string>
+    <string name="manage_shop_car">管理</string>
+    <string name="weixun">微询</string>
+    <string name="buy">拼了</string>
+    <string name="buy1">我要拼单</string>
+    <!-- 购物车 -->
+    <string name="declare">说明</string>
+    <string name="freight_not_included">(不含运费)</string>
+    <string name="freight_not_included_new">(不含运费)</string>
+    <string name="total">合计</string>
+    <string name="bill">结算</string>
+    <string name="units_of_good">件</string>
+    <string name="submit_order">提交订单</string>
+    <string name="receiver_info">收货信息</string>
+    <string name="count_x_price_x"><Data><![CDATA[应付 :<font color="#FC3D39"><b>¥%1$s</b></font>]]></Data></string>
+    <string name="rmb_x">¥%1$s</string>
+    <string name="update_buy_num">修改购买数量</string>
+    <string name="select_nothing">请选择商品</string>
+    <string name="leave_message_to_seller">给卖家留言</string>
+    <string name="order_bill">订单结算</string>
+    <string name="no_order">没有订单</string>
+    <string name="add_address">添加新地址</string>
+    <string name="receive_address">收货地址</string>
+    <string name="consignee">收件人：</string>
+    <string name="post_code">邮编：</string>
+    <string name="address">所在地区：</string>
+    <string name="address_detail">详细地址：</string>
+    <string name="saving">正在保存&#8230;</string>
+    <string name="pls_select_province">请选择省份</string>
+    <string name="pls_select_bankname">请选择银行</string>
+    <string name="pls_select_city">请选择城市</string>
+    <string name="pls_select_area">请选择区域</string>
+    <string name="provinve">省份</string>
+    <string name="city">城市</string>
+    <string name="area">区域</string>
+    <string name="update_address">修改收货地址</string>
+    <string name="deleting">正在删除，稍候&#8230;</string>
+    <string name="good_x_post_x"><Data><![CDATA[%1$d件 共：<font color="#d52831"><b>¥%2$s</b></font>&nbsp;&nbsp;&nbsp;]]></Data></string>
+    <string name="pay_now">立即付款</string>
+    <string name="will_pay_x"><Data><![CDATA[<font color="#FF5001"><b>¥%1$s</b></font>]]></Data></string>
+    <string name="available_balance"><Data><![CDATA[可用余额：<font color="#339900"><b>¥%1$s</b></font>]]></Data></string>
+    <string name="wait_upload_num">还有%d款在等待</string>
+    <string name="upload_failed_num">有%d款上传失败</string>
+    <string name="uploading_item">正在上传%s</string>
+    <string name="select_xsize_xcolor_xcount">已选%1$s码、%2$s、%3$s件</string>
+    <string name="good_manage">商品管理</string>
+    <string name="category_manage">分类管理</string>
+    <string name="supplierPrice_x">上家供货价：¥%1$s</string>
+    <string name="up_retail_price">上家零售价：¥%1$.2f</string>
+    <string name="price_x_retail_x">我给下家：¥%1$s&#160;&#160;&#160;&#160;&#160;&#160;我的零售：¥%2$s</string>
+    <string name="my_supply_price_x">我给下家：¥%1$s</string>
+    <string name="my_retail_price_x">我的零售：¥%1$s</string>
+
+    <!-- 自定义标题 -->
+    <string name="back">   </string>
+    <string name="order_total_item_count">共%d件商品</string>
+    <string name="why_recruit_agent">1、您的代理卖货后，您将享有价差收入\n2、您代理的代理卖货，您一样享有价差收入\n3、代理卖货后，系统自动为您结算利润\n4、多重保护您的货源不会被代理知道\n5、只有成为您的代理后，才能看到您的批发价</string>
+    <string name="pre_share_shop">1、分享给朋友的页面，只显示零售价。\n2、朋友不能通过分享页面知道您的拿货渠道。\n3、成交后，可由供货商直接发货。\n4、自动分账，天天拼货团自动将订单利润打到您的账户</string>
+    <string name="shop_share_default">亲，天天新款哦，比淘宝还便宜，包退换</string>
+    <string name="submit_order_fail_x"><Data><![CDATA[同时创建失败的订单有  <font color="#FF5001"><b>%1$s</b></font> 张订单]]></Data></string>
+    <string name="submit_order_success_x"><Data><![CDATA[您成功提交了订单]]></Data></string>
+    <string name="seller_x">卖家：%1$s</string>
+    <string name="order_number_x">单号：%1$s</string>
+    <string name="shopcart_empty_text"><Data><![CDATA[什么都没有，赶紧<font color="#39A4F7"><b>购物 </b></font>去吧]]></Data></string>
+    <string name="order_state">订单状态:%s</string>
+    <string name="order_money">商品金额:¥%.2f</string>
+    <string name="order_post_money">预付运费:¥%.2f</string>
+    <string name="recruite_agent_default">亲，点击“申请代理”,等我审核通过后即可做我的代理了，超级简单~</string>
+    <string name="post_name">收件人:%s</string>
+    <string name="contact">联系电话:%s</string>
+    <string name="post_address">收货地址:%s</string>
+    <string name="shop_name">店铺:%s</string>
+    <string name="weipu_account">账号:%s</string>
+    <string name="order_get_money">拿货:¥%.2f</string>
+    <string name="order_get_money2">拿货金额:¥%.2f</string>
+    <string name="order_get_money1">(拿货价¥%.2f)</string>
+    <string name="post_name1">收件姓名:%s</string>
+    <string name="buyer_name">买家账号:%s</string>
+    <string name="post_company">快递公司:%s</string>
+    <string name="post_number">快递单号:%s</string>
+    <string name="send_goods_time">发货时间:%s</string>
+    <string name="sell_money">售货金额:¥%.2f</string>
+    <string name="phone_number">手机:%s</string>
+    <string name="qq_number">QQ:%s</string>
+    <string name="child_order_price">拿货价%1$.2f&#160;&#160;售出价%2$.2f</string>
+    <string name="order_leave_time">离订单付款关闭时间还有：</string>
+    <string name="cancel_order">"你确定要取消订单?"</string>
+    <string name="prompt">提示</string>
+    <string name="change_price_method">¥%1$.2f-¥%2$.2f=</string>
+    <string name="rmb_2">¥%.2f</string>
+    <string name="ship_order">配货单</string>
+    <string name="pre_agent_item">·供货商每天会上大量新款，请根据店铺定位，选择目标款式，不要盲目贪多哟。\n\n·您可以针对目标客户设置合理的加价率。分享后，用户看到的将会是加价后的价格。\n\n·你还可以为商品设置下级代理的看款权限，方便对客户进行分组管理。\n\n·上架成功后，你的代理商或顾客即可看到上架后的商品。</string>
+    <string name="picking_order">配货单</string>
+    <string name="refresh">刷新</string>
+    <string name="can_earn_x"><Data><![CDATA[利润：<font color="#FF5001"><b>¥%1$s</b></font>元/件]]></Data></string>
+    <string name="can_earn_x_y"><Data><![CDATA[利润：<font color="#FF5001"><b>¥%1$s-¥%2$s</b></font>元/件]]></Data></string>
+    <string name="agent_earn_x_retail_earn_y"><Data><![CDATA[我给代理：¥%1$s，代理每售1件，我赚<font color="#FF5001"><b>¥%2$s</b></font>元；<br>我的零售价：¥%3$s，每售1件，我赚<font color="#FF5001"><b>¥%4$s</b></font>元]]></Data></string>
+    <string name="share_earn_money_text"><Data><![CDATA[代理每售出1件该商品，你赚<font color="#FF5001"><b>¥%1$s</b></font>元；每零售1件该商品，你赚<font color="#FF5001"><b>¥%2$s</b></font>元；分享后代理/顾客看不到你的供货商和供货价，不会泄露商家；交易成功后自动结算利润到天天拼货团]]></Data></string>
+
+    <string name="retail_price">零售:¥%.2f</string>
+    <string name="agent_price">给代理:¥%.2f</string>
+    <string name="share_to_wechat_friends_prompt">您正把该商品的图片、商品链接、商品二维码一键转到朋友圈；分享后代理/顾客看不到你的供货商和供货价，不会泄露上家；交易成功后自动结算利润到天天拼货团。</string>
+    <string name="product_what">商品:%s</string>
+    <string name="buyer_what">买家:%s</string>
+    <string name="pay_what">应付:¥%.2f</string>
+    <string name="close">关闭</string>
+    <string name="no_tip">不再提示</string>
+
+    <string name="scan_login_device">%s登录确认</string>
+
+    <string name="search_result_null">嗯～～，找不到：“%s”</string>
+    <string name="try_to_search">要不要试试：</string>
+    <string name="nahuo_search">拿货网搜索：“%s”</string>
+    <string name="hot_shop">热店：</string>
+    <string name="hot_good">热门搜索：</string>
+    <string name="search_history">搜索历史：</string>
+    <string name="input_wp_account">输入账号</string>
+    <string name="input_good_name">商品名称、档口/品牌</string>
+    <string name="collect_count_down"><Data><![CDATA[<font color="#C42A29">%s</font>秒后自动隐藏]]></Data></string>
+
+
+    <string name="pw_btnTakePhoto">拍照</string>
+    <string name="pw_btnFromAlbum">从手机相册选择</string>
+    <string name="pw_btnCancel">取消</string>
+    <string name="boss_name">店主姓名</string>
+    <string name="contact_phone">联系电话</string>
+    <string name="store_name">店铺名称</string>
+    <string name="store_address">店铺地址</string>
+    <string name="order_money1">¥ %.2f</string>
+    <string name="order_post_money1">¥ %.2f</string>
+
+    <!--dialog \t\t\t\t\t\t请选择款式\n（失效商品不进入结算）-->
+    <string name="shopcart_dialog">失效的商品暂时还没开拼哦，迟点回来看看吧。</string>
+
+    <string name="my_coupon_activity">我的优惠券</string>
+    <string name="my_security_settings">支付密码、提现设置</string>
+
+    <string name="coupon_discount">折</string>
+    <string name="fucous_notice">您关注的团都放在“我的－关注收藏”栏目里，以后要快速找到您喜欢的团就方便了~</string>
+    <string name="cancel_fucous_notice">您取消的团都放在“我的－关注收藏”栏目里，以后要快速找到您喜欢的团就方便了~</string>
+    <string name="pay_des">注意：如果订单状态未及时刷新，请5分钟后再查看。若扣款失败，金额会自动退回到您的钱包里，您可用余额重新支付。</string>
+
+    <string name="bind_bank_careful_context">注意：\n1、仅可使用储蓄卡，请不要填写信用卡\n2、建议选择中行、工行、农行、建行等大银行，提现更及时\n3、审核时间为1-3个工作日</string>
+    <string name="me_bink_list">正在获取银行信息，请稍候&#8230;</string>
+    <string name="save_bink_info">正在保存信息，请稍候&#8230;</string>
+    <string name="share_link">分享商品链接</string>
+    <string name="share_pics">分享商品图片</string>
+    <string name="share_pics1">发图片给朋友/客户</string>
+    <string name="share_pics2">分享场次链接</string>
+    <string name="sale_after_apply">售后申请</string>
+    <string name="pin_huo_net_error">网络开小差，再刷新看看</string>
+    <string name="pin_huo_no_data">没有数据，再刷新看看</string>
+    <string name="order_detail_tittle">订单详情</string>
+    <string name="logistics_detail_tittle">已发商品/物流</string>
+    <string name="package_received_tittle">点收货物</string>
+    <!--pppppp-->
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="tencent_tls_ui_independentLoginTitle">用户名登录</string>
+    <string name="tencent_tls_ui_independentRegisterTitle">用户名注册</string>
+
+
+
+    <string name="btn_take_photo">拍照</string>
+    <string name="btn_pic_photo">从手机相册选择</string>
+    <string name="btn_return_home">返回首页</string>
+    <string name="btn_return">返回</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_refuse">拒绝</string>
+    <string name="btn_agree">同意</string>
+    <string name="btn_sure">确定</string>
+    <string name="btn_close">关闭</string>
+
+
+    <string name="error_code_prefix">错误码：</string>
+
+    <!--loginActivity -->
+    <string name="activity_login_login">登录</string>
+    <string name="activity_login_phone_login">手机号登录</string>
+    <string name="activity_login_normal_login">用户名登录</string>
+    <string name="activity_login_register">注册新用户</string>
+    <string name="activity_login_guest_login">游客模式</string>
+    <string name="activity_login_username">用户名</string>
+    <string name="activity_login_verify_code">获取验证码</string>
+    <string name="activity_login_verify_code_edit">验证码</string>
+    <string name="activity_login_phone_num">手机号</string>
+    <string name="activity_login_password">密码</string>
+    <!--loginActivity -->
+
+    <!--registerActivity -->
+    <string name="activity_register_phone_register">手机注册</string>
+    <string name="activity_register_normal_register">用户名注册</string>
+    <string name="activity_register_register">注册</string>
+    <string name="activity_register_username">用户名(4~24位字母、数字、下划线)</string>
+    <string name="activity_register_password">密码(8~16位个字符)</string>
+    <string name="activity_register_password_verify">确认密码</string>
+    <string name="activity_register_phone_num">手机号</string>
+    <string name="activity_register_verify_code">验证码</string>
+    <string name="activity_register_return">返回</string>
+    <!--registerActivity -->
+
+    <!-- permission check-->
+    <string name="float_window_not_allow">悬浮窗权限未开启 请在应用-权限中打开悬浮窗权限</string>
+
+    <string name="dialog_input_text_hint">开启弹幕互动吧</string>
+
+    <string name="dialog_selectSex">请选择</string>
+    <!-- live fragment-->
+    <string name="live_unknown">不显示地理位置</string>
+    <string name="live_titile">最新直播</string>
+    <string name="video_list_empty">没有视频</string>
+
+    <!-- publish activity-->
+    <string name="activity_publish_beauty">美颜效果</string>
+    <string name="activity_publish_white">美白效果</string>
+
+    <!-- live play -->
+    <string name="send">发送</string>
+    <string name="invite_dialog_tips">主播邀请您与他进行互动直播</string>
+    <string name="live_end_ask_tips">确定结束直播?</string>
+    <string name="live_end_tips">直播结束啦!</string>
+    <string name="live_time_tips">直播时长</string>
+    <string name="live_members_tips">观看人数</string>
+    <string name="live_admires_tips">获赞数量</string>
+
+    <string name="live_report_tips">请选择您的举报原因</string>
+    <string name="live_report_dirty">垃圾营销</string>
+    <string name="live_report_false">不实信息</string>
+    <string name="live_report_virus">有害信息</string>
+    <string name="live_report_illegal">违法信息</string>
+    <string name="live_report_yellow">淫秽信息</string>
+
+    <string name="live_host_leave">主播可能暂时离开</string>
+
+    <string name="live_btn_par">par</string>
+    <string name="live_btn_record">录制视频</string>
+    <string name="live_btn_record_close">结束录制</string>
+    <string name="live_btn_show_item">商品展示开启</string>
+    <string name="live_btn_close_item">商品展示关闭</string>
+    <string name="live_btn_watch">观众进场开启</string>
+    <string name="live_btn_watch_close">观众进场关闭</string>
+    <string name="live_btn_push">开启推流</string>
+    <string name="live_btn_stop_push">关闭推流</string>
+    <string name="live_btn_stop_record">停录</string>
+
+    <!-- pushstream -->
+    <string name="clip_title">点击地址复制到黏贴版</string>
+    <string name="clip_tip">地址复制到黏贴版上了</string>
+
+    <string name="private_mode_off">隐私模式已关闭</string>
+    <string name="private_mode_on">隐私模式已开启</string>
+
+
+
+    <!-- userinfo fragment-->
+    <string name="userinfo_title">编辑个人信息</string>
+    <string name="userinfo_head">头像</string>
+    <string name="userinfo_nickname">昵称</string>
+    <string name="userinfo_sex">性别</string>
+    <string name="userinfo_cover">直播封面</string>string>
+    <string name="userinfo_sign">签名</string>
+
+    <string name="userinfo_sex_female">女</string>
+    <string name="userinfo_sex_male">男</string>
+
+    <string name="app_about">关于小直播</string>
+    <string name="app_set">编辑个人信息</string>
+    <string name="btn_login_out">退出登录</string>
+    <string name="tip_force_offline">您的帐号已在其它地方登录</string>
+
+    <!-- set -->
+    <string name="set_live_animator">渐隐动画</string>
+    <string name="set_log_level">日志等级</string>
+    <string name="set_sdk_version">SDK版本</string>
+
+    <!-- icon_edit -->
+    <string name="edit_error">修改失败</string>
+
+
+    <!-- fragment publish -->
+    <string name="publish_already_launch_avRoom">wait!</string>
+    <string name="publish_photo_take">拍照</string>
+    <string name="publish_photo_album">相册</string>
+    <string name="publish_need_photo_tips">从未发起过图片，请选择一张作为直播封面</string>
+    <string name="publish_wait_uploading">请等待封面上传完成</string>
+    <string name="publish_upload_success">上传封面成功</string>
+    <string name="publish_photo_make_sure_tips">请添加一张照片</string>
+    <string name="publish_photo_make_sure_title">请输入图片标题</string>
+    <string name="publish_create_room_failed">创建房间失败</string>
+    <string name="publish_upload_cover_failed">上传封面失败</string>
+    <string name="publish_photo_success">发布图片成功</string>
+    <string name="text_continue">继续</string>
+    <string name="text_publish">开始直播</string>
+    <string name="text_live_preview">发布直播</string>
+    <string name="text_photo_preview">发布照片</string>
+    <string name="text_live_title_input">请输入直播标题</string>
+    <string name="text_photo_title_input">你的照片你做主</string>
+    <string name="text_live_open_lbs">开启位置</string>
+    <string name="text_live_close_lbs">不显示地理位置</string>
+    <string name="text_live_record_scr">启动录屏</string>
+    <string name="text_live_not_record_scr">不启动录屏</string>
+    <string name="text_live_location">正在定位中</string>
+    <string name="text_live_lbs_fail">定位失败</string>
+    <string name="text_live_lbs_unknown">不显示地理位置</string>
+    <string name="text_live_default_title">我的直播我做主</string>
+    <string name="text_start_push">开启推流</string>
+    <string name="text_start_screen_record">启动录屏</string>
+    <string name="text_record_info">开始录制后直播视频自动录制，并可以进行回放</string>
+    <string name="text_live_all_see">所有人可看</string>
+    <string name="text_live_share">同步到</string>
+    <string name="text_live">正在直播>></string>
+    <string name="text_live_add_title_tips">给你的直播设置一个满意的封面</string>
+    <string name="text_live_admire_limit">点赞过于频繁</string>
+    <string name="tip_no_permission">权限不足</string>
+
+    <string name="host_sign">我的签名就是把我的世界直播给你们</string>
+    <string name="host_phone">iPhone6S Plus</string>
+    <string name="host_funs">粉丝数:9090</string>
+    <string name="host_follow">关注:7089</string>
+    <string name="host_admire">赞:11.3w</string>
+
+
+    <string name="ping_ing">测速中</string>
+    <string name="ping_progress">测速进度</string>
+    <string name="ping_speed_test">网络测速</string>
+    <string name="ping_start">开始测速</string>
+    <string name="ping_no_server">获取测速列表失败，请稍后重试</string>
+    <string name="ping_time">平均时延</string>
+    <string name="ping_miss">丢包率</string>
+    <string name="ping_cancel">取消</string>
+    <string name="ping_TEL">电信</string>
+    <string name="ping_CMCC">移动</string>
+    <string name="ping_CNC">联通</string>
+    <string name="ping_SH">上海</string>
+    <string name="ping_SZ">深圳</string>
+    <string name="ping_CD">成都</string>
+    <string name="ping_TJ">天津</string>
+    <string name="ping_NJ">南京</string>
+    <string name="ping_HZ">杭州</string>
+    <string name="ping_GZ">广州</string>
+
+    <string name="umeng_check_sign">检查签名</string>
+    <string name="umeng_check_sina">检查新浪</string>
+    <string name="umeng_check_wx">检查微信</string>
+    <string name="umeng_check_qq">检查qq</string>
+
+    <string-array name="frame_size_values">
+        <item>640 x 480</item>
+        <item>1024 x 768</item>
+        <item>1280 x 720</item>
+    </string-array>
+
+    <string-array name="video_bit_rate_values">
+        <item>5000</item>
+        <item>4000</item>
+        <item>3000</item>
+        <item>2000</item>
+        <item>1000</item>
+    </string-array>
+
+    <string name="video_decoding">视频正在解码中，请稍等...</string>
+    <string name="video_generating">视频生成中...</string>
+    <string name="video_edit">编辑视频</string>
+    <string name="video_join">视频合成</string>
+    <string name="video_drag_sort">视频将按照列表顺序进行合成，您可以长按拖动进行片段顺序调整。</string>
+    <string name="video_join_preview">片段合成预览</string>
+    <string name="video_preview">视频预览</string>
+    <string name="video_only_save">仅保存</string>
+    <string name="video_save_and_publish">保存并发布</string>
+    <string name="video_edit_segment">设置想要截取的片段</string>
+    <string name="music_empty">空空如也</string>
+    <string name="music_loading">正在加载本地音乐...</string>
+
+    <!--registerActivity  loginActivity-->
+    <string name="technical_support">如何获取技术支持服务？</string>
+    <string name="follow_public_number">关注公众号“腾讯云视频”</string>
+    <string name="send_msg_to_public_number">给公众号发送“小直播”</string>
+
+    <!-- userinfo fragment-->
+    <string name="get_technical_support">获取技术支持服务</string>
+    <string name="download_sdk"><a href='https://cloud.tencent.com/document/product/454/7873'>下载 SDK</a></string>
+    <string name="product_introduction"><a href='https://cloud.tencent.com/product/mlvb'>产品介绍</a></string>
+
+    <string name="follow_and_send_msg_to_public_number">关注公众号“腾讯云视频”\n给公众号发送“小直播”</string>
+    <string name="talk_audience">跟观众聊点什么</string>
+    <string name="talk_anchor">跟主播聊点什么呢?</string>
+    <string name="title_activity_live_list">天天拼货直播间</string>
+    <string name="watch_count">%1$d 人观看</string>
+    <string name="add_shop_carts_msg">加入成功，请在拿物车查看哦</string>
+    <string name="vod_player_rate">倍数播放</string>
+</resources>

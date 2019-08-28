@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chang_shi_item_height_gb"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+       >
+
+        <RadioButton
+            android:id="@+id/rb_new"
+            style="@style/rb_item_list"
+            android:background="@drawable/rb_bg_selector"
+            android:checked="true"
+            android:onClick="onClick"
+            android:text="新款" />
+
+        <RadioButton
+            android:id="@+id/rb_older"
+            style="@style/rb_item_list"
+            android:onClick="onClick"
+            android:text="旧款" />
+    </RadioGroup>
+</LinearLayout>

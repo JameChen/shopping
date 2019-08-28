@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 绑定手机 -->
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/security_bind_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:left_text="@string/security_bind_phone"
+            app:right_text_color="@color/hint"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <!-- 身份验证 -->
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/security_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:left_text="@string/security_authentication"
+            app:right_text_color="@color/hint"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <!-- 提现银行卡 -->
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/security_withdraw_bank_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:left_text="@string/security_withdraw"
+            app:right_text_color="@color/hint"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <!-- 支付密码 -->
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/security_pay_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:left_text="@string/security_pay_psw"
+            app:right_text_color="@color/hint"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+        <!-- 安全问题 -->
+
+        <com.nahuo.library.controls.SingleLineItem
+            android:id="@+id/security_safe_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:left_text="@string/security_safe_question"
+            app:right_text_color="@color/hint"
+            app:show_right_icon="false"
+            app:show_right_text="true" />
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

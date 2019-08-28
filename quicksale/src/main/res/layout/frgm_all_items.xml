@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#FFE3AA"
+        android:gravity="center"
+        android:weightSum="2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="剩余拼货时间："
+            android:textColor="#7E5518"
+            />
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            tools:text="01小时11分19秒"
+            android:textColor="#7E5518"
+            />
+    </LinearLayout>
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/lv_all_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/divider_horizontal_bright"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>

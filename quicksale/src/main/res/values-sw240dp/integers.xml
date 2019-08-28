@@ -1,0 +1,9 @@
+<resources>
+
+    <integer name="content_max_line">6</integer>
+	<integer name="grid_pic_width_small">4</integer>
+    <integer name="grid_pic_width_mid">8</integer>
+    <integer name="grid_pic_width_big">12</integer>
+    <!-- 上传商品时图片的列数 -->
+    <integer name="upload_item_pic_col_num">5</integer>
+</resources>

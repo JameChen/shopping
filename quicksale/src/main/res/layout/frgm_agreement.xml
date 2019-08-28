@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+<!-- 开通衣付通“协议” 页面 -->
+<LinearLayout 
+    android:padding="@dimen/activity_margin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+	<!-- title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/yft_agreement_title"
+        android:textSize="26sp"
+        android:textColor="#3B5999"
+        android:gravity="center"
+         />
+    <!-- content -->
+    <TextView
+        android:id="@+id/yft_agreement_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/yft_agreement_content_part"
+        style="@style/body_text_gray"
+        android:lineSpacingExtra="6dp"
+         />
+    <!-- full content -->
+    <Button 
+        android:id="@+id/yft_agreement_full_content_btn"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:layout_width="100dp"
+        android:text="@string/yft_agreement_content_all_btn"
+        android:onClick="onClick"
+        android:layout_height="40dp"/>
+    <TextView
+        android:id="@+id/yft_agreement_full_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:text="@string/yft_agreement_content_all"
+        style="@style/body_text_gray"
+        android:lineSpacingExtra="6dp"
+         />
+    <!-- 同意开通 -->
+
+    <Button
+        android:id="@+id/yft_agreement_btn"
+        style="@style/button_blue_style"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/button_vertical_spacing"
+        android:onClick="onClick"
+        android:text="@string/yft_agreement_btn" />
+
+    <TextView
+        android:id="@+id/yft_agreement_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/yft_agreement_hint"
+        android:textAppearance="@style/myTextAppearance.hint.micro" />
+
+</LinearLayout>
+</ScrollView>

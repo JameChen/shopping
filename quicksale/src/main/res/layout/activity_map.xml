@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <!--<include
+        android:id="@+id/head"
+        layout="@layout/title_layout" />-->
+
+    <RelativeLayout
+        android:id="@+id/head1"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/red"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <AutoCompleteTextView
+            android:id="@+id/keyWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_toLeftOf="@+id/tvSearch"
+            android:layout_toRightOf="@+id/iv_left1"
+            android:background="@drawable/single_bg"
+            android:completionThreshold="1"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:dropDownVerticalOffset="1.0dip"
+            android:ellipsize="end"
+            android:hint="请输入关键字"
+            android:imeOptions="actionDone"
+            android:inputType="text|textAutoComplete"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#606060"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fontsize_title_button_min" />
+
+    </RelativeLayout>
+
+    <!--<com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head" />-->
+
+    <fragment
+        android:id="@+id/map"
+        class="com.amap.api.maps2d.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_bg">
+
+        <ListView
+            android:id="@+id/lvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none" />
+    </LinearLayout>
+
+</RelativeLayout>

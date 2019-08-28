@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp" >
+
+    <RelativeLayout
+        android:id="@+id/shop_search_layout_top"
+        android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+        android:layout_height="match_parent" >
+
+        <com.nahuo.library.controls.CircleImageView2
+            android:id="@+id/layout_shop_search_item_shoplogo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/shop_logo_normal"
+            android:contentDescription="@string/app_name"
+            android:padding="1dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/layout_shop_search_item_username"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fontsize_title_button_middle"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/layout_shop_search_item_shoplogo"
+            android:text="用户名" />
+        <TextView
+            android:id="@+id/layout_shop_search_item_shopname"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/lightgray"
+            android:textSize="@dimen/fontsize_content_small"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/layout_shop_search_item_shoplogo"
+            android:text="店铺名" />
+    </RelativeLayout>
+
+</RelativeLayout>

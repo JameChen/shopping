@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#f7f7f7">
+
+    <TextView
+        android:id="@+id/titlebar_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="160dp"
+        android:singleLine="true"
+        android:text="@string/titlebar_title"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fontsize_title_max" />
+
+    <Button
+        android:id="@+id/titlebar_btnLeft"
+        style="@style/button_titlebar_left_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="@string/titlebar_btnBack"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/titlebar_btnRight"
+            style="@style/button_titlebar_default_style"
+            android:src="@drawable/menu_sreach"
+            android:text="@string/titlebar_btnRight"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/titlebar_btnRightmore"
+            style="@style/button_titlebar_default_style"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_dark"
+            android:text="@string/titlebar_btnRight"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- <View 
+        android:layout_height="0.5dp"
+        android:layout_width="fill_parent"
+        android:background="@color/lightgray"
+        android:layout_alignParentBottom="true"
+        /> -->
+</RelativeLayout>

@@ -1,0 +1,2 @@
+include ':nahuolibrary',':qqEmoji-lib',':picture_library', ':ucrop', ':upyun-android-sdk','baserecyclerlibrary',':banner', ':easeui', ':hmspush'
+include ':quicksale'

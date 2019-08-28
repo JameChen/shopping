@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llPanel1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <EditText
+                    android:id="@+id/et_boss_name"
+                    style="@style/edit_text_white_corner"
+                    android:layout_width="match_parent"
+                    android:hint="@string/boss_name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/txt_gray"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edit_text_white_corner"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+                    android:hint="@string/contact_phone"
+                    android:maxLength="12"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/txt_gray"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <EditText
+                    android:id="@+id/et_store_name"
+                    style="@style/edit_text_white_corner"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+                    android:hint="@string/store_name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/txt_gray"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+                    android:background="@drawable/bg_rect_white_stroke_gray_corner">
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_address"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/store_address"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txt_gray"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/iv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/nearby" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_store_num"
+                    style="@style/edit_text_white_corner"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+                    android:hint="门牌号(可不填)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/txt_gray"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <EditText
+                    android:id="@+id/et_style"
+                    style="@style/edit_text_white_corner"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/abc_action_bar_content_inset_material"
+                    android:hint="主营风格(可不填)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/txt_gray"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPanel2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="店铺实拍"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivStore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:minWidth="120dp"
+                        android:minHeight="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iv_default_sotre" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="企业营业执照扫描件"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivLicense"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="100dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iv_default_license" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/rlTip"
+        layout="@layout/activity_auth_tip" />
+</RelativeLayout>

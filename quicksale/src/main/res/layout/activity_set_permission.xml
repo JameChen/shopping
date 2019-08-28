@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin"
+        android:textColor="@color/gray_92"
+        android:text="选中的分组用户才能看到该款商品，可用来对下级代理进行分组分类管理"
+        />
+	<View style="@style/line_view"/>
+	<FrameLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="@dimen/activity_margin"
+	    android:layout_marginLeft="@dimen/activity_margin">
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="公开"
+	        android:layout_gravity="center_vertical"
+	        />
+	    <CheckBox android:id="@+id/cb_all"
+	        android:layout_width="@dimen/checkbox_height"
+	        android:layout_height="@dimen/checkbox_height"
+	        android:layout_gravity="right"
+	        />
+	</FrameLayout>
+	<View style="@style/line_view"/>
+	<FrameLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="@dimen/activity_margin"
+	    android:layout_marginLeft="@dimen/activity_margin">
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="所有代理可见"
+	        android:layout_gravity="center_vertical"
+	        />
+	    <CheckBox android:id="@+id/cb_agent"
+	        android:layout_width="@dimen/checkbox_height"
+	        android:layout_height="@dimen/checkbox_height"
+	        android:layout_gravity="right"
+	        />
+	</FrameLayout>
+	<View style="@style/line_view"/>
+	<TextView android:layout_width="wrap_content"
+	        android:layout_height="@dimen/checkbox_height"
+	        android:text="部分代理可见"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="@dimen/activity_margin"
+	        android:gravity="center_vertical"
+	        />
+	<View style="@style/line_view"/>
+	
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <Button
+	        android:id="@+id/btn_new_group"
+	        style="@style/button_red_style_1"
+	        android:layout_width="match_parent"
+	        android:layout_marginLeft="24dp"
+	        android:layout_marginRight="24dp"
+	        android:layout_marginBottom="@dimen/activity_margin"
+	        android:layout_marginTop="@dimen/activity_margin"
+	        android:layout_alignParentBottom="true"
+	        android:text="@string/create_group" />
+	    <ListView android:id="@+id/lst_group"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:cacheColorHint="@color/transparent"
+	        android:divider="@color/line_gray"
+	        android:layout_above="@id/btn_new_group"
+	        android:layout_marginLeft="@dimen/activity_margin"
+	        android:dividerHeight="0.5dp"/>
+	</RelativeLayout>
+	
+</com.nahuo.widget.TouchLinearLayout>

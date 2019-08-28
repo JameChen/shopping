@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:padding="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:layout_alignParentLeft="true"
+        >
+
+        <!-- 省市区 -->
+
+        <TextView
+            android:id="@+id/tv_province_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+             />
+        <!-- 详细地址 -->
+
+        <TextView
+            android:id="@+id/tv_detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+             />
+        <!-- 姓名、邮编 -->
+
+        <TextView
+            android:id="@+id/tv_name_postcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+             />
+        <!-- 手机 -->
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+             />
+    </LinearLayout>
+	<TextView 
+	    android:id="@+id/tv_default"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="4dp"
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentRight="true"
+	    android:text="@string/address_default"
+	    android:textColor="@color/light_blue"
+	    />
+</RelativeLayout>

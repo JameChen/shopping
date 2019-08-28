@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/receiveaccount_imgPic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/receiveaccount_imgPicBg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/take_photo_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/receiveaccount_imgPicBg1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/add"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <com.nahuo.library.controls.EditTextEx
+            android:id="@+id/receiveaccount_text"
+            style="@style/edittext_noborder_style"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/receiveaccount_remark"
+            android:imeActionLabel="@string/receiveaccount_remark_action"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            app:ex_title="" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/lightgray" />
+
+
+        <LinearLayout
+            android:id="@+id/receiveaccount_shareView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/receiveaccount_share_wx"
+                style="@style/button_red_style_1"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/receiveaccount_share_wx"
+                android:textSize="@dimen/fontsize_title_button_min" />
+
+            <Button
+                android:id="@+id/receiveaccount_edit"
+                style="@style/button_gray_style"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/receiveaccount_edit"
+                android:textSize="@dimen/fontsize_title_button_min" />
+
+        </LinearLayout>
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

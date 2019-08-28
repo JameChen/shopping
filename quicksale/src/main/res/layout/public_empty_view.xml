@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/ic_empty"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:text="没有数据再刷新看看" />
+
+    <TextView
+        android:id="@+id/btn_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_rect_item_red"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="重新刷新"
+        android:textColor="@color/pin_huo_red"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_pin"
+        android:layout_width="128dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_rectangle_red"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="浏览热门的团"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

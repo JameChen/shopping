@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rect_white_stroke_gray_corner">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="手机号码: "
+            android:paddingLeft="8dp"
+             />
+        <EditText
+            android:id="@+id/et_phone_num"
+            android:layout_height="36dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:hint="输入您的手机号码,作为账号"
+            android:imeOptions="actionNext"
+            android:textSize="14sp"
+            android:inputType="numberSigned" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="用户名："
+            android:visibility="gone" />
+        <EditText
+            android:id="@+id/et_user_name"
+            style="@style/edit_text_white_corner"
+            android:layout_width="match_parent"
+            android:hint="用户名"
+            android:imeOptions="actionNext"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rect_white_stroke_gray_corner">
+<!--<item name="android:background">@drawable/bg_rect_white_stroke_gray_corner</item>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="8dp"
+            android:text="设置密码: "
+             />
+        <EditText
+            android:id="@+id/et_psw"
+            android:layout_height="36dp"
+            android:singleLine="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:hint="设置您的密码,用于以后登录"
+            android:imeOptions="actionDone"
+            android:background="@null"
+            />
+        <ImageView
+            android:id="@+id/im_psw"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/see_eye"
+            android:layout_gravity="center_vertical"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_invitation_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rect_white_stroke_gray_corner">
+        <!--<item name="android:background">@drawable/bg_rect_white_stroke_gray_corner</item>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="8dp"
+            android:text="  邀请码: "
+            />
+        <EditText
+            android:id="@+id/et_invitation_code"
+            android:layout_height="36dp"
+            android:singleLine="true"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:hint="@string/login_edtInvitation_code_hint"
+            android:imeOptions="actionDone"
+            android:background="@null"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:text="邀请码(可不填)"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_cardid"
+            style="@style/edit_text_white_corner"
+            android:layout_width="match_parent"
+            android:hint="邀请码(可不填)"
+            android:imeOptions="actionGo"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_get_sms"
+        style="@style/button_blue_style"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:text="获取注册验证码" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+        <CheckBox
+            android:id="@+id/cx_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册表示您已阅读并同意"
+            android:textSize="14sp"
+            style="@style/style_check"
+            android:checked="true"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《使用协议》"
+            android:textColor="@color/map_alpha"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <EditText
+        android:id="@+id/et_pay_psw"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:hint="@string/security_pay_psw"
+        android:imeOptions="actionNext"
+        android:inputType="textPassword"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            style="@style/button_blue_text_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn_white_all_corners"
+            android:text="@string/btn_cancle" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/button_blue_text_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_btn_white_all_corners"
+            android:text="@string/btn_confirm" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_paypsw"
+        style="@style/myTextAppearance.medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/forget_paypsw"
+        android:textColor="@color/light_blue" />
+
+</LinearLayout>

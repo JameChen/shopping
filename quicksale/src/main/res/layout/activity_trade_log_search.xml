@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_titlebar_default" />
+
+    <TextView
+        android:id="@+id/trade_log_search_begintime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rect_gray_corner"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+        android:text="开始时间:" />
+
+    <TextView
+        android:id="@+id/trade_log_search_endtime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_rect_gray_corner"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+        android:text="结束时间:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="类别:" />
+
+        <TextView
+            android:id="@+id/trade_log_search_t1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rect_orange_corner"
+            android:gravity="center"
+            android:tag=""
+            android:text="全部收支" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/trade_log_search_t2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="1,8"
+                android:text="全部收入" />
+
+            <TextView
+                android:id="@+id/trade_log_search_t3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="1"
+                android:text="充值" />
+
+            <TextView
+                android:id="@+id/trade_log_search_t4"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="8"
+                android:text="拼货退款清算" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/trade_log_search_t5"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="2,13"
+                android:text="全部支出" />
+
+            <TextView
+                android:id="@+id/trade_log_search_t6"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="2"
+                android:text="提现" />
+
+            <TextView
+                android:id="@+id/trade_log_search_t7"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_gray_corner"
+                android:gravity="center"
+                android:tag="13"
+                android:text="拼货订单交易" />
+        </LinearLayout>
+    </LinearLayout>
+</com.nahuo.widget.TouchLinearLayout>

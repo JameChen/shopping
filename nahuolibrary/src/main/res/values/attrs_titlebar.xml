@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NoHuoLibTitleBar">
+        <attr name="Title" format="string" />
+        <attr name="RightButtonText" format="string" />
+        <attr name="RightButtonImage" format="reference" />
+        <attr name="IsImgButton" format="boolean" />
+        <attr name="ShowBackButton" format="boolean" />
+        <attr name="ShowLeftMenuButton" format="boolean" />
+        <attr name="ShowRightButton" format="boolean" />
+        <attr name="isshowRigthMore" format="boolean" />
+        <attr name="showRigthMoreimage" format="reference" />
+    </declare-styleable>
+
+</resources>

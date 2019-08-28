@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <CheckBox
+        android:id="@android:id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/mCheckBox"
+        android:focusable="false" />
+
+    <RelativeLayout
+        android:id="@android:id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:descendantFocusability="blocksDescendants"
+        android:padding="5dp" >
+        <FrameLayout
+            android:id="@+id/shopcart_framelayout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            >
+            <ImageView
+                android:id="@android:id/icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@android:string/ok"
+                android:scaleType="centerCrop"
+                />
+            <com.nahuo.library.controls.CircleTextView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/shopcart_circletext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@android:string/ok"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:alpha="0.9"
+                app:circlebackground="@color/black_actionbar"
+                app:textColor="@color/white"
+                app:textSize="15"
+                android:visibility="gone"/>
+        </FrameLayout>
+        <TextView
+            android:id="@android:id/title"
+            style="@style/Text.S.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/shopcart_framelayout"
+            android:lines="2"
+            android:textColor="@color/lightblack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@android:id/text1"
+            style="@style/Text.S.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shopcart_framelayout"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/shopcart_framelayout"
+            />
+
+        <LinearLayout
+            android:id="@+id/coupon_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shopcart_framelayout"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@android:id/text1"
+            >
+
+            <Button
+                android:id="@+id/img_shopcart_sub"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/selector_white_rect_stroke_gray_corner"
+                android:text="-"
+                android:textColor="@color/black"
+                />
+
+            <EditText
+                android:id="@android:id/edit"
+                style="@style/Text.S.Gray"
+                android:layout_width="30dp"
+                android:layout_height="19dp"
+                android:background="@drawable/selector_white_rect_stroke_gray_corner"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/img_shopcart_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_white_rect_stroke_gray_corner"
+                android:text="+"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@android:id/summary"
+            style="@style/Text.S.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shopcart_framelayout"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/coupon_linearlayout"
+            android:text="@string/units_of_good" />
+
+        <TextView
+            android:id="@android:id/text2"
+            style="@style/Text.S.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shopcart_framelayout"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

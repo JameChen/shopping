@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchFrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        >
+
+        <RelativeLayout
+            android:id="@+id/me_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp" >
+
+            <com.nahuo.library.controls.CircleImageView2
+                android:id="@+id/iv_shop_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shop_logo_normal1" />
+            <!-- 用户名 -->
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/iv_shop_logo"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="(昵称)"
+                android:textSize="@dimen/text_size_large" />
+            <!-- 签名 -->
+
+            <TextView
+                android:id="@+id/tv_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_toRightOf="@id/iv_shop_logo"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="签名内容"
+                android:textColor="@color/item_gray" />
+        </RelativeLayout>
+        <!-- 信誉 -->
+        <RelativeLayout
+            android:id="@+id/top_layout_credit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_gray"
+            android:paddingRight="8dp" 
+            >
+
+            <TextView
+                android:id="@+id/tv_credit"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="商家信誉" />
+
+            <LinearLayout
+                android:id="@+id/layout_credit"
+                android:layout_toRightOf="@id/tv_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                 />
+            <ImageView 
+                android:id="@+id/iv_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/more_mini"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <!-- 备注 -->
+
+        <LinearLayout
+            android:id="@+id/layout_desc"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_gray"
+            android:orientation="horizontal"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="备注" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:hint="添加备注信息"
+                android:onClick="onClick"
+                android:singleLine="true"
+                android:textColor="@color/item_gray"
+                android:textColorHint="@color/item_gray" />
+        </LinearLayout>
+
+        <!-- 地址 -->
+
+        <LinearLayout
+            android:id="@+id/layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_gray"
+            android:orientation="horizontal"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="地址" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:hint="添加档口/铺面店址"
+                android:onClick="onClick"
+                android:singleLine="true"
+                android:textColor="@color/item_gray"
+                android:textColorHint="@color/item_gray" />
+        </LinearLayout>
+
+        <!-- 电话 -->
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_gray"
+            android:orientation="horizontal"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="电话" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:singleLine="true"
+                android:textColor="@color/item_gray" 
+                android:text="未填写"
+                />
+        </LinearLayout>
+        <!-- 微铺 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/me_item_line_spacing"
+            android:background="@drawable/bg_white_gray"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:id="@+id/tv_shop_name_key"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/iv_right_icon"
+                android:layout_toRightOf="@id/tv_shop_name_key"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/item_gray" />
+
+            <ImageView
+                android:id="@id/iv_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrow_right" />
+        </RelativeLayout>
+
+
+        <com.nahuo.library.controls.NoScrollGridView
+            android:id="@+id/gv_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_gray"
+            android:horizontalSpacing="2dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="@integer/userinfo_pic_col_num"
+            android:padding="8dp" />
+
+
+        <Button
+            android:id="@+id/btn_agent"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_long"
+            android:layout_margin="8dp"
+            android:layout_marginTop="@dimen/button_vertical_spacing"
+            android:onClick="onClick"
+            android:text="申请代理"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btn_send_msg"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_long"
+            android:layout_margin="8dp"
+            android:layout_marginTop="@dimen/button_vertical_spacing"
+            android:onClick="onClick"
+            android:text="发送消息" />
+
+    </LinearLayout>
+
+	</ScrollView>
+</com.nahuo.widget.TouchFrameLayout>

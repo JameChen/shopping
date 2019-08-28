@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/specqty_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/view_pw_white_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/specqty_pw_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/specqty_pw_title"
+                android:textSize="@dimen/fontsize_title_min" />
+
+            <ImageView
+                android:id="@+id/specqty_pw_icon_loading"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/specqty_pw_title"
+                android:background="@drawable/loading_mini"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical" >
+                <GridView
+                    android:id="@+id/specqty_pw_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="3"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollingCache="true"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <LinearLayout
+                android:id="@+id/specqty_pw_rightview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/specqty_pw_icon_add_loading"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/loading_mini"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/specqty_pw_btnAdd"
+                    style="@style/button_red_style_1"
+                    android:layout_width="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/specqty_pw_btnAdd" />
+            </LinearLayout>
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/specqty_pw_edtNew"
+                style="@style/edittext_one_style"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/specqty_pw_rightview"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:hint="@string/specqty_pw_edtNew_hint"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/specqty_pw_btnDel"
+                style="@style/button_blue_text_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/specqty_pw_btnDel" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/lightgray" />
+
+            <Button
+                android:id="@+id/specqty_pw_btnOK"
+                style="@style/button_blue_text_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/specqty_pw_btnOK" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

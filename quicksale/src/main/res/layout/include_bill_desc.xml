@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:paddingLeft="20dp">
+<TextView
+    android:id="@+id/include_freight_paid_tv"
+    style="@style/style_desc_bill_tv"
+    android:text="已付运费:"/>
+    <TextView
+        android:id="@+id/include_really_paid_tv"
+        style="@style/style_desc_bill_tv"
+        android:text="实际运费:"/>
+</LinearLayout>

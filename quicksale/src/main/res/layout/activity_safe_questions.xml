@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/layout_title" layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/layout_questions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/question_key"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="安全问题：" />
+
+                <Spinner
+                    android:id="@+id/sp_question"
+                    style="@style/Widget.WP.Spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_weight="8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/answer_key"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="设置答案：" />
+
+                <EditText
+                    android:id="@+id/et_answer"
+                    style="@style/edittext_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8" />
+            </LinearLayout>
+            <!-- 底部文字 -->
+
+            <TextView
+                android:id="@+id/tv_bottom_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/red" />
+            <!-- 下一步 -->
+
+            <Button
+                android:id="@+id/safeq_next"
+                style="@style/button_blue_style"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_long"
+                android:layout_marginTop="@dimen/button_vertical_spacing"
+                android:onClick="onClick"
+                android:text="完成" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_has_set_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/safeq_has_set_questions"
+            android:visibility="gone" />
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

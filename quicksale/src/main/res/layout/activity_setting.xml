@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ebebeb">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.nahuo.quicksale.controls.WidgetSettingItem
+                    android:id="@+id/wsi_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:wsiLeftIcon="@drawable/me_pwd"
+                    app:wsiLeftText="登录密码"
+                    app:wsiRightText="修改" />
+
+                <com.nahuo.quicksale.controls.WidgetSettingItem
+                    android:id="@+id/wsi_clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:wsiLeftIcon="@drawable/me_clear"
+                    app:wsiLeftText="清除缓存" />
+
+                <com.nahuo.quicksale.controls.WidgetSettingItem
+                    android:id="@+id/wsi_upgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:wsiLeftIcon="@drawable/me_update"
+                    app:wsiLeftText="版本更新" />
+
+                <com.nahuo.quicksale.controls.WidgetSettingItem
+                    android:id="@+id/wsi_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:wsiLeftIcon="@drawable/me_exit"
+                    app:wsiLeftText="退出登录"
+                    app:wsiShowbottomLine="false" />
+            </LinearLayout>
+        </ScrollView>
+
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

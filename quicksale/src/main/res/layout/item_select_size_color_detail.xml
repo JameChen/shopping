@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/item_select_size_color_detail_color"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size_color_left_right_margin"
+        android:text="颜色"
+        android:textColor="@color/item_detail_color_size_txt"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center|left">
+
+        <TextView
+            android:id="@+id/item_select_size_color_detail_size"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size_color_left_right_margin"
+            android:text="尺码"
+            android:textColor="@color/item_detail_color_size_txt" />
+        <TextView
+            android:id="@+id/item_select_size_des"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size_color_left_right_margin"
+            android:text="尺码"
+            android:textSize="12sp"
+            android:textColor="@color/text_red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/item_select_size_color_detail_qty_reduce"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/bg_rect_gray"
+            android:gravity="center"
+            android:text="一"
+            android:textColor="@color/base_red"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_select_size_color_detail_qty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_rect_gray_corner"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/item_detail_color_size_txt" />
+
+        <TextView
+            android:id="@+id/item_select_size_color_detail_qty_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/bg_rect_gray"
+            android:gravity="center"
+            android:text="＋"
+            android:textColor="@color/base_red"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/size_color_left_right_margin"
+        android:layout_height="1dp" />
+
+</LinearLayout>

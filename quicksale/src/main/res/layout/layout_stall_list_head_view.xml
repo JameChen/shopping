@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_out_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_wai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+            <com.nahuo.quicksale.customview.ItemJCVideoPlayerStandard
+                android:id="@+id/video_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_need_hide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/iv_over_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_newitem_icon"
+                    android:layout_width="79dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/new_item_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_cover_yg"
+                    android:layout_width="38dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/yg"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_cover_ended"
+                    android:layout_width="75dp"
+                    android:layout_height="61dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/overed"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_cover_pining"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/now_pining"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tv_shop_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/mini_avatar_shadow" />
+
+            <LinearLayout
+                android:id="@+id/layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_cover"
+                android:layout_toRightOf="@id/tv_shop_icon"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_next_yg"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#AA000000"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_stall_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shop_name"
+            android:padding="12dp"
+            android:textColor="@color/body_text_2"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_shop_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/body_text_2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_shop_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textColor="@color/body_text_2"
+            tools:text="" />
+        <!--<TextView-->
+        <!--android:id="@+id/tv_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="12dp"-->
+        <!--android:textColor="@color/body_text_1"-->
+        <!--android:textSize="14sp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:visibility="gone"-->
+        <!--tools:text="【第9期】十三行当天新款，1件也是打包价" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="12dp"-->
+        <!--android:textColor="@color/body_text_2"-->
+        <!--tools:text="线上将准备700个款式:韩版淑女400款，欧美大牌100款" />-->
+    </LinearLayout>
+
+    <include
+        layout="@layout/xlayout_time_left" android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <com.nahuo.quicksale.controls.MyWebView
+            android:id="@+id/tv_overed_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_detail_line_spacing"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:onClick="onClick"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"></View>
+</LinearLayout>

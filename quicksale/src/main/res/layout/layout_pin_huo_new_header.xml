@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pager_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="10dp" />
+
+        <com.nahuo.library.controls.FlowIndicator
+            android:id="@+id/layout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:selectedColor="@color/orange1" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bannerview"
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+      >
+
+        <com.nahuo.quicksale.customview.ViewFlow
+            android:id="@+id/viewflow"
+            android:layout_width="match_parent"
+            android:layout_height="113dp" />
+
+        <com.nahuo.quicksale.customview.ViewFlowCircleIndicator
+            android:id="@+id/viewflowindic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="6dp"
+            android:padding="2dip"
+            app:activeColor="#ff3e3e"
+            app:activeType="fill"
+            app:circleSeparation="10dip"
+            app:inactiveColor="#FFFFF0"
+            app:inactiveType="fill"
+            app:radius1="3dp"
+            app:sidebuffer="0" />
+
+    </FrameLayout>
+</LinearLayout>

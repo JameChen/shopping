@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@android:id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_prompt_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/Text.M.Gray"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:lineSpacingExtra="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/selector_white_rect_stroke_gray_bottom_corner"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@android:id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="12dp"
+                android:text="@android:string/ok"
+                android:textColor="#43ACFE"
+                android:textSize="@dimen/text_size_large" />
+
+            <CheckBox
+                android:id="@android:id/checkbox"
+                style="@style/Text.S.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="6dp"
+                android:button="@drawable/selector_checkbox_1"
+                android:text="不再提示"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

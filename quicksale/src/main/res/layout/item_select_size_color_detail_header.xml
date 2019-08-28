@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal"
+    android:background="#eeeeee"
+    android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textColor="@color/black_38"
+            android:gravity="center"
+            android:text="颜色" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:textColor="@color/black_38"
+        android:gravity="center"
+        android:text="尺码" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:textColor="@color/black_38"
+        android:gravity="center"
+        android:text="购买数量"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+     >
+
+    <TextView
+        android:id="@+id/yft_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/yft_agreement_init_title"
+        android:textAppearance="@style/myTextAppearance.medium" />
+
+    <TextView
+        android:id="@+id/yft_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="6dp"
+        android:padding="8dp"
+        android:text="@string/yft_agreement_init_context"
+        android:textAppearance="@style/body_text_gray" />
+
+    <Button
+        android:id="@+id/yft_btn_open"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_marginTop="@dimen/button_vertical_spacing"
+        android:onClick="onClick"
+        android:text="@string/yft_btn_open" />
+
+</LinearLayout>

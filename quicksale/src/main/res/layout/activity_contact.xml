@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <!-- 微聊 -->
+        <include
+            android:id="@+id/item_weixun"
+            layout="@layout/layout_me_item"
+            android:visibility="gone" />
+        <!-- 手机 -->
+
+        <include
+            android:id="@+id/item_mobile"
+            layout="@layout/layout_me_item" />
+        <!-- QQ -->
+
+        <include
+            android:id="@+id/item_qq"
+            layout="@layout/layout_me_item" />
+        <!-- WX -->
+
+        <include
+            android:id="@+id/item_wx"
+            layout="@layout/layout_me_item" />
+        <!-- email -->
+
+        <include
+            android:id="@+id/item_email"
+            layout="@layout/layout_me_item" />
+        <!-- 地址 -->
+
+        <include
+            android:id="@+id/item_address"
+            layout="@layout/layout_me_item" />
+
+    </LinearLayout>
+</LinearLayout>

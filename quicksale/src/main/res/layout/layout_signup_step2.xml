@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="验证码："
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_sms_code"
+            style="@style/edit_text_white_corner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="验证码"
+            android:imeOptions="actionGo"
+            android:inputType="numberSigned" />
+        <Button
+            android:id="@+id/btn_reget_verify_code"
+            android:layout_width="118dp"
+            android:layout_height="36dp"
+            style="@style/button_blue_style"
+            android:text="重新获取(60)"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_speech_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:gravity="center|left"
+        android:textSize="13sp"
+        android:textColor="@color/bule_overlay"
+        android:text="收不到短信，试试语音验证码"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:onClick="onClick"
+        android:text="确认" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <!--<external-path-->
+            <!--name="camera_photos"-->
+            <!--path="" />-->
+
+        <!--<external-files-path-->
+            <!--name="apk"-->
+            <!--path="Download/apk/" />-->
+        <!--<external-files-path-->
+        <!--name="Download"-->
+        <!--path="" />-->
+        <root-path name="/" path="" />
+        <!--<cache-path name="cache" path="" />-->
+    </paths>
+</resources>

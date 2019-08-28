@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 开通衣付通“协议” 页面 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_margin">
+
+                    <!-- title -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/bage_7"
+                        android:gravity="center"
+                        android:text="7天无理由退换货承诺"
+                        android:textColor="#3B5999"
+                        android:textSize="26sp" />
+                    <!-- content -->
+
+                    <TextView
+                        android:id="@+id/tv_commitment_content"
+                        style="@style/body_text_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="6dp"
+                        android:maxLines="6"
+                        android:text="@string/seven_days_commitment" />
+                    <!-- full content -->
+
+                    <Button
+                        android:id="@+id/btn_view_all"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@null"
+                        android:onClick="onClick"
+                        android:text="全部协议内容>"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+                <!-- 同意开通 -->
+
+                <CheckBox
+                    android:id="@+id/cb_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="同意协议" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/button_blue_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="@dimen/button_vertical_spacing"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="onClick"
+                    android:text="加入承诺" />
+            </LinearLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

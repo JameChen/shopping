@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/me_item_new_height"
+    android:layout_marginLeft="@dimen/activity_horizontal_new_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_new_margin"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_new_margin">
+
+        <ImageView
+            android:id="@+id/iv_left_icon"
+            style="@style/sq_me_iv_style"
+            android:src="@drawable/me_setting" />
+
+        <TextView
+            android:id="@+id/tv_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_left_icon"
+            android:gravity="center_vertical"
+            android:text="Left Text" />
+
+        <TextView
+            android:id="@+id/regent_order_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_left_text"
+            android:background="@drawable/red_count_bg"
+            android:gravity="center"
+            android:text="new"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:visibility="gone" />
+
+        <com.nahuo.library.controls.CircleTextView
+            android:id="@+id/circle_order_text"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_left_text"
+            android:visibility="gone"
+            app:background="@color/light_red"
+            app:textColor="@color/white"
+            app:textSize="10" />
+        <!--android:maxWidth="@dimen/me_item_right_text_max_width"-->
+        <TextView
+            android:id="@+id/tv_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/iv_right_icon"
+            android:gravity="center_vertical"
+            android:maxWidth="@dimen/me_item_right_text_max_width1"
+            android:singleLine="true"
+            android:textColor="@color/lightgray" />
+
+        <ImageView
+            android:id="@id/iv_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/more_mini" />
+
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view_btm_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_gray" />
+</RelativeLayout>

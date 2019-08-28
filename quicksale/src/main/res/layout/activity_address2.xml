@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+            android:id="@+id/lv_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/line_gray"
+            android:dividerHeight="1dp"
+            android:padding="1dp" />
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

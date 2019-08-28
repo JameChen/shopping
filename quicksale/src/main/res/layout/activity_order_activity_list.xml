@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_bar" />
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+            android:id="@+id/lv_pull_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:divider="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:paddingBottom="8dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

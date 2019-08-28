@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_ablum_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/vendor_changrate"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:background="@drawable/share_bg"
+                android:text="@string/vendor_changrate"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/vendor_receiveaccount"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/share_bg"
+                android:text="@string/vendor_receiveaccount"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </TableRow>
+        
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/vendor_cancel"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:background="@drawable/share_bg"
+                android:text="@string/vendor_cancel"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

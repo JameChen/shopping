@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <!-- 填充 -->
+    <solid android:color="@color/red" />
+    
+    <size
+        android:width="@dimen/ad_size"
+        android:height="@dimen/ad_size" />
+
+</shape>

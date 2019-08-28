@@ -1,0 +1,55 @@
+Applications Memory Usage (kB):
+Uptime: 103005995 Realtime: 120108732
+
+** MEMINFO in pid 25031 [com.nahuo.quicksale] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    15292    15256        0    25548    49152    45458     3693
+  Dalvik Heap    11971    11960        0      820    78808    64801    14007
+ Dalvik Other    38758    38744        0    10800                           
+        Stack     1204     1204        0        0                           
+       Ashmem        2        0        0        0                           
+      Gfx dev    16688    16688        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap     4503      188     2384     5064                           
+    .apk mmap      743        0      396        0                           
+    .ttf mmap      294        0      284        0                           
+    .dex mmap    17958    17600      348        4                           
+    .oat mmap     9442        0     4432        4                           
+    .art mmap     2261     1488      180      152                           
+   Other mmap     3528       12     3444        0                           
+      Unknown      308      304        0      160                           
+        TOTAL   122956   103444    11472    42552   127960   110259    17700
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:    13628
+         Native Heap:    15256
+                Code:    25632
+               Stack:     1204
+            Graphics:    16688
+       Private Other:    42508
+              System:     8040
+ 
+               TOTAL:   122956      TOTAL SWAP (KB):    42552
+ 
+ Objects
+               Views:      278         ViewRootImpl:        1
+         AppContexts:        7           Activities:        3
+              Assets:        5        AssetManagers:        2
+       Local Binders:       21        Proxy Binders:       29
+       Parcel memory:       15         Parcel count:       62
+    Death Recipients:        2      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      550
+  PAGECACHE_OVERFLOW:      180          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       76            117         8/21/7  /data/user/0/com.nahuo.quicksale/databases/426188_emmsg.db
+         4       36             17         3/16/2  /data/user/0/com.nahuo.quicksale/databases/chat_user.db
+         4       24             24         2/17/3  /data/user/0/com.nahuo.quicksale/databases/rep.db
+         4      632             97       23/26/12  /data/user/0/com.nahuo.quicksale/databases/bugly_db_

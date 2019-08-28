@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:background="@color/bg_gray"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/titlebar_height"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_transparent_gray"
+        android:onClick="onClick"
+        android:padding="12dp"
+        android:src="@drawable/back" />
+
+    <com.nahuo.library.controls.AutoCompleteTextViewEx
+        android:id="@+id/et_search"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/iv_back"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:drawableRight="@drawable/txt_clear_bg"
+        android:hint="搜索标题"
+        android:imeOptions="actionSearch"
+        android:singleLine="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray" />
+
+</RelativeLayout>

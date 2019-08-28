@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/pin_huo_detail_flow_bg" />
+
+    <corners android:radius="3dp" />
+
+    <solid android:color="@color/pin_huo_detail_flow_bg" />
+
+</shape>

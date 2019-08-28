@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_shopshare_bg"
+                />
+            <View
+                android:id="@+id/iv_over_tips"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#00000000"
+                />
+            <ImageView
+                android:id="@+id/iv_overed_icon"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/body_text_1"
+            tools:text="【第9期】十三行当天新款，1件也是打包价"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/body_text_2"
+            tools:text="线上将准备700个款式:韩版淑女400款，欧美大牌100款"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <View android:layout_height="10dp" android:layout_width="fill_parent"
+            android:background="@color/bg_gray"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        tools:text="10月12日8点开拼"
+        android:background="@drawable/green_corner"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="184dp"
+        android:drawableLeft="@drawable/alarmclock"
+        android:drawablePadding="4dp"
+        />
+</FrameLayout>

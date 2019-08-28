@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.1'
+        classpath 'com.tencent.bugly:symtabfileuploader:1.0.6'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    apply plugin: 'java'
+
+    compile files('wp/libs/alipaysdk.jar')
+    compile files('wp/libs/alipaysecsdk.jar')
+    compile files('wp/libs/alipayutdid.jar')
+    compile files('wp/libs/android_api_3_5.jar')
+    compile files('wp/libs/easemobchat_2.1.4.jar')
+    compile files('wp/libs/jpush-sdk-release1.8.2.jar')
+    compile files('wp/libs/photoview.jar')
+    compile files('wp/libs/qq_open_sdk_r4346_lite.jar')
+    compile files('wp/libs/wechat_libammsdk.jar')
+    compile files('wp/libs/weibosdkcore_v3.0.1.jar')
+    compile files('wp/libs/zxing-core-2.3.0.jar')
+
+
+}

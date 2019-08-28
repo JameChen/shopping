@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.nahuo.library.controls.CircleImageView2
+            android:id="@+id/iv_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="8dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shop_logo_normal1" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/iv_icon"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/iv_icon">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/text_post_user_name"
+                android:text=""
+                android:textColor="@color/gray_3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_floor"
+                style="@style/text_post_gray"
+                android:layout_below="@+id/tv_user_name"
+                android:text=""
+                android:textColor="@color/gray_80"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_reply_time"
+                style="@style/text_post_gray"
+                android:layout_below="@+id/tv_user_name"
+                android:layout_toRightOf="@+id/tv_floor"
+                android:text=""
+                android:textColor="@color/gray_80"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:minWidth="44dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:src="@drawable/yepin_mess_red" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/tv_reply_content_view"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:layout_below="@id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+                <WebView
+                    android:id="@+id/tv_reply_content_html"
+        android:layout_width="match_parent"
+                   android:visibility="gone"
+        android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" />
+    </RelativeLayout>
+                     -->
+    <TextView
+        android:id="@+id/tv_reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_right"
+        android:paddingLeft="53dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/gray_3"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/lv_sub_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_reply_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="53dp"
+        android:background="#F0F1F3"
+        android:orientation="vertical" />
+
+
+</RelativeLayout>

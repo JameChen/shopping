@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/recycler_view1_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="往期好货："
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_sale_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_is_sale_out"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_down_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_shop_over"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/video_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:paddingBottom="7dp"
+                android:paddingLeft="7dp"
+                android:src="@drawable/vod_player_play_big_bg"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="top|left"
+            android:lines="2"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:textColor="@color/pinhuo_item_txt"
+            android:textSize="13sp"
+            tools:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/chang_item_left"
+            android:paddingRight="@dimen/chang_item_right">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/pin_huo_list_item_price_txt"
+                android:textSize="13sp"
+                tools:text="" />
+
+            <TextView
+                android:id="@+id/tv_ori_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/gray_92"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/iv_coin_pay_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="1dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"></View>
+
+            <TextView
+                android:id="@+id/tv_saleCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/gray_92"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/item_progressbar_style"
+            android:layout_marginLeft="@dimen/chang_item_left"
+            android:layout_marginRight="@dimen/chang_item_left" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/chang_item_left"
+            android:paddingRight="@dimen/chang_item_right">
+
+
+            <TextView
+                android:id="@+id/tv_pin_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/gray_92"
+                android:textSize="12sp"
+                tools:text="" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_pin_status_icon"
+        android:layout_width="@dimen/pin_huo_iv_width"
+        android:layout_height="@dimen/pin_huo_iv_height"
+        android:layout_gravity="top|right"
+        android:scaleType="centerCrop" />
+</FrameLayout>

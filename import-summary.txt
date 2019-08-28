@@ -1,0 +1,115 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From nahuo.library:
+* proguard-project.txt
+From wp:
+* proguard-project.txt
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In nahuo.library:
+* AndroidManifest.xml => nahuolibrary\src\main\AndroidManifest.xml
+* assets\ => nahuolibrary\src\main\assets
+* libs\android-viewbadger.jar => nahuolibrary\libs\android-viewbadger.jar
+* libs\slidingmenu.jar => nahuolibrary\libs\slidingmenu.jar
+* libs\universal-image-loader-1.9.1-SNAPSHOT-with-sources.jar => nahuolibrary\libs\universal-image-loader-1.9.1-SNAPSHOT-with-sources.jar
+* lint.xml => nahuolibrary\lint.xml
+* res\ => nahuolibrary\src\main\res\
+* src\ => nahuolibrary\src\main\java\
+In wp:
+* AndroidManifest.xml => wp\src\main\AndroidManifest.xml
+* assets\ => wp\src\main\assets\
+* bin\res\ => wp\src\androidTest\res\
+* libs\alipaysdk.jar => wp\libs\alipaysdk.jar
+* libs\alipaysecsdk.jar => wp\libs\alipaysecsdk.jar
+* libs\alipayutdid.jar => wp\libs\alipayutdid.jar
+* libs\android-async-http-1.4.5.jar => wp\libs\android-async-http-1.4.5.jar
+* libs\android_api_3_5.jar => wp\libs\android_api_3_5.jar
+* libs\armeabi-v7a\libBugly.so => wp\src\main\jniLibs\armeabi-v7a\libBugly.so
+* libs\armeabi-v7a\libjpush171.so => wp\src\main\jniLibs\armeabi-v7a\libjpush171.so
+* libs\armeabi-v7a\libweibosdkcore.so => wp\src\main\jniLibs\armeabi-v7a\libweibosdkcore.so
+* libs\armeabi\libBugly.so => wp\src\main\jniLibs\armeabi\libBugly.so
+* libs\armeabi\libjpush171.so => wp\src\main\jniLibs\armeabi\libjpush171.so
+* libs\armeabi\libweibosdkcore.so => wp\src\main\jniLibs\armeabi\libweibosdkcore.so
+* libs\bugly_1.1.7_release.jar => wp\libs\bugly_1.1.7_release.jar
+* libs\bugly_1.2.0.1_release.jar => wp\libs\bugly_1.2.0.1_release.jar
+* libs\eventbus-2.4.0.jar => wp\libs\eventbus-2.4.0.jar
+* libs\jpush-sdk-release1.7.1.jar => wp\libs\jpush-sdk-release1.7.1.jar
+* libs\mips\libjpush171.so => wp\src\main\jniLibs\mips\libjpush171.so
+* libs\mips\libweibosdkcore.so => wp\src\main\jniLibs\mips\libweibosdkcore.so
+* libs\photoview.jar => wp\libs\photoview.jar
+* libs\picasso-2.4.0.jar => wp\libs\picasso-2.4.0.jar
+* libs\qq_open_sdk_r4346_lite.jar => wp\libs\qq_open_sdk_r4346_lite.jar
+* libs\stetho-1.0.1-fatjar.jar => wp\libs\stetho-1.0.1-fatjar.jar
+* libs\wechat_libammsdk.jar => wp\libs\wechat_libammsdk.jar
+* libs\weibosdkcore_v3.0.1.jar => wp\libs\weibosdkcore_v3.0.1.jar
+* libs\x86\libjpush171.so => wp\src\main\jniLibs\x86\libjpush171.so
+* libs\x86\libweibosdkcore.so => wp\src\main\jniLibs\x86\libweibosdkcore.so
+* libs\zxing-core-2.3.0.jar => wp\libs\zxing-core-2.3.0.jar
+* lint.xml => wp\lint.xml
+* res\ => wp\src\main\res\
+* src\ => wp\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

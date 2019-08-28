@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_white_bg"
+    android:orientation="vertical"
+    android:theme="@style/AppFullScreenTheme" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/contact_email_edt_email"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/layout_contact_email_name"
+            style="@style/edittext_one_style"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/single_bg"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/contact_email_edt_cancel"
+            style="@style/button_blue_text_style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/cancel" />
+        
+        <Button
+            android:id="@+id/contact_email_edt_save"
+            style="@style/button_blue_text_style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+</LinearLayout>

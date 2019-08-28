@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/listview_item_height_big"
+    android:layout_margin="4dp"
+    android:gravity="center_vertical"
+    android:padding="8dp" >
+
+        <com.nahuo.library.controls.CircleImageView2
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true" 
+            android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:maxLines="2"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/icon"
+        android:text="@string/app_name"
+        android:ellipsize="end"
+        android:maxWidth="128dp"
+         />
+	<!-- 同意与拒绝按钮 -->
+    <LinearLayout
+        android:id="@+id/layout_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <Button
+            android:id="@+id/btn_ignore"
+            android:layout_width="64dp"
+            android:text="忽略"
+            android:layout_height="30dp" 
+            style="@style/agent_btn_ignore"
+            />
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:text="同意"
+            android:layout_width="64dp"
+            android:layout_height="30dp" 
+            android:layout_marginLeft="12dp"
+            style="@style/agent_btn_accept"
+            />
+    </LinearLayout>
+	<!-- 处理结果 -->
+    <TextView
+        android:id="@+id/apply_result"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_alignParentRight="true" 
+        android:text="@string/app_name"
+        android:textColor="@color/hint"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

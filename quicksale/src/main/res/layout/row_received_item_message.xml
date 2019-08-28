@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/pad_top_chat_activity"
+    android:paddingBottom="@dimen/pad_bottom_chat_activity">
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_chat_activity">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity" />
+
+        <RelativeLayout
+            android:id="@+id/chat_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_chat_activity"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/talk_right">
+
+
+            <ImageView
+                android:id="@+id/tv_chat_item_img"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop" />
+
+            <com.way.ui.emoji.EmojiTextView
+                android:id="@+id/tv_chat_item_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tv_chat_item_img"
+                android:autoLink="web"
+                android:maxLines="2"
+                android:maxWidth="200dp"
+
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_userid"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_userhead"
+            android:layout_toLeftOf="@id/chat_contents"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/lightgray"
+            android:text="备注记录"
+            android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/id_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@null"
+        android:scrollbars="vertical"/>
+
+        <Button
+            android:id="@+id/contact_msg_cancel"
+            style="@style/button_blue_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="知道了" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 开通衣付通“协议” 页面 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_margin">
+
+                <!-- title -->
+
+                <TextView
+                    style="@style/body_text_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="@string/yft_agreement_title1"
+                    android:textSize="16sp" />
+                <!-- content -->
+
+                <TextView
+                    android:id="@+id/yft_agreement_content"
+                    style="@style/body_text_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="@string/yft_agreement_init_context1" />
+
+                <Button
+                    android:id="@+id/yft_agreement_full_content_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:text="@string/yft_agreement_title2"
+                    android:textColor="@color/blue" />
+                <!-- full content -->
+
+                <TextView
+                    android:id="@+id/yft_agreement_full_content"
+                    style="@style/body_text_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="@string/yft_agreement_content_all1"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+                <!-- 修改店标 -->
+
+                <RelativeLayout
+                    android:id="@+id/item_shop_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:onClick="onClick"
+                    android:paddingLeft="@dimen/activity_margin"
+                    android:paddingRight="@dimen/activity_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="4dp"
+                        android:text="修改头像" />
+
+                    <com.nahuo.library.controls.CircleImageView2
+                        android:id="@+id/me_imgShopLogo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/iv_right_icon"
+                        android:contentDescription="@string/app_name"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shop_logo_normal1" />
+
+                    <ImageView
+                        android:id="@id/iv_right_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more_mini" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_gray" />
+                </RelativeLayout>
+                <!-- 签名 -->
+
+                <!--<include-->
+                <!-- -->
+                <!--android:id="@+id/item_signature"-->
+                <!--layout="@layout/layout_me_item"  />-->
+                <!-- 修改店铺名 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_edit_shop_name"-->
+                <!--layout="@layout/layout_me_item" />-->
+                <!-- 修改店招 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_edit_shop_banner"-->
+                <!--layout="@layout/layout_me_item" />-->
+
+                <!--<com.nahuo.wp.controls.WidgetSettingItem-->
+                <!--android:id="@+id/wsi_qrcode"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:clickable="true"-->
+                <!--android:onClick="onClick"-->
+                <!--app:wsiLeftText="店铺二维码"-->
+                <!--app:wsiRightTextIcon="@drawable/ic_qrcode"-->
+                <!--app:wsiShowbottomLine="false" />-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/me_item_line_spacing" />-->
+                <!-- 联系方式 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_contacts"-->
+                <!--layout="@layout/layout_me_item" />-->
+                <!-- 运费设置 -->
+
+                <!--<include-->
+                <include
+                    android:id="@+id/item_nickname"
+                    layout="@layout/layout_me_item_username" />
+                <!-- 用户名 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_postage"-->
+                <!--layout="@layout/layout_me_item" />-->
+                <!-- 收件地址 -->
+
+                <include
+                    android:id="@+id/item_address"
+                    layout="@layout/layout_me_item" />
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/me_item_line_spacing" />-->
+                <!-- 代理设置 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_agent_setting"-->
+                <!--layout="@layout/layout_me_item" />-->
+                <!-- 在线结算 -->
+                <include
+                    android:id="@+id/item_yft"
+                    layout="@layout/layout_me_item"
+                    android:visibility="gone" />
+                <!-- 微询设置 -->
+
+                <include
+                    android:id="@+id/item_weixun_setting"
+                    layout="@layout/layout_me_item" />
+                <!-- 7天无理由退换货承诺 -->
+
+                <!--<include-->
+                <!--android:id="@+id/item_7days_commitment"-->
+                <!--layout="@layout/layout_me_item" />-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_spacing" />
+
+                <include
+                    android:id="@+id/me_about"
+                    layout="@layout/layout_me_item" />
+
+                <include
+                    android:id="@+id/me_give_praise"
+                    layout="@layout/layout_me_item" />
+
+                <include
+                    android:id="@+id/me_clear_cache"
+                    layout="@layout/layout_me_item" />
+
+                <include
+                    android:id="@+id/me_look_images_casch"
+                    layout="@layout/layout_me_item" />
+
+                <include
+                    android:id="@+id/me_login_psw"
+                    layout="@layout/layout_me_item" />
+                <!--<Button-->
+                <!--android:id="@+id/btn_shop_preview"-->
+                <!--style="@style/button_white_style"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_marginLeft="12dp"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--android:onClick="onClick"-->
+                <!--android:text="预览店铺" />-->
+                <!-- 版本更新 -->
+                <include
+                    android:id="@+id/item_app_update"
+                    layout="@layout/layout_me_item" />
+
+                <include
+                    android:id="@+id/me_checkout"
+                    layout="@layout/layout_me_item" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp" >
+
+        <com.nahuo.library.controls.CircleImageView2
+             android:id="@+id/vendor_item_shopCover"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/vendor_item_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/vendor_item_userid"
+        android:textColor="@color/vendor_userid"
+        android:textSize="@dimen/fontsize_title_button_middle" />
+
+    <TextView
+        android:id="@+id/vendor_item_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/vendor_item_username"
+        android:textSize="@dimen/fontsize_content_default" />
+
+    
+
+    <ImageButton
+        android:id="@+id/vendor_items_menu"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_vendormenu_bg"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

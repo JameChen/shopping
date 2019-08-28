@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_write_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/comment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <ImageView
+                android:id="@+id/iv_cancel_comment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/ic_cancel" />
+            <!-- 回复楼层 -->
+
+            <TextView
+                android:id="@+id/tv_comment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="回复1楼" />
+
+            <ImageView
+                android:id="@+id/iv_submit_comment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:src="@drawable/ic_submit_comment" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#DFDFDD" />
+
+        <EditText
+            android:id="@+id/et_real_comment"
+            style="@style/edittext_noborder_style"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:hint="请输入回复内容" />
+
+        <Button
+            android:id="@+id/btn_set_mode_voice"
+            android:layout_width="18dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@drawable/microphone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="8dp"
+            android:background="#DFDFDD" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comment_bottom"
+        android:background="#66666666" >
+        <FrameLayout
+            android:id="@+id/fl_comment_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</RelativeLayout>

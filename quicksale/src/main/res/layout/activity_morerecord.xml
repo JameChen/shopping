@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.nahuo.library.controls.pulltorefresh.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res/com.nht"
+                android:id="@+id/chat_pull_refresh_listview_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:columnWidth="140dp"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollingCache="true"
+                android:stretchMode="columnWidth" />
+
+            <RelativeLayout
+                android:id="@+id/home_layout_empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:lineSpacingExtra="5dp"
+                    android:text="没有聊天记录"
+                    android:textColor="#7d7d7d"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+    </com.nahuo.widget.TouchLinearLayout>
+</LinearLayout>

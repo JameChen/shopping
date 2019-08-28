@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.+'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile files('libs/android-viewbadger.jar')
+    compile files('libs/slidingmenu.jar')
+   // compile files('libs/universal-image-loader-1.9.1-SNAPSHOT-with-sources.jar')
+}

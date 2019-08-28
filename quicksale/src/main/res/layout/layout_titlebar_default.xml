@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:background="@color/bg_red">
+
+    <LinearLayout
+        android:id="@+id/ll_title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="5dp">
+
+        <Button
+            android:id="@+id/titlebar_btnLeft"
+            style="@style/button_titlebar_left_style"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_transparent_gray"
+            android:paddingLeft="10dp"
+            android:text="@string/titlebar_btnBack"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/titlebar_btnLeft2"
+            style="@style/button_titlebar_base_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_transparent_gray"
+            android:minWidth="10dp"
+            android:text="@string/close"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titlebar_tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="160dp"
+        android:singleLine="true"
+        android:text="@string/titlebar_title"
+        android:textColor="@color/title_bar_text_color"
+        android:textSize="@dimen/fontsize_title_max" />
+
+    <LinearLayout
+        android:id="@+id/ll_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/titlebar_icon_right"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/titlebar_icon_loading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/loading_mini"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/titlebar_btnRight"
+            style="@style/button_titlebar_default_style"
+            android:background="@drawable/bg_transparent_gray"
+            android:paddingRight="5dp"
+            android:text="@string/titlebar_btnRight"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/titlebar_btnRightmore"
+            style="@style/button_titlebar_default_style"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_transparent_gray"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightgray" />
+
+</RelativeLayout>

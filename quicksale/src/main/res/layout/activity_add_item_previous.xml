@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+        android:id="@+id/add_item_previous"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_first"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:src="@drawable/merchant"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="17sp"
+            android:text="从供货商一键拿货" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="13sp"
+            android:textColor="@color/lightgray"
+            android:text="从供货商一键转到自己的店铺" />
+    </RelativeLayout>
+
+    
+    <RelativeLayout
+        android:id="@+id/layout_second"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="90dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:src="@drawable/take_photo"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="17sp"
+            android:text="添加自己的商品" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="60dp"
+            android:textSize="13sp"
+            android:textColor="@color/lightgray"
+            android:layout_marginRight="10dp"
+            android:text="上传自己的商品，不仅可以零售，还可以招募代理帮你卖货" />
+    </RelativeLayout>
+</com.nahuo.widget.TouchLinearLayout>

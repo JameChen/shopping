@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_content"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:showIn="@layout/frgm_pin_huo_detail">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_draw_layout_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/draw_clear_layout"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_draw_layout_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/bg_red"
+            android:gravity="center"
+            android:text="@string/draw_ok_layout"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

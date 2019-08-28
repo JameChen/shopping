@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/homedetail_pull_refresh_listview_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/divider_horizontal_bright"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="true"
+        android:visibility="gone" />
+
+    <com.nahuo.quicksale.controls.HeaderGridView
+        android:id="@+id/gv_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:divider="@color/bg_window_gray"
+        android:dividerHeight="4dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        app:mode="both" />
+
+    <include
+        android:id="@+id/ll_sort"
+        layout="@layout/layout_shop_item_header_sort"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/home_layoutdetail_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line_bottom"
+        android:layout_marginTop="320dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search_nodata" />
+
+        <TextView
+            android:id="@+id/layout_empty_tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="@string/layout_empty_message"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fontsize_content_normal" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/layout_bottom"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/category_nor"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="分类" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_shopping_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:drawableTop="@drawable/gwc_mid"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/shopping_cart" />
+
+            <com.nahuo.library.controls.CircleTextView
+                android:id="@+id/tv_cart_count"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="30dp"
+                android:visibility="gone"
+                app:circlebackground="@color/light_red"
+                app:textColor="@color/white"
+                app:textSize="10" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_weixun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableTop="@drawable/main_talk"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="微询" />
+    </LinearLayout>
+
+</com.nahuo.widget.TouchRelativeLayout>

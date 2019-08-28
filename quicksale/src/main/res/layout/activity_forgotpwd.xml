@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/forgotpwd_stepIconView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/forgotpwd_icon_step1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="60dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/step1" />
+
+                        <ImageView
+                            android:id="@+id/forgotpwd_next_toStep2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/next_unok" />
+
+                        <ImageView
+                            android:id="@+id/forgotpwd_icon_step2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="60dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/step2_unok" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/forgotpwd_tvStep1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="38dp"
+                            android:text="@string/forgotpwd_step1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/fontsize_content_default" />
+
+                        <TextView
+                            android:id="@+id/forgotpwd_tvStep2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="40dp"
+                            android:text="@string/forgotpwd_step2"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/fontsize_content_default" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/lightgray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotpwd_firstView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.nahuo.library.controls.EditTextEx
+                        android:id="@+id/forgotpwd_edtPhoneNo"
+                        style="@style/edittext_one_style"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/txt_clear_bg"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:paddingLeft="85dp"
+                        android:singleLine="true"
+                        app:ex_title="@string/forgotpwd_edtPhoneNo_title" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/forgotpwd_tip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fontsize_content_default" />
+
+                    <Button
+                        android:id="@+id/forgotpwd_btnNext1"
+                        style="@style/button_red_style_1"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/forgotpwd_btnNext1_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotpwd_secondView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/forgotpwd_tvSmsKeyDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forgotpwd_tvSmsKeyDesc_text"
+                        android:textSize="@dimen/fontsize_content_normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.nahuo.library.controls.EditTextEx
+                            android:id="@+id/forgotpwd_edtSmsKey"
+                            style="@style/edittext_one_style"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="3.5"
+                            android:drawableRight="@drawable/txt_clear_bg"
+                            android:hint="@string/forgotpwd_edtSmsKey_hint"
+                            android:imeActionLabel="@string/action_focus_next"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingLeft="68dp"
+                            android:singleLine="true"
+                            app:ex_title="@string/forgotpwd_edtSmsKey_title" />
+
+                        <Button
+                            android:id="@+id/forgotpwd_btnGetSmsKey"
+                            style="@style/button_red_style_1"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="-4dp"
+                            android:layout_weight="2"
+                            android:text="@string/forgotpwd_btnGetSmsKey_text"
+                            android:textSize="@dimen/fontsize_content_default" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_speech_verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center|left"
+                        android:text="收不到短信，试试语音验证码"
+                        android:textColor="@color/bule_overlay"
+                        android:textSize="13sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/forgotpwd_btnNext2"
+                        style="@style/button_red_style_1"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/forgotpwd_button_next" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotpwd_thirdView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <com.nahuo.library.controls.EditTextEx
+                        android:id="@+id/forgotpwd_edtPwd"
+                        style="@style/edittext_one_style"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/txt_clear_bg"
+                        android:imeActionLabel="@string/action_focus_next"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:paddingLeft="68dp"
+                        android:singleLine="true"
+                        app:ex_title="@string/forgotpwd_edtPwd_title" />
+
+                    <com.nahuo.library.controls.EditTextEx
+                        android:id="@+id/forgotpwd_edtSecondPwd"
+                        style="@style/edittext_one_style"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/txt_clear_bg"
+                        android:imeActionLabel="@string/action_done_ok"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:paddingLeft="100dp"
+                        android:singleLine="true"
+                        app:ex_title="@string/forgotpwd_edtSecondPwd_title" />
+
+                    <Button
+                        android:id="@+id/forgotpwd_btnResetPwd"
+                        style="@style/button_red_style_1"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/forgotpwd_btnResetPwd_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forgotpwd_finishView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/forgotpwd_findSuccess_text"
+                        android:textSize="@dimen/fontsize_content_normal" />
+
+                    <Button
+                        android:id="@+id/forgotpwd_btnGotoLogin"
+                        style="@style/button_red_style_1"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/forgotpwd_btnGotoLogin_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </com.nahuo.widget.TouchFrameLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb" >
+
+    <com.nahuo.library.controls.NoHuoLibTitleBar
+        android:id="@+id/titlebar_wp_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:IsImgButton="false"
+        app:ShowRightButton="false"
+        app:Title="店铺管理" >
+    </com.nahuo.library.controls.NoHuoLibTitleBar>
+
+    <GridView
+        android:id="@+id/gv_manage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar_wp_manage"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:overScrollMode="never"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:horizontalSpacing="18dp"
+        android:verticalSpacing="36dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="38dp" >
+
+        <ImageView
+            android:id="@+id/iv_broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@android:string/ok"
+            android:src="@drawable/ic_broadcast" />
+
+        <com.nahuo.library.controls.CircleTextView
+            android:id="@+id/tv_broadcast_count"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="top|right"
+            android:visibility="gone"
+            app:circlebackground="@color/light_red"
+            app:textColor="@color/white"
+            app:textSize="10" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="38dp"
+        android:contentDescription="@android:string/ok"
+        android:src="@drawable/ic_setting" />
+
+</RelativeLayout>

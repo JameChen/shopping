@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F7F7"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:text=""
+        android:textAppearance="@style/myTextAppearance.micro"
+        android:textColor="@color/black_38"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_month"
+        android:minHeight="70dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+
+        <LinearLayout
+            android:id="@+id/transaction_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/transaction_record_week"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/myTextAppearance.micro"
+                android:textColor="@color/gray_92"
+                android:textSize="15sp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/transaction_record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/myTextAppearance.micro"
+                android:textColor="@color/gray_92" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/transaction_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:layout_toRightOf="@+id/transaction_linearlayout"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:id="@+id/transaction_linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/transaction_image"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/transaction_record_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="@style/myTextAppearance.micro"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"></View>
+
+                <TextView
+                    android:id="@+id/transaction_post_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textAppearance="@style/myTextAppearance.micro"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/transaction_record_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textAppearance="@style/myTextAppearance.micro"
+                android:textColor="@color/gray_92" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_list" />
+</RelativeLayout>

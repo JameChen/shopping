@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_white_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/address_province" />
+
+        <Spinner
+            android:id="@+id/sp_province"
+            style="@style/Widget.WP.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/spinner_height" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/address_city" />
+
+        <Spinner
+            android:id="@+id/sp_city"
+            style="@style/Widget.WP.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/spinner_height" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/address_area" />
+
+        <Spinner
+            android:id="@+id/sp_area"
+            style="@style/Widget.WP.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/spinner_height" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_vertical_spacing"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            style="@style/button_blue_text_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn_white_all_corners"
+            android:text="@string/btn_cancle" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/button_blue_text_style"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bg_btn_white_all_corners"
+            android:text="@string/btn_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

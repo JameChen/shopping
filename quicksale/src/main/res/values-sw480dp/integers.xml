@@ -1,0 +1,7 @@
+<resources>
+
+    <integer name="grid_pic_width_small">14</integer>
+    <integer name="grid_pic_width_mid">19</integer>
+    <integer name="grid_pic_width_big">24</integer>
+
+</resources>

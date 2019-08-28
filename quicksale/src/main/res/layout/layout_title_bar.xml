@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:background="@color/bg_red"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/titlebar_btnLeft"
+        style="@style/button_titlebar_left_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text=""
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/titlebar_right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/titlebar_icon_loading"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/titlebar_icon_right"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/titlebar_btnRight"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/fontsize_title_button_middle" />
+        <TextView
+            android:id="@+id/titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/fontsize_title_button_middle" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontsize_button_Large" />
+
+</RelativeLayout>

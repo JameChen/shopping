@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@android:id/content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@drawable/selector_bottom_menu_item"
+            android:numColumns="2"
+            android:padding="5dp"
+            android:verticalSpacing="3dp" />
+    </LinearLayout>
+
+</RelativeLayout>

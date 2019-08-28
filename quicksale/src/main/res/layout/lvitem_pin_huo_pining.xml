@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:paddingBottom="12dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_shopshare_bg"
+                />
+
+            <ImageView
+                android:id="@+id/iv_new_item_icon"
+                android:layout_width="79dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_cover_yg"
+                android:layout_width="38dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_cover_ended"
+                android:layout_width="75dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/overed"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_next_yg"
+                android:background="#AA000000"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/body_text_1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="【第9期】十三行当天新款，1件也是打包价"
+            />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/body_text_2"
+            tools:text="线上将准备700个款式:韩版淑女400款，欧美大牌100款"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            >
+
+            <View
+            style="@style/line_view"/>
+            <Button
+                android:id="@+id/btn_focus"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="96dp"
+                android:textColor="@color/black"
+                android:text="关注本团"
+                android:visibility="gone"
+                android:background="@drawable/bg_rectangle_red1"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/btn_pin"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_rectangle_red1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="马上去拼"
+                android:textSize="14sp"
+                android:textColor="@color/text_red"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

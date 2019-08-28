@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- 可用余额 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="left"
+                        android:text="@string/available_money"
+                        android:textColor="@android:color/secondary_text_dark" />
+
+                    <TextView
+                        android:id="@+id/available_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="left"
+                        android:textColor="@color/gray_3"
+                        android:textSize="60sp" />
+
+                    <TextView
+                        android:id="@+id/available_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_vertical_spacing"
+                        android:layout_marginTop="@dimen/button_vertical_spacing"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <!-- 充值 -->
+                        <Button
+                            android:id="@+id/btn_top_up"
+                            style="@style/button_blue_style"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="5"
+                            android:onClick="onClick"
+                            android:text="@string/top_up" />
+
+                        <!-- 提现 -->
+                        <Button
+                            android:id="@+id/btn_withdraw"
+                            style="@style/button_red_style"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="5"
+                            android:onClick="onClick"
+                            android:text="@string/withdraw" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 不可用余额 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/not_available_money"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/not_available_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/lightgray" />
+                <!-- 交易纪录 -->
+
+                <com.nahuo.library.controls.SingleLineItem
+                    android:id="@+id/trade_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    app:left_text="@string/me_trade_log"
+                    app:right_icon="@drawable/more_mini" />
+
+
+                <!-- 提现纪录 -->
+
+                <com.nahuo.library.controls.SingleLineItem
+                    android:id="@+id/withdraw_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    app:left_text="@string/me_withdraw_log"
+                    app:right_icon="@drawable/more_mini" />
+
+
+                <!-- 在线结算 -->
+
+                <com.nahuo.library.controls.SingleLineItem
+                    android:id="@+id/online_statement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    app:left_text="@string/me_online_statement"
+                    app:right_icon="@drawable/more_mini" />
+
+                <!-- 安全设置 -->
+
+                <com.nahuo.library.controls.SingleLineItem
+                    android:id="@+id/security_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    app:left_text="@string/me_security_settings"
+                    app:right_icon="@drawable/more_mini"
+                    app:right_text="支付密码，提现设置"
+                    app:right_text_color="@color/lightgray"
+                    app:show_right_text="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</com.nahuo.widget.TouchLinearLayout>

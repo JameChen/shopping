@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/layout_myitems_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <TableRow>
+
+            <RelativeLayout
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:padding="3dp" >
+
+                <TextView
+                    android:id="@+id/shopitemdetail_myitems_Day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/shopitemdetail_myitems_Month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/shopitemdetail_myitems_Day"
+                    android:paddingTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/shopitemdetail_myitems_txtcontent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="80dp"
+                    android:paddingTop="10dp"
+                    android:textSize="15sp" />
+				<TextView 
+				    android:id="@+id/tv_expand_content"
+				    android:layout_width="72dp"
+				    android:layout_height="@dimen/expend_content_height"
+				    android:gravity="center|left"
+				    android:layout_below="@id/shopitemdetail_myitems_txtcontent"
+				    android:textColor="@color/expand_blue"
+				    android:text="全文"
+				    android:visibility="gone"
+				    />
+                <com.nahuo.library.controls.UnScrollGridView
+                    android:id="@+id/shopitemdetail_myitems_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/tv_expand_content"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@null"
+                    android:numColumns="3"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="2dp" >
+                </com.nahuo.library.controls.UnScrollGridView>
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/shopitem_myitems_Price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="10000"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fontsize_content_small" />
+
+        <TextView
+            android:id="@+id/shopitem_myitems_Price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fontsize_content_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="63dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+             >
+
+            <TextView
+                android:id="@+id/shopitem_myitems_Price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fontsize_content_small" />
+
+            <TextView
+                android:id="@+id/shopitem_myitems_Price4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fontsize_content_small" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_popup_menu"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_ablumshare_bg" />
+    </RelativeLayout>
+
+    <View android:layout_width="fill_parent" android:layout_height="0.5dp"
+        android:background="#f6f6f6"/>
+</LinearLayout>

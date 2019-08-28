@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/draw_top_tab_right" />
+    <item android:drawable="@color/transparent" />
+</selector>
+

@@ -1,0 +1,250 @@
+CURRENT STATS:
+System memory usage:
+  SOff/Norm: 3 samples:
+    Cached: 13MB min, 57MB avg, 93MB max
+    Free: 364MB min, 398MB avg, 416MB max
+    ZRam: 136MB min, 138MB avg, 139MB max
+    Kernel: 310MB min, 311MB avg, 313MB max
+    Native: 75MB min, 76MB avg, 78MB max
+  SOn /Norm: 2 samples:
+    Cached: 54MB min, 69MB avg, 84MB max
+    Free: 344MB min, 356MB avg, 369MB max
+    ZRam: 136MB min, 138MB avg, 139MB max
+    Kernel: 310MB min, 313MB avg, 315MB max
+    Native: 75MB min, 77MB avg, 80MB max
+
+Per-Package Stats:
+  * com.nahuo.quicksale / u0a370 / v33:
+      * com.nahuo.quicksale / u0a370 / v33:
+               TOTAL: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+                 Top: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+             Service: 0.21%
+          Service Rs: 0.03%
+            (Cached): 0.25%
+      * com.android.tools.fd.runtime.InstantRunService:
+        Process: com.nahuo.quicksale
+            Running count 11 / time 22%
+            Started count 11 / time 22%
+          Executing count 8 / time 0.25%
+      * cn.jpush.android.service.DaemonService:
+        Process: com.nahuo.quicksale
+            Running count 13 / time 92%
+            Started count 12 / time 92%
+          Executing count 16 / time 0.01%
+      * cn.jpush.android.service.PushService:
+        Process: com.nahuo.quicksale
+            Running count 13 / time 93%
+            Started count 12 / time 93%
+          Executing count 48 / time 0.09%
+
+Summary:
+  * com.nahuo.quicksale / u0a370 / v33:
+           TOTAL: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+             Top: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+         Service: 0.21%
+      Service Rs: 0.03%
+        (Cached): 0.25%
+
+Run time Stats:
+  SOff/Norm: +1h1m1s126ms (running)
+  SOn /Norm: +32m11s549ms
+      TOTAL: +1h33m12s675ms
+
+Memory usage:
+  Kernel : 311MB (38 samples)
+  Native : 77MB (38 samples)
+  Persist: 343MB (182 samples)
+  Top    : 154MB (62 samples)
+  ImpFg  : 342MB (413 samples)
+  ImpBg  : 42MB (346 samples)
+  Service: 315MB (704 samples)
+  Receivr: 59KB (153 samples)
+  CchEmty: 163MB (187 samples)
+  Cached : 59MB (38 samples)
+  Free   : 392MB (38 samples)
+  Z-Ram  : 138MB (38 samples)
+  TOTAL  : 2.3GB
+  ServRst: 230KB (108 samples)
+
+          Start time: 2017-03-30 15:36:44
+  Total elapsed time: +1h33m12s703ms (partial) libart.so
+
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOff/Norm: 31 samples:
+    Cached: 13MB min, 147MB avg, 568MB max
+    Free: 79MB min, 308MB avg, 510MB max
+    ZRam: 118MB min, 129MB avg, 139MB max
+    Kernel: 291MB min, 326MB avg, 364MB max
+    Native: 71MB min, 81MB avg, 99MB max
+       Mod : 3 samples:
+    Cached: 0.00 min, 191MB avg, 521MB max
+    Free: 125MB min, 284MB avg, 381MB max
+    ZRam: 128MB min, 130MB avg, 134MB max
+    Kernel: 285MB min, 304MB avg, 318MB max
+    Native: 77MB min, 84MB avg, 93MB max
+       Low : 6 samples:
+    Cached: 0.00 min, 112MB avg, 441MB max
+    Free: 38MB min, 269MB avg, 539MB max
+    ZRam: 127MB min, 131MB avg, 134MB max
+    Kernel: 289MB min, 323MB avg, 372MB max
+    Native: 76MB min, 83MB avg, 91MB max
+  SOn /Norm: 23 samples:
+    Cached: 580KB min, 208MB avg, 566MB max
+    Free: 101MB min, 303MB avg, 681MB max
+    ZRam: 118MB min, 128MB avg, 139MB max
+    Kernel: 281MB min, 324MB avg, 351MB max
+    Native: 71MB min, 84MB avg, 104MB max
+       Mod : 2 samples:
+    Cached: 2.5MB min, 59MB avg, 116MB max
+    Free: 197MB min, 253MB avg, 310MB max
+    ZRam: 130MB min, 131MB avg, 131MB max
+    Kernel: 321MB min, 324MB avg, 327MB max
+    Native: 77MB min, 82MB avg, 87MB max
+       Low : 18 samples:
+    Cached: 0.00 min, 0.00 avg, 39MB max
+    Free: 89MB min, 194MB avg, 317MB max
+    ZRam: 128MB min, 129MB avg, 132MB max
+    Kernel: 316MB min, 331MB avg, 373MB max
+    Native: 72MB min, 81MB avg, 91MB max
+       Crit: 17 samples:
+    Cached: 0.00 min, 0.00 avg, 80MB max
+    Free: 51MB min, 163MB avg, 270MB max
+    ZRam: 128MB min, 128MB avg, 129MB max
+    Kernel: 317MB min, 335MB avg, 370MB max
+    Native: 70MB min, 83MB avg, 94MB max
+
+Per-Package Stats:
+  * com.nahuo.quicksale / u0a370 / v33:
+      * com.nahuo.quicksale / u0a370 / v33:
+               TOTAL: 48% (4.7MB-162MB-347MB/2.2MB-152MB-342MB over 238)
+                 Top: 46% (4.7MB-165MB-347MB/2.2MB-154MB-342MB over 229)
+             Service: 2.7% (35MB-92MB-185MB/32MB-84MB-174MB over 9)
+          Service Rs: 0.05%
+            (Cached): 0.18% (38MB-38MB-38MB/29MB-29MB-29MB over 1)
+      * com.android.tools.fd.runtime.InstantRunService:
+        Process: com.nahuo.quicksale
+            Running count 172 / time 25%
+            Started count 145 / time 25%
+          Executing count 108 / time 0.19%
+      * cn.jpush.android.service.DaemonService:
+        Process: com.nahuo.quicksale
+            Running count 244 / time 47%
+            Started count 212 / time 47%
+          Executing count 269 / time 0.14%
+      * cn.jpush.android.service.PushService:
+        Process: com.nahuo.quicksale
+            Running count 233 / time 48%
+            Started count 219 / time 47%
+          Executing count 473 / time 0.13%
+
+Summary:
+  * com.nahuo.quicksale / u0a370 / v33:
+           TOTAL: 48% (4.7MB-162MB-347MB/2.2MB-152MB-342MB over 238)
+             Top: 46% (4.7MB-165MB-347MB/2.2MB-154MB-342MB over 229)
+         Service: 2.7% (35MB-92MB-185MB/32MB-84MB-174MB over 9)
+      Service Rs: 0.05%
+        (Cached): 0.18% (38MB-38MB-38MB/29MB-29MB-29MB over 1)
+
+Run time Stats:
+  SOff/Norm: +11h46m58s295ms
+       Mod : +1m55s555ms
+       Low : +4m31s80ms
+       Crit: +8m40s124ms
+  SOn /Norm: +5h43m56s67ms
+       Mod : +3m41s636ms
+       Low : +17m43s751ms
+       Crit: +1h58m2s887ms
+      TOTAL: +20h5m29s395ms
+
+Memory usage:
+  Kernel : 326MB (298 samples)
+  Native : 82MB (298 samples)
+  Persist: 339MB (3186 samples)
+  Top    : 141MB (9209 samples)
+  ImpFg  : 352MB (16121 samples)
+  ImpBg  : 44MB (7377 samples)
+  Service: 311MB (29391 samples)
+  Receivr: 67KB (9220 samples)
+  LastAct: 166KB (867 samples)
+  CchAct : 221KB (56 samples)
+  CchEmty: 138MB (7780 samples)
+  Cached : 148MB (298 samples)
+  Free   : 290MB (298 samples)
+  Z-Ram  : 128MB (298 samples)
+  TOTAL  : 2.2GB
+  ServRst: 17MB (20852 samples)
+
+          Start time: 2017-03-29 17:07:31
+  Total elapsed time: +1d0h2m25s884ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOff/Norm: 3 samples:
+    Cached: 13MB min, 57MB avg, 93MB max
+    Free: 364MB min, 398MB avg, 416MB max
+    ZRam: 136MB min, 138MB avg, 139MB max
+    Kernel: 310MB min, 311MB avg, 313MB max
+    Native: 75MB min, 76MB avg, 78MB max
+  SOn /Norm: 2 samples:
+    Cached: 54MB min, 69MB avg, 84MB max
+    Free: 344MB min, 356MB avg, 369MB max
+    ZRam: 136MB min, 138MB avg, 139MB max
+    Kernel: 310MB min, 313MB avg, 315MB max
+    Native: 75MB min, 77MB avg, 80MB max
+
+Per-Package Stats:
+  * com.nahuo.quicksale / u0a370 / v33:
+      * com.nahuo.quicksale / u0a370 / v33:
+               TOTAL: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+                 Top: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+             Service: 0.21%
+          Service Rs: 0.03%
+            (Cached): 0.25%
+      * com.android.tools.fd.runtime.InstantRunService:
+        Process: com.nahuo.quicksale
+            Running count 11 / time 22%
+            Started count 11 / time 22%
+          Executing count 8 / time 0.25%
+      * cn.jpush.android.service.DaemonService:
+        Process: com.nahuo.quicksale
+            Running count 13 / time 92%
+            Started count 12 / time 92%
+          Executing count 16 / time 0.01%
+      * cn.jpush.android.service.PushService:
+        Process: com.nahuo.quicksale
+            Running count 13 / time 93%
+            Started count 12 / time 93%
+          Executing count 48 / time 0.09%
+
+Summary:
+  * com.nahuo.quicksale / u0a370 / v33:
+           TOTAL: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+             Top: 93% (102MB-158MB-226MB/90MB-148MB-208MB over 20)
+         Service: 0.21%
+      Service Rs: 0.03%
+        (Cached): 0.25%
+
+Run time Stats:
+  SOff/Norm: +1h1m1s264ms
+  SOn /Norm: +32m11s549ms
+      TOTAL: +1h33m12s813ms
+
+Memory usage:
+  Kernel : 311MB (38 samples)
+  Native : 77MB (38 samples)
+  Persist: 343MB (182 samples)
+  Top    : 154MB (62 samples)
+  ImpFg  : 342MB (413 samples)
+  ImpBg  : 42MB (346 samples)
+  Service: 315MB (704 samples)
+  Receivr: 59KB (153 samples)
+  CchEmty: 163MB (187 samples)
+  Cached : 59MB (38 samples)
+  Free   : 392MB (38 samples)
+  Z-Ram  : 138MB (38 samples)
+  TOTAL  : 2.3GB
+  ServRst: 230KB (108 samples)
+
+          Start time: 2017-03-30 15:36:44
+  Total elapsed time: +1h33m12s813ms (partial) libart.so

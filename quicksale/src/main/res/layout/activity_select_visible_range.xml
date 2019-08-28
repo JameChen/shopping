@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin"
+            android:text="选中的分组用户才能看到该款商品，可用来对下级代理进行分组分类管理"
+            android:textColor="@color/gray_92" />
+
+        <ExpandableListView
+            android:id="@+id/lv_item_visible_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/create_group"
+            android:layout_below="@+id/text"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/bg_transparent_gray"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+
+        <!-- 新建分组 -->
+
+        <Button
+            android:id="@+id/create_group"
+            style="@style/button_red_style_1"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="onClick"
+            android:text="@string/create_group" />
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

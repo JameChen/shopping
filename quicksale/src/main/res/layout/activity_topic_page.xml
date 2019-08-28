@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/id_topic_page_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/layout_tittle_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/my_colorPrimary"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/layout_title_bar" />
+
+        <com.nahuo.library.controls.pulltorefresh.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/id_group_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical"
+            ptr:ptrMode="both" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_scroll_to_top"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/scroll_to_top"
+        android:visibility="gone" />
+</RelativeLayout>

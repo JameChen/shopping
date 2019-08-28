@@ -1,0 +1,374 @@
+<!--<com.nahuo.widget.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:id="@+id/new_login_root"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/layout_titlebar_default"
+        android:visibility="gone"></include>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是测试标志，正式版不能看到我"
+                android:visibility="gone" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layout_center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/login_logo" />
+            </RelativeLayout>
+
+            <com.nahuo.widget.TouchLinearLayout
+                android:id="@+id/layout_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <com.nahuo.library.controls.AutoCompleteTextViewEx
+                        android:id="@+id/login_edtAccount"
+                        style="@style/LoginCompleteStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:completionThreshold="1"
+                        android:drawableRight="@drawable/txt_clear_bg"
+                        android:hint="@string/login_edtAccount_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:paddingLeft="@dimen/login_iv_left_padding"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray_98" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/login_edtAccount"
+                        android:layout_marginLeft="@dimen/login_left_padding"
+                        android:background="@color/ad_line_bg"></View>
+
+                    <ImageView
+                        android:layout_width="@dimen/login_iv_left_width_height"
+                        android:layout_height="@dimen/login_iv_left_width_height"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/login_left_padding"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/login_user" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/login_edtPassword"
+                        style="@style/LoginCompleteStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="@string/login_edtPassword_hint"
+                        android:imeActionLabel="@string/login_btnLogin_text"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/login_iv_left_padding"
+                        android:singleLine="true"
+                        android:textColorHint="@color/gray_98" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/login_edtPassword"
+                        android:layout_marginLeft="@dimen/login_left_padding"
+                        android:background="@color/ad_line_bg"></View>
+
+                    <ImageView
+                        android:layout_width="@dimen/login_iv_left_width_height"
+                        android:layout_height="@dimen/login_iv_left_width_height"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/login_left_padding"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/login_pass_word" />
+
+                    <ImageView
+                        android:id="@+id/img_see_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/activity_margin"
+                        android:paddingRight="@dimen/activity_margin"
+                        android:src="@drawable/close_eye" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sms_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/login_edtSms"
+                            style="@style/LoginCompleteStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="@string/login_edtSmsPassword_hint"
+                            android:imeActionLabel="@string/login_btnLogin_text"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/login_iv_left_padding"
+                            android:singleLine="true"
+                            android:textColorHint="@color/gray_98" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/login_edtSms"
+                            android:layout_marginLeft="@dimen/login_left_padding"
+                            android:background="@color/ad_line_bg"></View>
+
+                        <ImageView
+                            android:layout_width="@dimen/login_iv_left_width_height"
+                            android:layout_height="@dimen/login_iv_left_width_height"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/login_left_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/login_verification" />
+
+                        <Button
+                            android:id="@+id/btn_sms_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/button_red_bg"
+                            android:paddingLeft="@dimen/activity_margin"
+                            android:paddingRight="@dimen/activity_margin"
+                            android:text="@string/yft_get_sms_key"
+                            android:textColor="@color/pin_huo_red"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/layout_invitation_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <EditText
+                            android:id="@+id/et_invitation_code"
+                            style="@style/LoginCompleteStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+
+                            android:hint="@string/login_edtInvitation_code_hint"
+                            android:imeActionLabel="@string/login_btnLogin_text"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/login_iv_left_padding"
+                            android:singleLine="true"
+                            android:textColorHint="@color/gray_98" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/et_invitation_code"
+                            android:layout_marginLeft="@dimen/login_left_padding"
+                            android:background="@color/ad_line_bg"></View>
+
+                        <ImageView
+                            android:layout_width="@dimen/login_iv_left_width_height"
+                            android:layout_height="@dimen/login_iv_left_width_height"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/login_left_padding"
+                            android:src="@drawable/invitation_code" />
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_speech_verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:gravity="center|left"
+                        android:text="收不到短信，试试语音验证码"
+                        android:textColor="@color/bule_overlay"
+                        android:textSize="13sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/login_btnLogin"
+                    style="@style/button_red_style_1"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/login_btnLogin_text" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/login_btnSmSLogin"
+                        style="@style/button_notbg_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/login_btnSmsLogin_text"
+                        android:textColor="@color/gray_98"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/login_btnForgotPwd"
+                        style="@style/button_notbg_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/login_btnForgotPwd_text"
+                        android:textColor="@color/gray_98"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height_mid"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_third_login"
+                        android:background="@color/line_gray" />
+
+                    <TextView
+                        android:id="@id/tv_third_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="第三方登录"
+                        android:textColor="#999999" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height_mid"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_third_login"
+                        android:background="@color/line_gray" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/btn_wx_login"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="onClick"
+                        android:src="@drawable/login_wechat" />
+
+                    <ImageView
+                        android:id="@+id/btn_qq_login"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:src="@drawable/login_qq" />
+                </LinearLayout>
+            </com.nahuo.widget.TouchLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/test"
+                    style="@style/button_notbg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还没有账号?"
+                    android:textColor="@color/gray_98"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/login_btnReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/login_btnReg_text"
+                    android:textColor="@color/light_red" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView><!--</com.nahuo.widget.ResizeLayout>-->
+
+    <ImageView
+        android:id="@+id/tv_cancel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/del_icon" />
+</RelativeLayout>

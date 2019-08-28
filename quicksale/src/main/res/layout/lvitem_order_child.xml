@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/bg_gray"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/tv_order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/vertical_sapcing_order"
+            android:text="代理订单1: " />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_arrow_right"
+            android:layout_toRightOf="@id/tv_order_name"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="楸之蓝女款专柜"
+            />
+
+        <TextView
+            android:id="@id/tv_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="待支付" 
+            android:layout_marginLeft="3dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_thumb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_order_name"
+            android:layout_marginRight="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_photo" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_order_name"
+            android:layout_marginBottom="@dimen/vertical_sapcing_order"
+            android:layout_toRightOf="@+id/iv_thumb"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:text="商品标题" />
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_title"
+            android:layout_toRightOf="@+id/iv_thumb"
+            android:text="共1件商品"
+            android:textColor="@color/item_gray" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_item_title"
+            android:text="￥60.00"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dash_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/horizontal_dash_line" />
+	<View 
+	    android:id="@+id/white_block"
+	    android:layout_width="match_parent"
+	    android:layout_height="6dp"
+	    android:layout_gravity="bottom"
+	    android:background="@color/white"
+	    />
+</FrameLayout>

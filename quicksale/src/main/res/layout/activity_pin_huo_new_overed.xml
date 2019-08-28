@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/iv_back"
+            style="@style/button_titlebar_left_style"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_transparent_gray"
+            android:onClick="onClick"
+            android:paddingLeft="10dp"
+            android:text="@string/titlebar_btnBack" />
+
+        <TextView
+            android:id="@+id/iv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_shopping_cart"
+                android:layout_width="@dimen/titlebar_height"
+                android:layout_height="@dimen/titlebar_height"
+                android:layout_alignParentRight="true"
+                android:onClick="onClick"
+                android:padding="16dp"
+                android:src="@drawable/toolbar_cart" />
+
+            <com.nahuo.library.controls.CircleTextView
+                android:id="@+id/circle_car_text"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                app:background="@color/light_red"
+                app:textColor="@color/white"
+                app:textSize="10" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.nahuo.quicksale.controls.refreshlayout.SwipeRefreshLayoutEx
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_gray"
+            android:divider="@null"
+            tools:listitem="@layout/lvitem_pin_huo" />
+
+    </com.nahuo.quicksale.controls.refreshlayout.SwipeRefreshLayoutEx>
+
+    <RelativeLayout
+        android:id="@+id/ll_next_activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/ll_next_activity_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_next_activity"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_next_activity"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_rectangle_green1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="本团介绍"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</com.nahuo.widget.TouchLinearLayout>

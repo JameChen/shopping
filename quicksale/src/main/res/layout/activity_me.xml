@@ -1,0 +1,127 @@
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    tools:context=".MeActivity" >
+
+    <com.nahuo.library.controls.NoHuoLibTitleBar
+        android:id="@+id/ablum_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:IsImgButton="false"
+        app:ShowRightButton="false"
+        app:Title="店铺管理" >
+    </com.nahuo.library.controls.NoHuoLibTitleBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                >
+
+                <!-- 衣付通 -->
+
+                <include
+                    android:id="@+id/item_yft"
+                    layout="@layout/layout_me_item" />
+
+                <!-- 订单管理 -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/item_detail_line_spacing"
+                    android:background="@color/white" >
+
+                    <include
+                        android:id="@+id/item_orders"
+                        layout="@layout/layout_me_item" />
+
+                    <com.nahuo.library.controls.CircleTextView
+                        android:id="@+id/circle_order_text"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="124dp"
+                        android:layout_marginTop="6dp"
+                        android:visibility="gone"
+                        app:background="@color/light_red"
+                        app:textColor="@color/white"
+                        app:textSize="10" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_spacing" />
+                <!-- 我的供货商 -->
+
+                <include
+                    android:id="@+id/item_supply"
+                    layout="@layout/layout_me_item" />
+
+                <!-- 我的代理商 -->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+
+                    <include
+                        android:id="@+id/item_agent"
+                        layout="@layout/layout_me_item" />
+
+                    <com.nahuo.library.controls.CircleTextView
+                        android:id="@+id/circle_text"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="104dp"
+                        android:layout_marginTop="6dp"
+                        android:visibility="gone"
+                        app:circlebackground="@color/light_red"
+                        app:textColor="@color/white"
+                        app:textSize="10" />
+                </FrameLayout>
+                <!-- 粉丝 -->
+                <include
+                    android:id="@+id/item_fans"
+                    layout="@layout/layout_me_item" />
+				<View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_spacing" />
+				<!-- 登录密码 -->
+				<include
+                    android:id="@+id/item_login_psw"
+                    layout="@layout/layout_me_item" />
+				<!-- 版本更新 -->
+				<include
+                    android:id="@+id/item_app_update"
+                    layout="@layout/layout_me_item" />
+           
+             
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_spacing" />
+                <!-- 退出登录 -->
+
+                <include
+                    android:id="@+id/item_exit"
+                    layout="@layout/layout_me_item" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.nahuo.widget.TouchLinearLayout>

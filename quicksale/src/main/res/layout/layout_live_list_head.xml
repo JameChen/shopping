@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_live_head_shape">
+
+        <ImageView
+            android:id="@+id/bg_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+
+        <com.nahuo.live.xiaozhibo.common.widget.like.PLHeartLayout
+            android:id="@+id/heart_layout"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/iv_likes"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:focusable="true"
+            app:anim_duration="2000"
+            />
+
+        <ImageView
+            android:id="@+id/iv_likes"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="22dp"
+            android:src="@drawable/give_live" />
+
+        <TextView
+            android:id="@+id/tv_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_live_shape_red"
+            android:drawableLeft="@drawable/live_music"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:text="查看回放"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_head_watch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="22dp"
+            android:layout_toRightOf="@+id/tv_time_title"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_head_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_time_title"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/heart_layout"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/live_void" />
+
+        <RelativeLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/bg_live_head_shape_white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/live_emty_bg" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <com.nahuo.quicksale.customview.TopScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_logobg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_userhead"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/mini_avatar_shadow" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_top"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/iv_userhead"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:paddingLeft="6dp">
+
+
+                            <TextView
+                                android:id="@+id/txt_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/score_bg"
+                                android:gravity="center"
+                                android:paddingBottom="1dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="1dp"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_vip"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:background="@color/transparent">
+
+                            <ImageView
+                                android:id="@+id/iv_vip"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:id="@+id/tv_vip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="6dp"
+                                android:textColor="@color/vip_txt_color"
+                                android:textSize="6sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_notifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_new_height"
+                    android:layout_marginBottom="@dimen/me_item_line_new_spacing"
+                    android:layout_marginLeft="@dimen/activity_horizontal_new_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_new_margin"
+                    android:layout_marginTop="-25dp"
+                    android:background="@drawable/bg_rectangle_me_item"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="6dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/notify_width"
+                        android:layout_height="@dimen/notify_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_notifi_anto" />
+
+                    <!--<com.gongwen.marqueen.MarqueeView-->
+                    <!--android:id="@+id/tv_notifi"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="13sp"-->
+                    <!--app:marqueeAnimDuration="3000"-->
+                    <!--app:marqueeAnimIn="@anim/right_in"-->
+                    <!--app:marqueeAnimOut="@anim/left_out"-->
+                    <!--app:marqueeInterval="4000"-->
+                    <!--android:visibility="gone"></com.gongwen.marqueen.MarqueeView>-->
+                    <com.nahuo.quicksale.customview.MarqueeTextView
+                        android:id="@+id/tv_notifi_marquee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:content_text_color="#f54b4b"
+                        app:content_text_size="13sp"></com.nahuo.quicksale.customview.MarqueeTextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_spacing"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/item_myorder"
+                    layout="@layout/layout_me_new_item_top" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_new_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_new_margin"
+                    android:background="@drawable/bg_rectangle_me_item_bottom"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <RelativeLayout
+                        android:id="@+id/my_order_pay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/sp_me_order_iv"
+                                android:src="@drawable/sq_me_order_01"></ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/me_margin_top"
+                                android:text="待支付"
+                                android:textSize="@dimen/text_size_medium"></TextView>
+                        </LinearLayout>
+
+                        <com.nahuo.library.controls.CircleTextView
+                            android:id="@+id/circle_order_text0"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:visibility="gone"
+                            app:background="@color/light_red"
+                            app:textColor="@color/white"
+                            app:textSize="10" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_order_ship"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/sp_me_order_iv"
+                                android:src="@drawable/sq_me_order_02"></ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/me_margin_top"
+                                android:text="待发货"
+                                android:textSize="@dimen/text_size_medium"></TextView>
+                        </LinearLayout>
+
+                        <com.nahuo.library.controls.CircleTextView
+                            android:id="@+id/circle_order_text1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:visibility="gone"
+                            app:background="@color/light_red"
+                            app:textColor="@color/white"
+                            app:textSize="10" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_order_get"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/sp_me_order_iv"
+                                android:src="@drawable/sq_me_order_03"></ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/me_margin_top"
+                                android:text="待收货"
+                                android:textSize="@dimen/text_size_medium"></TextView>
+                        </LinearLayout>
+
+                        <com.nahuo.library.controls.CircleTextView
+                            android:id="@+id/circle_order_text2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:visibility="gone"
+                            app:background="@color/light_red"
+                            app:textColor="@color/white"
+                            app:textSize="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/my_order_overed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            style="@style/sp_me_order_iv"
+                            android:src="@drawable/sq_me_order_04"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/me_margin_top"
+                            android:text="@string/me_finish"
+                            android:textSize="@dimen/text_size_medium"></TextView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_order_refund"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                style="@style/sp_me_order_iv"
+                                android:src="@drawable/sq_me_order_05"></ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/me_margin_top"
+                                android:text="售后单"
+                                android:textSize="@dimen/text_size_medium"></TextView>
+                        </LinearLayout>
+
+                        <com.nahuo.library.controls.CircleTextView
+                            android:id="@+id/circle_order_sale_after"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="6dp"
+                            android:visibility="gone"
+                            app:background="@color/light_red"
+                            app:textColor="@color/white"
+                            app:textSize="10" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/my_order_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/my_order_cancel"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:text="已取消"
+                            android:textSize="@dimen/text_size_medium"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/me_item_line_new_spacing" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_new_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_new_margin"
+                        android:background="@drawable/bg_rectangle_me_item"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_new_margin"
+                        android:paddingRight="@dimen/activity_horizontal_new_margin">
+
+                        <TextView
+                            android:id="@+id/tv_plan_tittle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text=""
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ProgressBar
+                                android:id="@+id/me_pd"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/myprogressbar"
+                                android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                                android:indeterminateOnly="false"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/myprogressbar" />
+
+                            <TextView
+                                android:id="@+id/tv_pd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/regent_bg"
+                                android:drawableLeft="@drawable/smile_left"
+                                android:drawablePadding="3dp"
+                                android:gravity="center"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="#FC3D39"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_plane_finish"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|right"
+                            android:paddingBottom="10dp"
+                            android:text=""
+                            android:textColor="@color/txt_gray"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_plane_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="10dp"
+                            android:text=""
+                            android:textColor="@color/txt_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_new_spacing" />
+                <!-- 收藏-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/item_mytuan"
+                        layout="@layout/layout_me_new_item_top" />
+                </RelativeLayout>
+                <!-- 即将成团-->
+                <include
+                    android:id="@+id/item_my_goto_tuan"
+                    layout="@layout/layout_me_new_item_bottom" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_new_spacing" />
+                <!--我的钱包-->
+                <include
+                    android:id="@+id/item_myyft"
+                    layout="@layout/layout_me_new_item_top" />
+                <!--我的换货币-->
+                <include
+                    android:id="@+id/item_mycoin"
+                    layout="@layout/layout_me_new_item"
+                    android:visibility="gone" />
+                <!--我的优惠券-->
+                <include
+                    android:id="@+id/item_mycoupon"
+                    layout="@layout/layout_me_new_item" />
+                <!--商品账单-->
+                <include
+                    android:id="@+id/item_mybill"
+                    layout="@layout/layout_me_new_item" />
+
+                <!--运费-->
+
+                <include
+                    android:id="@+id/item_mypostfee"
+                    layout="@layout/layout_me_new_item_bottom" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_new_spacing" />
+                <!--配货清单-->
+                <include
+                    android:id="@+id/item_phqd"
+                    layout="@layout/layout_me_new_item_top" />
+                <!--包裹清单-->
+                <include
+                    android:id="@+id/item_bgqd"
+                    layout="@layout/layout_me_new_item_bottom" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_new_spacing" />
+
+                <!--   邀请店主注册-->
+                <include
+                    android:id="@+id/item_me_invite_register"
+                    layout="@layout/layout_me_new_item_top" />
+                <!--店铺验证-->
+                <include
+                    android:id="@+id/item_myrenzheng"
+                    layout="@layout/layout_me_new_item" />
+
+                <include
+                    android:id="@+id/item_setting_security"
+                    layout="@layout/layout_me_new_item"
+                    android:visibility="gone" />
+
+                <!-- 帮助-->
+                <include
+                    android:id="@+id/item_myhelp"
+                    layout="@layout/layout_me_new_item_bottom" />
+
+                <include
+                    android:id="@+id/item_about"
+                    layout="@layout/layout_me_new_item"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/me_item_line_new_spacing" />
+            </LinearLayout>
+        </com.nahuo.quicksale.customview.TopScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_logobg1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rl_top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_height">
+
+
+                <ImageView
+                    android:id="@+id/my_share"
+                    style="@style/title_iv"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/my_setting"
+                    android:paddingLeft="@dimen/pin_tittle_margin"
+                    android:src="@drawable/pn_share_left_white" />
+
+                <ImageView
+                    android:id="@+id/my_setting"
+                    style="@style/title_iv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="@dimen/pin_tittle_search_margin"
+                    android:src="@drawable/pn_set_left_white" />
+
+                <ImageView
+                    android:id="@+id/iv_all_search"
+                    style="@style/title_iv"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/iv_chat_txt"
+                    android:onClick="onClick"
+                    android:paddingRight="@dimen/pin_tittle_margin"
+                    android:src="@drawable/pn_message_left_white" />
+
+                <ImageView
+                    android:id="@+id/iv_chat_txt"
+                    style="@style/title_iv"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:onClick="onClick"
+                    android:paddingRight="@dimen/pin_tittle_mess_margin"
+                    android:src="@drawable/pn_message_right_white" />
+
+                <ImageView
+                    android:id="@+id/iv_shopping_cart"
+                    android:layout_width="@dimen/titlebar_height"
+                    android:layout_height="@dimen/titlebar_height"
+                    android:layout_toLeftOf="@+id/iv_chat_txt"
+                    android:onClick="onClick"
+                    android:padding="14dp"
+                    android:src="@drawable/toolbar_cart"
+                    android:visibility="gone" />
+
+                <com.nahuo.library.controls.CircleTextView
+                    android:id="@+id/circle_car_text"
+                    android:layout_width="@dimen/circle_view_width_height"
+                    android:layout_height="@dimen/circle_view_width_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/pin_tittle_margin"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    app:background="@color/light_red"
+                    app:textColor="@color/white"
+                    app:textSize="10" />
+
+                <com.nahuo.library.controls.CircleTextView
+                    android:id="@+id/circle_car_text_chat"
+                    android:layout_width="@dimen/circle_view_width_height"
+                    android:layout_height="@dimen/circle_view_width_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/pin_tittle_margin"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    app:background="@color/light_red"
+                    app:textColor="@color/white"
+                    app:textSize="10" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_explain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/beijing"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="320dp">
+
+            <ImageView
+                android:id="@+id/ll"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/shouc_icon_ex" />
+
+            <ImageView
+                android:id="@+id/ii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/ll"
+                android:src="@drawable/up_jiantou" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ii"
+                android:src="@drawable/icon_clle_expl" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

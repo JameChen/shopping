@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="商品"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+<View
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="1dp"></View>
+        <ImageView
+            android:id="@+id/iv_top_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_low_price"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="18"
+            android:focusable="true"
+            android:numeric="integer"
+            android:background="@drawable/sort_bg_defaut"
+            android:textColorHint="@color/txt_gray"
+            android:textColor="@color/black"
+            android:hint="¥最低价格"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="至"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:maxLength="18"
+            android:focusable="true"
+            android:inputType="number"
+            android:id="@+id/et_high_price"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:numeric="integer"
+            android:gravity="center"
+            android:textColorHint="@color/txt_gray"
+            android:hint="¥最高价格"
+            android:background="@drawable/sort_bg_defaut"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

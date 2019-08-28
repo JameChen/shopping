@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_gray_height"
+        android:background="@color/line_gray" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/item_shop_cart_padding_left"
+        android:paddingRight="@dimen/item_shop_cart_padding_right"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/icon_expand"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pack_shang"/>
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center|left"
+            android:text=""
+            android:textColor="@color/order_item_txt"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+</LinearLayout>

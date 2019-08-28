@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="距截单"
+            android:textColor="@color/pin_huo_time_red"
+            android:textSize="@dimen/time_txt_size"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/shop_cart_time_icon" />
+        <TextView
+            android:id="@+id/tv_day"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_day_desc"
+            style="@style/text_time_r"
+            android:text="天"
+            android:textColor="@color/pin_huo_time_red" />
+
+        <TextView
+            android:id="@+id/tv_hh"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_h"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_hour_desc"
+            style="@style/text_time_r"
+            android:text="时"
+            android:textColor="@color/pin_huo_time_red" />
+
+        <TextView
+            android:id="@+id/tv_mm"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_m"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_m_desc"
+            style="@style/text_time_r"
+            android:text="分"
+            android:textColor="@color/pin_huo_time_red" />
+
+        <TextView
+            android:id="@+id/tv_ss"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_s"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_s_desc"
+            style="@style/text_time_r"
+            android:text="秒"
+            android:textColor="@color/pin_huo_time_red" />
+
+        <TextView
+            android:id="@+id/tv_f"
+            style="@style/text_time_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+    </LinearLayout>
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window_gray"
+        android:id="@+id/ll_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/line_bottom"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            style="@style/Text.M.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="应支付：" />
+
+                        <TextView
+                            android:id="@android:id/text1"
+                            style="@style/Text.M.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="25sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="选择支付方式:"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_size_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_alipay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_alipay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="169dp"
+                            android:layout_height="45dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pay_alipay" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_wechat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_wechat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:checked="false"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="169dp"
+                            android:layout_height="45dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pay_wechat" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="5dp"
+                        android:text="是否使用余额:"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_yft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_yft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginRight="8dp"
+                            android:button="@drawable/rb_yft_sel"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                style="@style/Text.M.Gray"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left|center"
+                                android:text="余额：Y2209.33(全额支付后剩余Y2..555" />
+
+                            <TextView
+                                style="@style/Text.M.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="衣付通余额支付"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@android:id/button2"
+                            style="@style/Button.Gray.Corner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:onClick="onClick"
+                            android:padding="12dp"
+                            android:text="激活"
+                            android:textSize="@dimen/text_size_small"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.S.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/pay_warning"
+                    android:drawablePadding="8dp"
+                    android:text="担保交易，只有您收货满意店家才能收到货款，请放心支付！\n严禁信用卡套现，如经发现，所付金额将冻结不得提现！"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_rect_white_stroke_gray_corner"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <TextView
+                android:id="@+id/not_enough_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="您的余额不足，请先充值再支付"
+                android:textColor="@color/red"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@android:id/button1"
+                style="@style/button_blue_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="onClick"
+                android:padding="12dp"
+                android:text="@string/pay_now" />
+        </LinearLayout>
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

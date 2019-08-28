@@ -1,0 +1,79 @@
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="50dp"
+    tools:context="com.nahuo.quicksale.fragment.AuthenticationFragment">
+    <LinearLayout
+        android:id="@+id/forgotpwd_secondView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/forgotpwd_tvSmsKeyDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgotpwd_tvSmsKeyDesc_text"
+            android:textSize="@dimen/fontsize_content_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.nahuo.library.controls.EditTextEx
+                android:id="@+id/forgotpwd_edtSmsKey"
+                style="@style/edittext_one_style"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="4"
+                android:drawableRight="@drawable/txt_clear_bg"
+                android:hint="@string/forgotpwd_edtSmsKey_hint"
+                android:imeActionLabel="@string/action_focus_next"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textSize="@dimen/fontsize_content_default"
+                android:maxLength="6"
+                android:paddingLeft="68dp"
+                android:singleLine="true"
+                app:ex_title="@string/forgotpwd_edtSmsKey_title" />
+
+            <Button
+                android:id="@+id/forgotpwd_btnGetSmsKey"
+                style="@style/button_red_style_1"
+                android:layout_width="0dp"
+                android:layout_marginTop="-4dp"
+                android:layout_weight="2"
+                android:text="@string/forgotpwd_btnGetSmsKey_text"
+                android:textSize="@dimen/fontsize_content_default" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_speech_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center|left"
+            android:text="收不到短信，试试语音验证码"
+            android:textColor="@color/bule_overlay"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/forgotpwd_btnNext2"
+            style="@style/button_red_style_1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/forgotpwd_button_next" />
+    </LinearLayout>
+
+</LinearLayout>

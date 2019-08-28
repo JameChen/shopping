@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_titlebar_default" />
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/identity_title"
+        android:textColor="@color/bg_red_btn"
+        android:textSize="13sp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+    <!-- 持证姓名 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="@string/really_user_name" />
+
+        <EditText
+            android:id="@+id/et_user_name"
+            style="@style/edittext_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:hint="@string/hint_auth_name"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_user_name_after"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/hint" />
+    </LinearLayout>
+    <!-- 证件号码 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="@string/identity_card_number" />
+
+        <EditText
+            android:id="@+id/et_card_number"
+            style="@style/edittext_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:hint="@string/hint_card_number"
+            android:textSize="12sp" 
+            />
+
+        <TextView
+            android:id="@+id/tv_card_number_after"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/hint" />
+    </LinearLayout>
+    </LinearLayout>
+    <!-- 证件类型 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/card_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="@string/auth_card_type" />
+
+        <Spinner
+            android:id="@+id/sp_card_type"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_weight="0.7"
+            style="@style/Widget.WP.Spinner"
+            />
+
+        <TextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/hint" />
+    </LinearLayout>-->
+    <!-- 验证状态 -->
+
+
+    <!-- 开户银行 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+
+        <TextView
+            android:id="@+id/tv_card_user_bank_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="@string/user_bank_name" />
+
+        <!--<EditText
+            android:id="@+id/et_card_user_bank_name"
+            style="@style/edittext_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:hint="@string/hint_auth_bank_name"
+            android:textSize="12sp"/>-->
+        <TextView
+            android:id="@+id/et_card_user_bank_name"
+            style="@style/Widget.WP.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:hint="@string/hint_auth_bank_name"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_card_user_bank_name_after"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/hint" />
+    </LinearLayout>
+
+
+    <!--银行卡号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+
+        <TextView
+            android:id="@+id/tv_bank_card_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="@string/user_bank_card" />
+
+        <EditText
+            android:id="@+id/et_bank_card_number"
+            style="@style/edittext_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:hint="@string/hint_auth_bank_card_number"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_bank_card_number_after"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/hint" />
+    </LinearLayout>
+
+        <!--验证状态-->
+        <LinearLayout
+            android:id="@+id/layout_card_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/card_state"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:text="@string/auth_card_state"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_card_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/hint" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_marginTop="32dp"
+        android:onClick="onClick"
+        android:text="@string/btn_submit_bind"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+    <!-- 一些文字说明，比如没通过的原因等 -->
+
+    <TextView
+        android:id="@+id/bottom_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/bind_bank_careful_context" />
+
+    <TextView
+        android:id="@+id/bottom_info_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_name"
+        android:visibility="gone"/>
+</com.nahuo.widget.TouchLinearLayout></LinearLayout>

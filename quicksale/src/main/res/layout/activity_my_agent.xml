@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <com.nahuo.quicksale.controls.SearchEditText
+            android:id="@+id/et_search_agent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:focusable="false"
+            android:hint="@string/hint_search_agent"
+            android:imeOptions="actionSearch"
+            android:inputType="none"
+            android:onClick="onClick"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray"
+            android:focusable="false" />
+    </LinearLayout>
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/me_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hint_my_agent"
+        android:layout_below="@+id/ll_top"
+        android:background="@color/white"
+        android:paddingLeft="16dp" />
+
+    <TextView
+        android:id="@id/hint_my_agent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btn_recruit_agent"
+        android:gravity="center"
+        android:hint="@string/hint_long_press_to_edit" />
+
+    <Button
+        android:id="@+id/btn_recruit_agent"
+        style="@style/button_orange_no_cornors"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:text="招代理" />
+
+</com.nahuo.widget.TouchRelativeLayout>

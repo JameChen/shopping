@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_window_gray">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/line_bottom"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:id="@+id/ll_pay_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/txt_pay_for_info"
+                    style="@style/Text.M.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                    android:padding="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_rect_white_stroke_gray_corner"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Text.M.Gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:gravity="center"
+                        android:text="支付方式" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_yft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_yft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Text.M.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="衣付通余额支付" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                style="@style/Text.M.Gray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="可用余额：" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@android:id/button2"
+                            style="@style/Button.Gray.Corner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:onClick="onClick"
+                            android:padding="12dp"
+                            android:text="激活"
+                            android:textSize="@dimen/text_size_small"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_wechat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <RadioButton
+                            android:id="@+id/radio_wechat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:checked="true"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="169dp"
+                            android:layout_height="45dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pay_wechat" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_alipay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_alipay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="169dp"
+                            android:layout_height="45dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pay_alipay" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_netbank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical|left"
+                        android:onClick="onClick"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_bank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:clickable="false"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pay_bank" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Text.S.Gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/pay_warning"
+                    android:drawablePadding="8dp"
+                    android:text="担保交易，只有您收货满意店家才能收到货款，请放心支付！" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@android:id/button1"
+            style="@style/button_blue_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:onClick="onClick"
+            android:padding="12dp"
+            android:text="@string/pay_now" />
+
+        <CheckBox
+            android:id="@+id/box_sure_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@android:id/button1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="我已确认对方信息，并愿意为他支付。" />
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/box_sure_pay"
+            android:background="@color/line_gray" />
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

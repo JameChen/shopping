@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_postdetail_voice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_more_bar" />
+
+    <RelativeLayout
+        android:id="@+id/layout_fake_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F1F1F1" >
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:onClick="onClick"
+           />
+
+        <TextView
+            android:id="@+id/et_fake_comment"
+            style="@style/edittext_one_style"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@+id/iv_like"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:hint="回复楼主"
+            android:onClick="onClick"
+            android:paddingLeft="8dp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="1px"
+
+            android:layout_below="@id/et_fake_comment"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListView
+
+        android:id="@+id/lv_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_fake_comment"
+        android:layout_below="@id/title"
+        android:background="#ffffff"
+        android:divider="#dfdfdd"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"
+       />
+
+</RelativeLayout>

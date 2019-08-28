@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0EFF5">
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Text.S.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="6dp"
+            android:textColor="#797979"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_time"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tip"
+                style="@style/Text.M.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="点击“刷新”查看配货单 "
+                android:textColor="#646464" />
+
+            <TextView
+                android:id="@+id/tv_empty"
+                style="@style/Text.M.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="您当前没有需要配货的商品"
+                android:textColor="#797979"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_what_picking"
+                style="@style/Text.M.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="什么是配货单  >"
+                android:textColor="#43ACFE" />
+        </LinearLayout>
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

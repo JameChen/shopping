@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="titlebar_title">标题</string>
+    <string name="titlebar_back">   </string>
+    <string name="titlebar_add">添加</string>
+    <string name="titlebar_save">保存</string>
+    <string name="titlebar_cancel">取消</string>
+
+</resources>

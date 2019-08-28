@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_item_bg"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <TextView
+        android:id="@+id/ship_info_createtime"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/ship_info_express_name"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/ship_info_express_info"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/ship_info_product_info"
+        style="@style/Text.M.Gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/lightgray" />
+
+	<View style="@style/line_view" android:layout_marginLeft="10dp"
+	    android:layout_marginTop="12dp"/>
+	
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.nahuo.quicksale.controls.MyWebView
+            android:id="@+id/tv_next_tips"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_detail_line_spacing"
+            android:background="@color/white"
+            android:onClick="onClick" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_overed_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/body_text_1"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_top1"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="距截单"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/time_txt_size" />
+
+        <TextView
+            android:id="@+id/tv_day"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_day_desc"
+            style="@style/text_time_r"
+            android:text="天"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_hh"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_h"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            style="@style/text_time_r"
+            android:text="时"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_mm"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_m"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            style="@style/text_time_r"
+            android:text="分"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_ss"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_s"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+
+        <TextView
+            style="@style/text_time_r"
+            android:text="秒"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_f"
+            style="@style/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray"
+        android:visibility="gone" />
+</LinearLayout>

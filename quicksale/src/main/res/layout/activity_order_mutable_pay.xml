@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:background="@color/bg_red"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/iv_back"
+            style="@style/button_titlebar_left_style"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_transparent_gray"
+            android:onClick="onClick"
+            android:paddingLeft="10dp"
+            android:text="@string/titlebar_btnBack" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:text="111"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefExpandListViewEx
+        android:id="@+id/lv_pull_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbarStyle="outsideOverlay" />
+    <RelativeLayout
+        android:id="@+id/inputArea"
+        android:background="#88000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <CheckBox
+            android:id="@+id/checkbox_allcheck"
+            android:layout_width="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:id="@+id/all_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/checkbox_allcheck"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:text="0.00"/>
+
+
+        <TextView
+            android:id="@+id/batch_pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_red_3"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white"
+            android:text="批量支付"
+            android:textSize="@dimen/text_size_medium" />
+    </RelativeLayout>
+</RelativeLayout>
+</com.nahuo.widget.TouchLinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_empty"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还没有关注的团"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <Button
+            android:id="@+id/btn_pin"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_rectangle_red"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="浏览热门的团"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>
+

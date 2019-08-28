@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_photo" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_cover"
+            android:layout_toRightOf="@+id/iv_cover"
+            android:maxLines="2"
+            android:text="欧洲站新款针织上衣半裙大半欧洲丫新款针织上衣半裙大半" />
+
+        <TextView
+            android:id="@+id/tv_supply_price"
+            style="@style/text_list_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_toRightOf="@+id/iv_cover"
+            android:maxLines="2"
+            android:text="上家供货￥88.00" />
+
+        <TextView
+            android:id="@+id/tv_my_supply_price"
+            style="@style/text_list_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_supply_price"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/iv_cover"
+            android:text="我给下家￥100.00" />
+
+        <TextView
+            android:id="@+id/tv_my_retail_price"
+            style="@style/text_list_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_supply_price"
+            android:layout_toRightOf="@+id/tv_my_supply_price"
+            android:text="我的零售￥120.00" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/tv_share_count"
+            style="@style/text_list_share_etc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@drawable/friend_circle_count"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textColor="#A1A1A1" />
+
+        <ImageView
+            android:id="@+id/tv_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@+id/tv_share_count"
+            android:padding="5dp"
+            android:src="@drawable/share_list_small" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_share"
+            android:padding="5dp"
+            android:src="@drawable/edit_green" />
+
+        <ImageView
+            android:id="@+id/btn_popup"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_ablumshare_bg" />
+    </RelativeLayout>
+
+</LinearLayout>

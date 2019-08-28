@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nahuo.widget.TouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_search_header" />
+
+    <include
+        android:id="@+id/layout_upload_progress"
+        layout="@layout/layout_upload_progress"
+        android:visibility="gone" />
+
+    <com.nahuo.library.controls.pulltorefresh.PullToRefreshListViewEx
+        android:id="@android:id/list"
+        style="@style/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.nahuo.widget.TouchLinearLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/uploaditem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="?android:attr/dividerHorizontal"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/me_layout_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="8dp">
+
+                    <com.nahuo.library.controls.CircleImageView2
+                        android:id="@+id/iv_shop_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shop_logo_normal1" />
+                    <!-- 用户名 -->
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/iv_shop_logo"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text="(昵称)"
+                        android:textSize="@dimen/text_size_large" />
+                    <!-- 签名 -->
+
+                    <TextView
+                        android:id="@+id/tv_signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_user_name"
+                        android:layout_toRightOf="@id/iv_shop_logo"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="签名内容"
+                        android:textColor="@color/item_gray" />
+                </RelativeLayout>
+                <!-- 卖货星级 -->
+
+                <RelativeLayout
+                    android:id="@+id/top_layout_shop_credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_shop_credit"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="卖家星级" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_shop_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_shop_credit"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_good_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="好评率" />
+                </RelativeLayout>
+                <!-- 拿货星级 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_buyer_credit"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="拿货星级" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_buyer_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_buyer_credit"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tv_buyer_good_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:text="好评率" />
+                </RelativeLayout>
+
+                <!-- 代理数量 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="代理数量" />
+
+                    <TextView
+                        android:id="@+id/tv_agent_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint="0"
+                        android:singleLine="true"
+                        android:textColor="@color/item_gray"
+                        android:textColorHint="@color/item_gray" />
+                </LinearLayout>
+
+                <!-- 徽商商龄 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="微商商龄" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_years"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="0天"
+                        android:textColor="@color/item_gray" />
+                </LinearLayout>
+
+                <!-- 保证金 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="保证金" />
+
+                    <TextView
+                        android:id="@+id/tv_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/item_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_white_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:text="服务承诺" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_service_commitment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

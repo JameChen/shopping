@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/ye_pin_margin_bottom"
+        android:paddingTop="@dimen/ye_pin_margin_top"
+        android:paddingLeft="@dimen/ye_pin_margin_left"
+        android:paddingRight="@dimen/ye_pin_margin_right">
+
+
+        <com.nahuo.library.controls.CircleImageView2
+            android:id="@+id/iv_icon"
+            style="@style/ye_pin_pic"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/shop_logo_normal1" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/ye_pin_margin_two_left"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/gray_3"
+                android:paddingRight="@dimen/ye_pin_margin_two_left"
+                android:textSize="@dimen/fontsize_title_button_min" />
+                <TextView
+                    android:id="@+id/tv_post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text=""
+                    android:textColor="@color/gray_80"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_shop_signture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="@color/gray_80"
+                android:textSize="@dimen/fontsize_content_small" />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_post_title"
+        style="@style/text_post_title"
+        android:text=""
+        android:textColor="@color/gray_3"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/ye_pin_margin_bottom"
+        android:paddingLeft="@dimen/ye_pin_margin_left"
+        android:paddingRight="@dimen/ye_pin_margin_right"/>
+
+</LinearLayout>

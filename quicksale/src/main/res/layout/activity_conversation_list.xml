@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pin_huo_red">
+
+
+        <TextView
+            android:id="@+id/chat_titlebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="@color/white"></TextView>
+
+        <TextView
+            android:id="@+id/unread_tip_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/red_circle"
+            android:gravity="center"
+            android:text="11"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_shopping_cart"
+            style="@style/title_iv"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:onClick="onClick"
+            android:paddingRight="@dimen/pin_tittle_mess_margin"
+            android:src="@drawable/mess_shop_cart"
+            android:visibility="visible" />
+
+        <com.nahuo.library.controls.CircleTextView
+            android:id="@+id/circle_car_text"
+            android:layout_width="@dimen/circle_view_width_height"
+            android:layout_height="@dimen/circle_view_width_height"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/pin_tittle_margin"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:background="@color/light_red"
+            app:textColor="@color/white"
+            app:textSize="10" />
+
+
+        <TextView
+            android:id="@+id/tvTLeft"
+            style="@style/Text.L.Gray"
+            android:layout_width="@dimen/titlebar_height"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_titlebar_btn_selector"
+            android:drawableLeft="@drawable/back"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="   "
+            android:textColor="@color/title_bar_text_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+</LinearLayout>

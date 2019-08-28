@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_default" />
+
+    <com.nahuo.widget.TouchRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="800dp">
+
+        <RelativeLayout
+            android:id="@+id/shop_search_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/lightgray">
+
+            <com.nahuo.library.controls.AutoCompleteTextViewEx
+                android:id="@+id/shop_search_edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_border_shape"
+                android:completionThreshold="1"
+                android:drawableLeft="@drawable/menu_sreach"
+                android:drawableRight="@drawable/search_icon_clear"
+                android:dropDownVerticalOffset="1dp"
+                android:hint="输入用户名"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:onClick="onClick" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/shop_search_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/shop_search_layout_top"
+            android:background="@color/white"></ListView>
+
+        <include
+            android:id="@+id/shop_search_layout_empty"
+            layout="@layout/layout_empty" />
+
+    </com.nahuo.widget.TouchRelativeLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/pw_photo_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/pw_photo_menu_btnLookup"
+            style="@style/button_blue_text_single_style"
+            android:layout_width="match_parent"
+            android:text="查看" />
+
+        <Button
+            android:id="@+id/pw_photo_menu_btnSetCoverImg"
+            style="@style/button_blue_text_single_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="设为主图"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/pw_photo_menu_btnDelete"
+            style="@style/button_blue_text_single_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/pw_photo_menu_btnCancel"
+            style="@style/button_blue_text_single_style"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

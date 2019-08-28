@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin">
+
+    <!-- 验证码申请之后的提示 -->
+
+    <TextView
+        android:id="@+id/sms_key_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=" " />
+
+    <LinearLayout
+        android:id="@+id/line_one"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/sms_key_tips"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 手机号码 -->
+
+        <TextView
+            android:id="@+id/tv_phone_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:textSize="@dimen/fontsize_content_middle" />
+
+        <Button
+            android:id="@+id/btn_sms_key"
+            style="@style/button_blue_style"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="@string/yft_get_sms_key"
+            android:textSize="@dimen/fontsize_content_default" />
+    </LinearLayout>
+    <!-- 验证码 -->
+
+    <com.nahuo.library.controls.EditTextEx
+        android:id="@+id/et_sms_key"
+        style="@style/edittext_one_style"
+        android:layout_width="match_parent"
+        android:layout_below="@id/line_one"
+        android:layout_marginTop="@dimen/edittext_vertical_spacing"
+        android:drawableRight="@drawable/txt_clear_bg"
+        android:hint="@string/yft_sms_key"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="6"
+        android:singleLine="true"
+        android:textSize="@dimen/fontsize_content_middle" />
+
+    <TextView
+        android:id="@+id/tv_speech_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@id/et_sms_key"
+        android:gravity="center|left"
+        android:text="收不到短信，试试语音验证码"
+        android:textColor="@color/bule_overlay"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/button_blue_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_long"
+        android:layout_below="@+id/tv_speech_verification"
+        android:layout_marginTop="10dp"
+        android:text="@string/yft_btn_next" />
+
+</RelativeLayout>

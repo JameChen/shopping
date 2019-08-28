@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/item_shop_detail_color"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:gravity="center|left"
+        android:text="颜色" />
+
+    <TextView
+    android:id="@+id/item_shop_detail_size"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:gravity="center"
+    android:text="尺码" />
+    <TextView
+        android:id="@+id/item_shop_detail_deliver_num"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="发货" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/item_shop_detail_qty_reduce"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray"
+            android:gravity="center"
+            android:text="—"
+            android:textSize="16sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:id="@+id/item_shop_detail_appyly_qty"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/bg_rect_gray_corner"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/item_shop_detail_qty_add"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rect_gray"
+            android:gravity="center"
+            android:text="+"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<com.github.florent37.arclayout.ArcLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/arc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dip"
+    app:arc_cropDirection="cropOutside"
+    app:arc_height="15dp"
+    app:arc_position="bottom">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+</com.github.florent37.arclayout.ArcLayout>

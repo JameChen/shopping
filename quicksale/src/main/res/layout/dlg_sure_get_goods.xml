@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_white_corner_bg"
+    android:orientation="vertical" >
+    <TextView android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/draw_top_corner_black"
+        android:textSize="18sp"
+        android:text="确认收货?"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:gravity="center"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_overlay"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="请确认您已成功签收了货物，确认收货后，货款将由酷有网自动发放结算给卖家"
+        android:gravity="center_horizontal"
+        />
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+        <TextView android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="支付密码:"
+            android:layout_centerVertical="true"/>
+        <EditText android:id="@+id/et_pwd"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/draw_white_rect_bl"
+		    android:padding="6dp"
+		    android:layout_marginLeft="4dp"
+		    android:inputType="textPassword"
+		    android:layout_toRightOf="@id/txt"
+		    />
+        
+    </RelativeLayout>
+	<TextView 
+	    android:id="@+id/txt_froget_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_edittext_border"
+        android:text="忘记支付密码？"
+		android:layout_gravity="right"        
+		android:layout_marginRight="20dp"
+        />
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_cancle"
+            android:textColor="@color/blue_edittext_border"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_white_nocorners_bg"
+            android:text="@string/btn_confirm"
+            android:textColor="@color/blue_edittext_border"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
